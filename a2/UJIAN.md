@@ -38,3 +38,9 @@ Semakan tambahan: pembatalan audio semasa kembali ke papan kes tidak menghasilka
 ## Kemas kini latar agensi A2
 
 Imej PNG asal pengguna 1672×941 disalin tanpa perubahan kepada assets/images/agensi-detektif.png. Ujian pada lebar 1440, 768 dan 390px mengesahkan pemuatan imej, opacity 1, filter none, tiada gradient atau pseudo-element yang menutupi latar, dan tiada limpahan mendatar. Imej dipaparkan mengikut nisbah asal. Pada tablet/telefon, tajuk diletakkan selepas gambar untuk mengelakkan pertindihan. Bantuan, Escape, Mulakan Penyiasatan, lapan fail kes, soalan pertama dan kembali ke pembukaan diuji. Tiada ralat JavaScript. Markah, data soalan, audio dan bahagian portal lain tidak diubah.
+
+## Halaman utama berdasarkan gambar lengkap pengguna
+
+Sumber: laman utama A2.zip, mengandungi laman utama A2.png (1672×941). Fail disalin tanpa perubahan ke assets/images/laman-utama-a2.png. Tiada tulisan HTML kelihatan ditambah pada halaman utama (body.innerText kosong semasa tiada dialog). Kawasan klik pada gambar dipadankan dengan semua lapan unit; setiap unit diuji untuk nombor kes yang betul. Gambar kecil setiap fail digunakan semula melalui paparan CSS pada unit sepadan. Tiada imej baharu dijana.
+
+Butang Mulakan Penyiasatan memfokuskan fail pertama; fail lain bebas dipilih. Cara Bermain, Escape, Bunyi, Animasi dan Peti Maklumat/Panel Guru diuji. Pada telefon/tablet, ilustrasi boleh ditatal mendatar dalam bingkai tanpa menyebabkan limpahan halaman. Kawasan klik kekal sepadan selepas tatal. Label aria menyediakan nama butang tanpa tulisan tambahan pada imej. Bintang yang terkandung dalam imej ialah grafik; ganjaran sebenar kekal pada laporan unit.

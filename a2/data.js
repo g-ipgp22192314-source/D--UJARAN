@@ -86,6 +86,13 @@ window.A2_UNITS = [
       ],
       "correct": 3,
       "explanation": "Aina ingin mendapatkan maklumat untuk mencari Si Comel yang hilang."
+    },
+    "cover": {
+      "src": "assets/images/laman-utama-a2.png",
+      "x": 163,
+      "y": 601,
+      "width": 127,
+      "height": 77
     }
   },
   {
@@ -175,6 +182,13 @@ window.A2_UNITS = [
       ],
       "correct": 0,
       "explanation": "Amir mahu mendapatkan kepastian tentang pemilik bungkusan yang tersalah dihantar."
+    },
+    "cover": {
+      "src": "assets/images/laman-utama-a2.png",
+      "x": 337,
+      "y": 601,
+      "width": 127,
+      "height": 77
     }
   },
   {
@@ -264,6 +278,13 @@ window.A2_UNITS = [
       ],
       "correct": 2,
       "explanation": "Nasihat itu bertujuan menjaga keselamatan Danish dan pengguna jalan."
+    },
+    "cover": {
+      "src": "assets/images/laman-utama-a2.png",
+      "x": 506,
+      "y": 601,
+      "width": 127,
+      "height": 77
     }
   },
   {
@@ -357,6 +378,13 @@ window.A2_UNITS = [
       ],
       "correct": 1,
       "explanation": "Sofea ingin berkenalan dan membantu jiran baharu mengenali kawasan kejiranan."
+    },
+    "cover": {
+      "src": "assets/images/laman-utama-a2.png",
+      "x": 684,
+      "y": 601,
+      "width": 127,
+      "height": 77
     }
   },
   {
@@ -446,6 +474,13 @@ window.A2_UNITS = [
       ],
       "correct": 3,
       "explanation": "Penerangan itu membantu penduduk memahami dan mengikuti peraturan peminjaman buku."
+    },
+    "cover": {
+      "src": "assets/images/laman-utama-a2.png",
+      "x": 861,
+      "y": 601,
+      "width": 127,
+      "height": 77
     }
   },
   {
@@ -535,6 +570,13 @@ window.A2_UNITS = [
       ],
       "correct": 0,
       "explanation": "Encik Lim mahu mengelakkan kemalangan akibat laluan yang licin."
+    },
+    "cover": {
+      "src": "assets/images/laman-utama-a2.png",
+      "x": 1036,
+      "y": 601,
+      "width": 127,
+      "height": 77
     }
   },
   {
@@ -624,6 +666,13 @@ window.A2_UNITS = [
       ],
       "correct": 3,
       "explanation": "Kak Nisha memaklumkan hari, masa, tempat dan persediaan untuk acara kejiranan."
+    },
+    "cover": {
+      "src": "assets/images/laman-utama-a2.png",
+      "x": 1205,
+      "y": 601,
+      "width": 127,
+      "height": 77
     }
   },
   {
@@ -717,6 +766,13 @@ window.A2_UNITS = [
       ],
       "correct": 2,
       "explanation": "Faris mengingatkan Puan Ramlah supaya mengangkat pakaian sebelum terkena hujan."
+    },
+    "cover": {
+      "src": "assets/images/laman-utama-a2.png",
+      "x": 1384,
+      "y": 601,
+      "width": 127,
+      "height": 77
     }
   }
 ];

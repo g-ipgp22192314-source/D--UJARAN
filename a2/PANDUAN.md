@@ -41,3 +41,9 @@ Ilustrasi watak/situasi/bukti 3D belum dijana. Aplikasi menggunakan slot bertand
 Butang asli menyokong Tab/Enter/Space, dialog guru dan bantuan menggunakan elemen dialog dengan Escape. Pilihan pengurangan animasi disimpan dan menghormati tetapan sistem. Tiada kelipan pantas. localStorage menyimpan markah, jawapan pertama, tahap dan tetapan. Jika simpanan ditolak, permainan masih boleh dijalankan dengan mesej amaran. Audio guru menggunakan IndexedDB; jika tidak tersedia, muat naik boleh dimainkan sepanjang sesi sahaja. Buka melalui hos HTTP untuk simpanan yang konsisten; pelayar mungkin mengehadkan simpanan bagi file:// atau mod peribadi.
 
 Fon Fredoka dan Nunito dibekalkan secara tempatan (Fontsource 5.3.0, subset Latin) bersama lesen SIL OFL dalam assets/fonts. Tiada akses Google Fonts diperlukan bagi A2. Tiada kebergantungan Canva SDK. Bahagian D-UJARAN lain dikekalkan; hanya pautan kad A2 menuju permainan ini.
+
+## Reka bentuk utama daripada laman utama A2.zip
+
+Halaman utama kini menggunakan satu imej asal pengguna `assets/images/laman-utama-a2.png` tanpa menambah tulisan yang kelihatan. Kawasan lapan fail, Mulakan Penyiasatan, Cara Bermain, Bunyi dan Animasi dipadankan dengan butang HTML telus berlabel aria untuk papan kekunci/pembaca skrin. Peti Maklumat membuka panel guru. Papan D-UJARAN di kiri atas kembali ke portal. Imej tidak disunting.
+
+Setiap fail 1–8 terus membuka unit sedia ada yang sepadan. Gambar kecil setiap fail digunakan semula sebagai situasi unit melalui pemotongan paparan CSS (medan cover dalam data.js), bukan imej baharu. Imej 24 pilihan bukti berasingan belum dibekalkan. Pada skrin kecil, ilustrasi boleh ditatal secara mendatar supaya kawasan tekan tidak menjadi terlalu kecil. Markah masih dipaparkan dalam unit/laporan dan disimpan seperti sebelumnya. Garis hijau pada fail menunjukkan kes selesai; bintang dalam gambar asal ialah hiasan statik, markah/bintang sebenar dirujuk pada laporan.
