@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ms"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D-UJARAN — Dengar • Faham • Bertutur</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,700;9..144,800&amp;display=swap" rel="stylesheet">
+  <style>
+    .mt-4{margin-top:1rem}
+    :root{--ink:#173b51;--teal:#087f91;--purple:#7253a8;--pink:#f9d9e8;--cream:#fffaf0;--yellow:#ffdc73}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;width:100%;font-family:"DM Sans",sans-serif;color:var(--ink)}
+    button,a{cursor:pointer}button:focus-visible,a:focus-visible,video:focus-visible{outline:4px solid #e45088;outline-offset:4px}
+    .shell{width:100%;overflow:hidden}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}.section{padding:86px 0}.section-title{font-family:Fraunces,serif;font-weight:800;line-height:1.12;letter-spacing:-.025em;text-align:center;margin:0 auto 14px;max-width:850px;font-size:clamp(2rem,4vw,3.35rem)}.section-lead{text-align:center;max-width:790px;margin:0 auto 40px;line-height:1.7}
+    .hero{position:relative;min-height:660px;background:#ffdc73;isolation:isolate;display:flex;align-items:center;padding:116px 0 80px}
+    .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 53%;z-index:-2}.hero:after{content:none}
+    .topbar{position:absolute;inset:16px 0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:2}.brand{font-weight:800;color:#075b6b;letter-spacing:.06em;background:#ffffffdd;padding:12px 17px;border-radius:20px;box-shadow:0 6px 0 #a1d9d3}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.mini{border:2px solid #fff;border-radius:999px;padding:10px 14px;background:#102d4f;color:#fff;font-weight:800;box-shadow:0 4px 0 #081c34}.mini:hover{background:#1b4775;transform:translateY(-2px)}
+    .hero-copy{max-width:670px}.eyebrow{font-size:.95rem;font-weight:800;letter-spacing:.13em;color:#117282;text-transform:uppercase}.hero h1{font-family:Fraunces,serif;font-size:clamp(3.1rem,7vw,6.2rem);font-weight:800;line-height:1.02;color:#073d56;margin:16px 0;letter-spacing:-.035em;text-shadow:0 2px 0 #fff;animation:rise 1.15s cubic-bezier(.2,.75,.25,1) both}.hero h1 span{color:#b74379}.tagline{font-weight:800;color:#543e83;font-size:clamp(1.15rem,2vw,1.5rem);margin:0 0 10px}.hero-description{max-width:600px;line-height:1.8;background:#fffdf1dd;padding:17px 20px;border-radius:22px;border:2px solid #fff;box-shadow:0 9px 24px #27657425}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.pill{border:0;border-radius:20px;padding:15px 24px;font-weight:800;color:#173b51;background:#ffe38a;box-shadow:0 6px 0 #d3b85e,0 13px 25px #102d4f40;transition:transform .18s,box-shadow .18s,background-color .18s;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;text-align:center}.pill:hover{background:#1b4775;color:#fff;transform:translateY(-3px);box-shadow:0 9px 0 #081c34,0 16px 25px #102d4f40}.pill:active{transform:translateY(4px);box-shadow:0 2px 0 #081c34}.pill.purple,.pill.pink,.pill.gold{background:#e3d4ff;color:#382851;box-shadow:0 6px 0 #bba4df}.pill.purple:hover,.pill.pink:hover,.pill.gold:hover{background:#1b4775;color:#fff;box-shadow:0 9px 0 #081c34,0 16px 25px #102d4f40}
+    .cloud{position:absolute;width:105px;height:34px;border-radius:50px;background:#fff9;top:107px;right:29%;animation:drift 12s ease-in-out infinite alternate}.cloud:before,.cloud:after{content:"";position:absolute;background:inherit;border-radius:50%}.cloud:before{width:52px;height:52px;left:19px;bottom:3px}.cloud:after{width:42px;height:42px;left:52px;bottom:2px}.sparkle{position:absolute;right:17%;top:28%;font-size:32px;color:#fff3a2;text-shadow:0 0 17px #f2a63e;animation:twinkle 2.3s infinite}
+    #video{background-image:url("assets/images/jom-kenali.png");background-size:100% auto;background-position:center top;padding-top:clamp(140px,25vw,360px)}
+    .video-section{position:relative;isolation:isolate;background-color:#dff3ed;background-position:center;background-size:cover;background-repeat:no-repeat}.video-section:before{content:"";position:absolute;inset:0;z-index:-1;background:transparent;pointer-events:none}.video-wrap{max-width:900px;margin:auto;padding:15px;border-radius:32px;background:#fff;box-shadow:0 12px 0 #b8e9df,0 28px 60px #29547720;position:relative}.video-wrap:before{content:"✦  ♪  ✦";position:absolute;top:-24px;left:15px;color:#ae5eaa;font-size:25px}.video-wrap video,.video-wrap .drive-video,.video-poster-frame{width:100%;aspect-ratio:16/9;display:block;border:0;border-radius:20px;background:linear-gradient(140deg,#267b9b,#8464b4);object-fit:cover}.video-poster-frame{position:relative;overflow:hidden}.video-poster-image{width:100%;height:100%;object-fit:contain;object-position:center;display:block}.video-play{display:none}.video-wrap .drive-video[hidden],.video-poster-frame[hidden]{display:none}.video-note{text-align:center;font-weight:600;line-height:1.6;margin:27px auto 0;max-width:850px}
+    .modes{position:relative;isolation:isolate;overflow:hidden;background-color:#3aaee5;background-position:center;background-size:cover;background-repeat:no-repeat}.modes:before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;pointer-events:none;background:none}.grid-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}.mode-card{border-radius:34px;padding:30px;border:3px solid #fff;box-shadow:0 10px 0 #b3dce0,0 22px 35px #215b7122;background:linear-gradient(145deg,#ddfbfb,#f4fffa)}.mode-card.b{background:linear-gradient(145deg,#f2e8ff,#ffeaf5);box-shadow:0 10px 0 #dec5e9,0 22px 35px #71538c22}.mode-icon{font-size:42px;display:inline-grid;place-items:center;width:82px;height:82px;border-radius:23px;background:#fff;box-shadow:0 6px 0 #90cfd0;color:#00879d}.mode-card.b .mode-icon{color:#8654a9;box-shadow:0 6px 0 #dfb9df}.mode-card h3{font-family:Fraunces,serif;font-size:1.65rem;margin:20px 0 10px}.mode-card p{line-height:1.65}.standard{font-weight:800;color:#146778}.mode-card.b .standard{color:#704490}.mode-card ul{padding-left:23px;line-height:1.85;margin:20px 0 25px}.mode-card li::marker{color:#ef9c36}
+    .activities.a{background:#eafaf8 center/cover no-repeat}.activities.b{background:#f7effb center/cover no-repeat}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}.activity-card{background:#fff;border:2px solid #fff;border-radius:27px;overflow:hidden;box-shadow:0 8px 0 #addbd7,0 18px 28px #14485017;display:flex;flex-direction:column;transition:transform .18s}.b .activity-card{box-shadow:0 8px 0 #dfc9e9,0 18px 28px #51356a16}.activity-card:hover,.activity-card:focus-within{transform:translateY(-5px)}.art{height:140px;display:flex;align-items:center;justify-content:center;gap:13px;background:linear-gradient(135deg,#a5ece9,#d8f9e6);color:#14798a}.b .art{background:linear-gradient(135deg,#e7d8fb,#fce5ed);color:#8151a4}.art svg{width:58px;height:58px;stroke:currentColor;stroke-width:2;fill:#fff9;filter:drop-shadow(3px 6px 0 #24778a30)}.art svg:nth-child(2){transform:rotate(13deg) translateY(-8px)}.activity-emoji{font-size:48px;line-height:1;filter:drop-shadow(0 7px 3px #194f5b44);transform:translateY(-4px);text-shadow:0 2px 0 #ffffff88}.activity-emoji:nth-child(2){transform:translateY(-10px) rotate(8deg)}.activity-content{padding:23px;display:flex;flex-direction:column;flex:1}.activity-kicker{font-weight:800;font-size:.85rem;color:#087f91;letter-spacing:.04em}.b .activity-kicker{color:#7950a0}.activity-card h3{font-family:Fraunces,serif;font-size:1.4rem;margin:10px 0}.activity-card p{line-height:1.65;flex:1}.activity-card .pill{align-self:flex-start;margin-top:8px}.activities.a .activity-card .pill{background:#b9f2d9;color:#173b51;box-shadow:0 6px 0 #d3b85e,0 13px 25px #102d4f40}.activities.a .activity-card .pill.purple,.activities.a .activity-card .pill.pink,.activities.a .activity-card .pill.gold{background:#e3d4ff;color:#382851;box-shadow:0 6px 0 #bba4df}.activities.a .activity-card .pill:hover{background:#1b4775;color:#fff;box-shadow:0 9px 0 #081c34,0 16px 25px #102d4f40}.activities.a .art{background:linear-gradient(145deg,#a7f3e5,#d3fff0);color:#06899c}.activities.a .art svg{filter:drop-shadow(3px 6px 0 #16798a35);stroke-width:2.4}.activities.a .art svg path,.activities.a .art svg rect,.activities.a .art svg circle{fill:#ffffffaa;stroke:currentColor}.example{font-weight:800;color:#75449a;background:#f5edff;padding:10px;border-radius:12px}
+    .routes{position:relative;isolation:isolate;background-color:#fffaf0;background-position:center;background-size:cover;background-repeat:no-repeat}.routes:before{content:"";position:absolute;inset:0;z-index:-1;background:transparent;pointer-events:none}.routes::after{content:none}.route-board{border-radius:30px;background:#fff;border:3px dashed #87cbba;padding:27px;margin:20px 0;box-shadow:0 10px 24px #27768115}.route-board.b{border-color:#d5ade4}.route-board h3{font-family:Fraunces,serif;margin:0 0 23px;font-size:1.5rem}.stops{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;position:relative}.stops:before{content:"";position:absolute;top:24px;left:6%;right:6%;border-top:5px dashed #97cfc8;z-index:0}.route-board.b .stops:before{border-color:#d4b6dd}.stop{z-index:1;text-align:center;font-weight:700;line-height:1.35}.stop strong{display:grid;place-items:center;width:49px;height:49px;border-radius:15px;background:#0b8d9d;color:white;margin:0 auto 11px;box-shadow:0 5px 0 #07616e;font-size:1.2rem}.route-board.b .stop strong{background:#8655a8;box-shadow:0 5px 0 #60397e}
+    .cta-section{background:radial-gradient(circle at 85% 15%,#ffe0a5,transparent 32%),linear-gradient(120deg,#b0ebdf,#b4d9f4 60%,#efcfe9);text-align:center}.cta-box{background:transparent;border:0;border-radius:0;padding:48px 25px;box-shadow:none}.cta-box p{line-height:1.7}.cta-buttons{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:27px}.cta-buttons .pill:not(.pink){background:#ffdc73;color:#173b51}.cta-buttons .pill.pink{background:#ffb36b;color:#173b51}
+    footer{background:#163c54;color:#fff;padding:42px 20px;text-align:center;line-height:1.8}footer strong{font-family:Fraunces,serif;font-size:1.8rem}
+    .modal-backdrop{position:fixed;inset:0;z-index:20;background:#10283cb9;display:grid;place-items:center;padding:18px}.modal-backdrop[hidden]{display:none}.modal-panel{background:#fffdf6;border:4px solid #b9e7de;border-radius:28px;width:min(490px,100%);padding:30px;box-shadow:0 22px 0 #1a4d6166}.modal-panel h2{font-family:Fraunces,serif;margin:0 0 12px}.modal-panel p{line-height:1.7}.modal-actions{text-align:right;margin-top:25px}
+    @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes float{50%{transform:translateY(-9px)}}@keyframes drift{to{transform:translateX(-50px)}}@keyframes twinkle{50%{opacity:.35;transform:scale(.75)}}
+    @media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-copy{position:relative;z-index:1}}
+    @media(max-width:650px){.section{padding:65px 0}.hero{min-height:670px;padding:150px 0 85px;align-items:flex-start}.hero-description{font-size:.94rem}.topbar{align-items:flex-start}.brand{font-size:.8rem;padding:10px}.mini{padding:8px 10px;font-size:.76rem}.controls{max-width:240px}.grid-two,.cards{grid-template-columns:1fr}.stops{grid-template-columns:1fr;gap:13px}.stops:before{left:23px;right:auto;top:10px;bottom:10px;height:auto;border-top:0;border-left:5px dashed #97cfc8}.route-board.b .stops:before{border-left-color:#d4b6dd}.stop{display:flex;text-align:left;align-items:center;gap:15px}.stop strong{flex:0 0 49px;margin:0}.mode-card{padding:24px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+  
+  
+  
+  
+  
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(193, 255, 114);">
+  <div class="shell">
+   <header class="hero" id="utama"><img data-template-id="hero-image" class="canva-image hero-photo" loading="eager" src="assets/images/taman-harmoni.png" alt="Taman Harmoni yang berwarna-warni dengan guru bertudung merah jambu di sebelah kanan, rumah, taman permainan, bunga, gunung dan langit cerah">
+    <div class="cloud" aria-hidden="true"></div>
+    <div class="sparkle" aria-hidden="true">
+     ✦
+    </div>
+    <div class="wrap topbar">
+     <div data-template-id="site-brand" class="canva-tag brand" style="background: rgb(255, 255, 255); color: rgb(7, 91, 107); font-weight: 400; font-style: normal; font-size: 16px;">D-UJARAN</div>
+     <nav class="controls" aria-label="Kawalan laman"><button id="music-toggle" class="mini" type="button" aria-label="Tukar status muzik" aria-pressed="false"><span data-template-id="music-label" class="canva-text" style="font-weight: 400; font-style: normal; font-size: 16px;">Muzik</span> <span id="music-state">OFF</span></button> <button id="sound-toggle" class="mini" type="button" aria-label="Tukar status kesan bunyi" aria-pressed="false"><span data-template-id="sound-label" class="canva-text" style="font-weight: 400; font-style: normal; font-size: 16px;">Kesan bunyi</span> <span id="sound-state">OFF</span></button> <button id="info-button" data-template-id="info-button" class="canva-button mini" type="button" aria-haspopup="dialog" aria-expanded="false" style="background: rgb(16, 45, 79); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Maklumat produk</button>
+     </nav>
+    </div>
+    <div class="wrap">
+     <div class="hero-copy">
+      <div data-template-id="hero-kicker" class="canva-text eyebrow" style="color: rgb(17, 114, 130); font-weight: 800; font-style: normal; font-size: 16px;"></div>
+      <h1 data-template-id="hero-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 45px; letter-spacing: 0.036rem;">
+
+</h1>
+      <p data-template-id="hero-tagline" class="canva-text tagline" style="color: rgb(159, 6, 6); font-weight: 700; font-style: normal; font-size: 28px;"></p>
+      <p data-template-id="hero-theme" class="canva-text tagline" style="color: rgb(84, 62, 131); font-weight: 400; font-style: normal; font-size: 23px; letter-spacing: 0.302rem;"></p>
+      <p data-template-id="hero-description" class="canva-text hero-description" style="background: linear-gradient(90deg, rgb(255, 247, 173), rgb(255, 169, 249)); color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 18px; letter-spacing: 0.084rem;">Selamat datang ke dunia pembelajaran D-UJARAN.
+Mari sertai pengembaraan yang menyeronokkan untuk mengasah kemahiran mendengar dan bertutur serta melalui pelbagai situasi kehidupan berjiran.</p>
+      <div class="hero-actions"><a data-template-id="discover-button" class="canva-button pill" href="#mod" aria-label="Terokai dua mod pembelajaran" style="background: rgb(16, 45, 79); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Jom teroka ↓</a> <a data-template-id="video-jump" class="canva-button pill purple" href="#video" aria-label="Pergi ke video pengenalan" style="background: rgb(16, 45, 79); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Tonton pengenalan</a>
+      </div>
+     </div>
+    </div>
+   </header>
+   <main>
+    <section data-template-id="video-section" class="canva-section section video-section" id="video" aria-labelledby="video-title">
+     <div class="wrap">
+      <h2 data-template-id="video-title" id="video-title" class="canva-text section-title" style="color: rgb(226, 169, 241); font-weight: 400; font-style: normal; font-size: 69px; letter-spacing: 0.132rem;">
+
+</h2>
+      <p data-template-id="video-description" class="canva-text section-lead" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 24px;"></p>
+      <div class="video-wrap"><!-- Poster imej dipaparkan sebelum pengguna membuka pemain video. -->
+       <div class="video-poster-frame">
+        <img data-template-id="video-poster" class="canva-image video-poster-image" loading="lazy" src="assets/images/poster-pengenalan.png" alt="Bilik darjah berwarna pastel dengan papan hitam, meja, kerusi dan rak buku"><button class="video-play" type="button" aria-label="Mainkan video pengenalan">▶</button>
+       </div><a class="pill purple video-fallback" href="https://drive.google.com/file/d/10nyyLMpFqj37PHXh5Ak03vNrZy4OhJ_L/view" target="_blank" rel="noopener noreferrer">Buka video</a>
+      </div>
+      <p data-template-id="video-status" class="canva-text video-note" style="color: rgb(23, 59, 81); font-weight: 400; font-style: normal; font-size: 16px;"></p>
+     </div>
+    </section>
+    <section data-template-id="modes-section" class="canva-section section modes" id="mod" aria-labelledby="modes-title">
+     <div class="wrap">
+      <h2 data-template-id="modes-title" id="modes-title" class="canva-text section-title" style="color: rgb(23, 59, 81); font-weight: 800; font-style: normal; font-size: 24px;"></h2>
+      <p data-template-id="modes-description" class="canva-text section-lead" style="color: rgb(23, 59, 81); font-weight: 400; font-style: normal; font-size: 16px;">
+
+
+
+
+</p>
+      <div class="grid-two">
+       <article data-template-id="mode-a-card" class="canva-card mode-card">
+        <h3 data-template-id="mode-a-title" class="canva-text" style="color: rgb(23, 59, 81); font-weight: 700; font-style: normal; font-size: 19px;"></h3>
+        <p data-template-id="mode-a-standard" class="canva-text standard" style="color: rgb(20, 103, 120); font-weight: 800; font-style: normal; font-size: 16px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+        <p data-template-id="mode-a-description" class="canva-text" style="color: rgb(23, 59, 81); font-weight: 400; font-style: normal; font-size: 16px;"></p><button data-template-id="mode-a-button" class="canva-button pill mt-4" type="button" data-url="modAUrl" data-activity="Mod A — Murid Perdana" aria-label="Teroka Mod A" style="background: rgb(125, 211, 252); color: rgb(23, 59, 81); font-weight: 400; font-style: normal; font-size: 16px;">TEROKA MOD A</button>
+       </article>
+       <article data-template-id="mode-b-card" class="canva-card mode-card b">
+        <p data-template-id="mode-b-standard" class="canva-text standard" style="color: rgb(112, 68, 144); font-weight: 800; font-style: normal; font-size: 16px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><button data-template-id="mode-b-button" class="canva-button pill purple" type="button" data-url="modBUrl" data-activity="Mod B — Murid Inklusif" aria-label="Teroka Mod B" style="background: rgb(114, 83, 168); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">TEROKA MOD B</button>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section data-template-id="activities-a-bg" class="section activities a canva-section" id="aktiviti-a" aria-labelledby="activities-a-title">
+     <div class="wrap">
+      <h2 data-template-id="activities-a-title" id="activities-a-title" class="canva-text section-title" style="color: rgb(23, 59, 81); font-weight: 800; font-style: normal; font-size: 24px;">
+
+
+
+
+</h2>
+      <p data-template-id="activities-a-subtitle" class="canva-text section-lead" style="color: rgb(23, 59, 81); font-weight: 400; font-style: normal; font-size: 16px;"></p>
+      <div class="cards">
+       <article class="activity-card">
+        <div class="art" aria-hidden="true"><span class="activity-emoji" aria-hidden="true">🧩</span> <span class="activity-emoji" aria-hidden="true">💌</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">A1 · Set Induksi</span>
+         <h3 data-template-id="a1-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">PUZZLE JIRAN HARMONI</h3>
+         <p data-template-id="a1-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Buka sampul misteri, susun puzzle bergambar dan temukan amalan baik sesama jiran!</p><button class="pill" type="button" data-url="puzzleUrl" data-activity="Puzzle Jiran Harmoni" aria-label="Buka aktiviti Puzzle Jiran Harmoni Mod A">Buka aktiviti ↗</button>
+        </div>
+       </article>
+       <article class="activity-card">
+        <div class="art" aria-hidden="true"><span class="activity-emoji" aria-hidden="true">🎧</span> <span class="activity-emoji" aria-hidden="true">🔍</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">A2 · Mendengar dan Memahami</span>
+         <h3 data-template-id="a2-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">DETEKTIF DIALOG HARMONI</h3>
+         <p data-template-id="a2-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Jadilah detektif pendengar! Dengar dialog jiran, perhatikan visual dan kenal pasti maklumat penting yang disampaikan.</p><a class="pill" href="a2/index.html" aria-label="Buka aktiviti Detektif Dialog Harmoni">Buka aktiviti ↗</a>
+        </div>
+       </article>
+       <article class="activity-card">
+        <div class="art" aria-hidden="true"><span class="activity-emoji" aria-hidden="true">💬</span> <span class="activity-emoji" aria-hidden="true">✅</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">A3 · Memahami dan Memberikan Respons</span>
+         <h3 data-template-id="a3-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">MISI RESPONS BIJAK</h3>
+         <p data-template-id="a3-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Fahami ujaran yang didengar, jawab soalan dan pilih respons yang paling sesuai berdasarkan situasi.</p><button class="pill" type="button" data-url="aktivitiModA.responsBijak" data-activity="Misi Respons Bijak" aria-label="Buka aktiviti Misi Respons Bijak">Buka aktiviti ↗</button>
+        </div>
+       </article>
+       <article class="activity-card">
+        <div class="art" aria-hidden="true"><span class="activity-emoji" aria-hidden="true">🎙️</span> <span class="activity-emoji" aria-hidden="true">🎵</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">A4 · Bertutur dan Merakam Suara</span>
+         <h3 data-template-id="a4-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">SUARA JIRAN CILIK</h3>
+         <p data-template-id="a4-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Berikan respons secara lisan menggunakan ayat yang sesuai. Rakam suara kamu dan dengar semula pertuturan sendiri!</p><button class="pill" type="button" data-url="aktivitiModA.suaraJiran" data-activity="Suara Jiran Cilik" aria-label="Buka aktiviti Suara Jiran Cilik">Buka aktiviti ↗</button>
+        </div>
+       </article>
+       <article class="activity-card">
+        <div class="art" aria-hidden="true"><span class="activity-emoji" aria-hidden="true">🏆</span> <span class="activity-emoji" aria-hidden="true">⭐</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">A5 · Lembaran Kerja Bergamifikasi</span>
+         <h3 data-template-id="a5-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">CABARAN BINTANG HARMONI</h3>
+         <p data-template-id="a5-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Selesaikan latihan interaktif seperti kuiz pemahaman, padanan ujaran dan pemilihan respons untuk mengumpul bintang kejayaan!</p><button class="pill" type="button" data-url="aktivitiModA.cabaranBintang" data-activity="Cabaran Bintang Harmoni" aria-label="Buka aktiviti Cabaran Bintang Harmoni">Buka aktiviti ↗</button>
+        </div>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section data-template-id="activities-b-bg" class="section activities b canva-section" id="aktiviti-b" aria-labelledby="activities-b-title">
+     <div class="wrap">
+      <h2 data-template-id="activities-b-title" id="activities-b-title" class="canva-text section-title" style="color: rgb(23, 59, 81); font-weight: 800; font-style: normal; font-size: 24px;">
+
+
+</h2>
+      <p data-template-id="activities-b-subtitle" class="canva-text section-lead" style="color: rgb(23, 59, 81); font-weight: 400; font-style: normal; font-size: 16px;"></p>
+      <div class="cards">
+       <article class="activity-card">
+        <div class="art" aria-hidden="true"><span class="activity-emoji" aria-hidden="true">🧩</span> <span class="activity-emoji" aria-hidden="true">💌</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">B1 · Set Induksi</span>
+         <h3 data-template-id="b1-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">PUZZLE JIRAN HARMONI</h3>
+         <p data-template-id="b1-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Susun kepingan puzzle bergambar dan kenal pasti amalan baik yang dilakukan oleh jiran.</p><button class="pill purple" type="button" data-url="puzzleUrl" data-activity="Puzzle Jiran Harmoni" aria-label="Buka aktiviti Puzzle Jiran Harmoni Mod B">Buka aktiviti ↗</button>
+        </div>
+       </article>
+       <article class="activity-card">
+        <div class="art" aria-hidden="true">
+         <svg viewBox="0 0 64 64">
+          <path d="M9 35v-7a23 23 0 0 1 46 0v7M9 32h9v19H9zM46 32h9v19h-9z"></path>
+         </svg><span class="activity-emoji" aria-hidden="true">🖼️</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">B2 · Mendengar dan Memerhati</span>
+         <h3 data-template-id="b2-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">JELAJAH AUDIO VISUAL</h3>
+         <p data-template-id="b2-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Dengar audio ringkas sambil memerhatikan gambar. Kenal pasti siapa yang terlibat dan apakah tindakan yang dilakukan.</p><button class="pill purple" type="button" data-url="aktivitiModB.jelajahAudioVisual" data-activity="Jelajah Audio Visual" aria-label="Buka aktiviti Jelajah Audio Visual">Buka aktiviti ↗</button>
+        </div>
+       </article>
+       <article class="activity-card">
+        <div class="art" aria-hidden="true"><span class="activity-emoji" aria-hidden="true">🔤</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">B3 · Membina Ayat Tunggal</span>
+         <h3 data-template-id="b3-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">SUSUN AYAT CERIA</h3>
+         <p data-template-id="b3-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Susun kad perkataan mengikut urutan yang betul untuk membina ayat tunggal berdasarkan gambar.</p>
+         <p data-template-id="b3-example" class="canva-text example" style="background: rgb(245, 237, 255); color: rgb(117, 68, 154); font-weight: 800; font-style: normal; font-size: 16px;">Aina + membantu + jiran. → Aina membantu jiran.</p><button class="pill purple" type="button" data-url="aktivitiModB.susunAyat" data-activity="Susun Ayat Ceria" aria-label="Buka aktiviti Susun Ayat Ceria">Buka aktiviti ↗</button>
+        </div>
+       </article>
+       <article class="activity-card">
+        <div class="art" aria-hidden="true"><span class="activity-emoji" aria-hidden="true">🎙️</span> <span class="activity-emoji" aria-hidden="true">💬</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">B4 · Bertutur dan Merakam Suara</span>
+         <h3 data-template-id="b4-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">CERITA GAMBAR HARMONI</h3>
+         <p data-template-id="b4-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Perhatikan gambar dan ceritakan situasi menggunakan ayat tunggal. Rakam suara kamu dan dengar semula!</p><button class="pill purple" type="button" data-url="aktivitiModB.ceritaGambar" data-activity="Cerita Gambar Harmoni" aria-label="Buka aktiviti Cerita Gambar Harmoni">Buka aktiviti ↗</button>
+        </div>
+       </article>
+       <article class="activity-card">
+        <div class="art" aria-hidden="true"><span class="activity-emoji" aria-hidden="true">🏆</span> <span class="activity-emoji" aria-hidden="true">⭐</span>
+        </div>
+        <div class="activity-content">
+         <span class="activity-kicker">B5 · Lembaran Kerja Bergamifikasi</span>
+         <h3 data-template-id="b5-title" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 700; font-style: normal; font-size: 19px;">BINTANG AYAT BIJAK</h3>
+         <p data-template-id="b5-description" class="canva-text" style="color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-size: 20px;">Selesaikan latihan padanan gambar, pilih perkataan yang sesuai dan bina ayat tunggal untuk memperoleh bintang!</p><button class="pill purple" type="button" data-url="aktivitiModB.bintangAyat" data-activity="Bintang Ayat Bijak" aria-label="Buka aktiviti Bintang Ayat Bijak">Buka aktiviti ↗</button>
+        </div>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section data-template-id="routes" class="section routes canva-section" aria-labelledby="routes-title">
+     <div class="wrap">
+      <h2 data-template-id="routes-title" id="routes-title" class="canva-text section-title" style="color: rgb(23, 59, 81); font-weight: 800; font-style: normal; font-size: 24px;">
+
+
+
+</h2>
+      <div class="route-board">
+       <h3 data-template-id="route-a-title" class="canva-text" style="color: rgb(23, 59, 81); font-weight: 700; font-style: normal; font-size: 19px;">✦ Laluan Mod A</h3>
+       <div class="stops">
+        <div class="stop">
+         <strong>1</strong>Puzzle Jiran Harmoni
+        </div>
+        <div class="stop">
+         <strong>2</strong>Detektif Dialog Harmoni
+        </div>
+        <div class="stop">
+         <strong>3</strong>Misi Respons Bijak
+        </div>
+        <div class="stop">
+         <strong>4</strong>Suara Jiran Cilik
+        </div>
+        <div class="stop">
+         <strong>5</strong>Cabaran Bintang Harmoni
+        </div>
+       </div>
+      </div>
+      <div class="route-board b">
+       <h3 data-template-id="route-b-title" class="canva-text" style="color: rgb(23, 59, 81); font-weight: 700; font-style: normal; font-size: 19px;">✦ Laluan Mod B</h3>
+       <div class="stops">
+        <div class="stop">
+         <strong>1</strong>Puzzle Jiran Harmoni
+        </div>
+        <div class="stop">
+         <strong>2</strong>Jelajah Audio Visual
+        </div>
+        <div class="stop">
+         <strong>3</strong>Susun Ayat Ceria
+        </div>
+        <div class="stop">
+         <strong>4</strong>Cerita Gambar Harmoni
+        </div>
+        <div class="stop">
+         <strong>5</strong>Bintang Ayat Bijak
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section data-template-id="cta-background" class="section cta-section canva-section" aria-labelledby="cta-title">
+     <div class="wrap cta-box">
+      <h2 data-template-id="cta-title" id="cta-title" class="canva-text section-title" style="color: rgb(23, 59, 81); font-weight: 800; font-style: normal; font-size: 24px;"></h2>
+      <p data-template-id="cta-description" class="canva-text" style="color: rgb(23, 59, 81); font-weight: 400; font-style: normal; font-size: 16px;">
+
+
+
+</p>
+      <div class="cta-buttons"><button data-template-id="cta-a" class="canva-button pill" type="button" data-url="modAUrl" data-activity="Mod A — Murid Perdana" aria-label="Mula pengembaraan Mod A" style="background: rgb(16, 45, 79); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">MULA PENGEMBARAAN MOD A</button> <button data-template-id="cta-b" class="canva-button pill pink" type="button" data-url="modBUrl" data-activity="Mod B — Murid Inklusif" aria-label="Mula pengembaraan Mod B" style="background: rgb(16, 45, 79); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">MULA PENGEMBARAAN MOD B</button>
+      </div>
+     </div>
+    </section>
+   </main>
+   <footer>
+    <strong data-template-id="footer-brand" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 48px; letter-spacing: 0.512rem;">D-UJARAN</strong>
+    <div data-template-id="footer-tagline" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 20px;">Dengar • Faham • Bertutur</div>
+    <div data-template-id="footer-theme" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 20px;">Tema: Kemasyarakatan</div>
+    <div data-template-id="footer-context" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 20px;">Konteks: Jiran Sepakat Membawa Berkat</div>
+    <div data-template-id="footer-credit" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 20px;">Dibangunkan oleh Cikgu Adibah Amani</div>
+   </footer>
+  </div>
+  <div id="modal" class="modal-backdrop" hidden="">
+   <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-message">
+    <h2 id="modal-title"></h2>
+    <p id="modal-message"></p>
+    <div class="modal-actions">
+     <button data-template-id="modal-close" id="modal-close" class="canva-button pill" type="button" aria-label="Tutup tetingkap maklumat" style="background: rgb(16, 45, 79); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Tutup</button>
+    </div>
+   </div>
+  </div>
+  <script>
+  // Kemas kini URL aktiviti di sini apabila halaman sebenar tersedia.
+  const CONFIG = {
+    modAUrl: "",
+    modBUrl: "",
+    puzzleUrl: "https://pbsemsatutahunduapismp.my.canva.site/induksi-d-ujaran",
+    aktivitiModA: { detektifDialog: "", responsBijak: "", suaraJiran: "", cabaranBintang: "" },
+    aktivitiModB: { jelajahAudioVisual: "", susunAyat: "", ceritaGambar: "", bintangAyat: "" }
+  };
+
+  const modal = document.getElementById("modal");
+  const modalTitle = document.getElementById("modal-title");
+  const modalMessage = document.getElementById("modal-message");
+  const closeButton = document.getElementById("modal-close");
+  let previousFocus = null;
+
+  function openModal(title, message) {
+    previousFocus = document.activeElement;
+    modalTitle.textContent = title;
+    modalMessage.textContent = message;
+    modal.hidden = false;
+    document.getElementById("info-button").setAttribute("aria-expanded", "true");
+    closeButton.focus();
+  }
+  function closeModal() {
+    modal.hidden = true;
+    document.getElementById("info-button").setAttribute("aria-expanded", "false");
+    previousFocus?.focus();
+  }
+  closeButton.addEventListener("click", closeModal);
+  modal.addEventListener("click", event => { if (event.target === modal) closeModal(); });
+  document.addEventListener("keydown", event => {
+    if (modal.hidden) return;
+    if (event.key === "Escape") closeModal();
+    if (event.key === "Tab") {
+      event.preventDefault();
+      closeButton.focus();
+    }
+  });
+
+  document.querySelectorAll("[data-url]").forEach(button => {
+    button.addEventListener("click", () => {
+      const url = button.dataset.url.split(".").reduce((value, key) => value?.[key], CONFIG);
+      if (typeof url === "string" && /^https:\/\//i.test(url.trim())) {
+        window.open(url.trim(), "_blank", "noopener,noreferrer");
+      } else {
+        openModal(button.dataset.activity, "Halaman aktiviti belum dihubungkan. Kemas kini URL dalam CONFIG apabila halaman tersedia.");
+      }
+    });
+  });
+  document.getElementById("info-button").addEventListener("click", () => {
+    openModal("Mengenai D-UJARAN", "D-UJARAN ialah portal pembelajaran Bahasa Melayu untuk murid Tahun 4. Fokusnya ialah kemahiran mendengar dan bertutur melalui tema kemasyarakatan, khususnya Jiran Sepakat Membawa Berkat. Dibangunkan oleh Cikgu Adibah Amani.");
+  });
+  [["music-toggle","music-state"],["sound-toggle","sound-state"]].forEach(([buttonId,stateId]) => {
+    const button = document.getElementById(buttonId);
+    button.addEventListener("click", () => {
+      const enabled = button.getAttribute("aria-pressed") !== "true";
+      button.setAttribute("aria-pressed", String(enabled));
+      document.getElementById(stateId).textContent = enabled ? "ON" : "OFF";
+    });
+  });
+</script>
+ 
+</body></html>

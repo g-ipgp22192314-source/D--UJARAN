@@ -1,0 +1,26 @@
+{
+  "status": "Tiga imej dibekalkan pengguna dan dipautkan. Poster baharu berbeza daripada rujukan Canva terdahulu.",
+  "images": [
+    {
+      "source": "canva://MAHXtluQZ9Q/1",
+      "target": "assets/images/taman-harmoni.png",
+      "status": "available",
+      "sha256": "a6d1d037d4ffc9d5f9ca8fbf3c2e2e76b6ea597dd1d0b7fa32ede8a48506ac20",
+      "uploaded_filename": "halaman utama.png"
+    },
+    {
+      "source": "canva://MAHXthdtKOk/1",
+      "target": "assets/images/poster-pengenalan.png",
+      "status": "available",
+      "uploaded_filename": "poster bilik darjah.png",
+      "note": "Imej dibekalkan pengguna: papan hitam tanpa guru/logo; bukan padanan tepat poster rujukan terdahulu.",
+      "sha256": "98cc663d0c671d2529f6b499954b5eec35e46db43932e7fccb1ecbaaf0d46f76"
+    },
+    {
+      "source": "user-upload:jom kenali.zip/jom kenali.png",
+      "target": "assets/images/jom-kenali.png",
+      "status": "available",
+      "sha256": "dc5d815fd7c45ab8f02c6b7555c3941abaf43b3b094b78acf47481f914bb8520"
+    }
+  ]
+}

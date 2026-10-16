@@ -1,0 +1,36 @@
+# Laporan pengesahan A2
+
+## Disahkan melalui ujian Chromium
+
+- Pembukaan → papan lapan fail → setiap unit → empat cabaran → laporan → ulang kaji/pilih fail lain.
+- Tepat 8 unit, 3 soalan pemahaman + 1 bukti + 1 tujuan ujaran setiap unit: 40 soalan.
+- Semua 40 soalan dilalui dalam ujian; jawapan betul dan salah diuji.
+- Unit 1 hingga 8 diuji dengan skor 0, 20, 40, 60, 80, 100, 100 dan 100.
+- Bintang masing-masing 0, 1, 1, 2, 3, 3, 3 dan 3. Jumlah 500/800 dan 8/8 selesai kekal selepas reload.
+- Pilihan dikunci selepas jawapan pertama. Menekan pilihan sekali lagi atau mengulang kaji tidak menambah markah.
+- Mesej audio hilang dipaparkan. Tiada suara Indonesia/Inggeris dipilih secara automatik.
+- Fail WAV ujian tiga saat dimuat naik melalui panel guru: main, jeda, sambung, ulang dari awal dan mute disahkan. Muat naik dipulihkan daripada IndexedDB selepas reload.
+- Fail WAV ialah nada ujian, bukan dialog guru. Ia tidak disimpan dalam aplikasi yang dihantar.
+- Teks dialog, bantuan dan penutupan dialog dengan Escape diuji.
+- Pengurangan animasi dan paparan 1440/768/390px diperiksa; tiada limpahan mendatar.
+- Fredoka dan Nunito setempat disahkan dimuatkan oleh document.fonts.
+- Tiada ralat JavaScript tidak tertangkap dalam aliran ujian.
+- Kesemua 10 kad portal masih hadir. Kedua-dua pautan A1 kekal. Perbandingan bait menunjukkan hanya pautan kad A2 di index.html berubah; fail lain di luar A2 tidak diubah.
+
+Jalankan semula dengan Node.js, Playwright dan Chromium tersedia:
+
+```sh
+node a2/tests/smoke.cjs
+```
+
+Ujian memulakan pelayan Python sementara pada port 8879 dan menutupnya selepas selesai. Tetapkan CHROMIUM_PATH jika binari Chromium bukan /usr/bin/chromium. Tiada pemasangan dependency runtime diperlukan untuk permainan itu sendiri.
+
+## Had yang masih jelas
+
+Ilustrasi 3D baharu dan lapan rakaman MP3 Bahasa Melayu Malaysia belum dibekalkan. Slot visual mempunyai ikon/keterangan fakta sementara, jadi tugas memilih ilustrasi sebenar belum boleh dinilai sepenuhnya secara visual. Dua suara ms-MY bergantung pada pelayar/peranti; persekitaran ujian tidak menyediakan pengesahan sebutan manusia. Guru perlu menyemak kandungan dan rakaman sebelum penggunaan kelas. Ujian pelayar tidak menggantikan semakan pedagogi atau percubaan bersama murid.
+
+Tiada penerbitan laman, push GitHub atau pengujian peranti fizikal dilakukan. Permainan boleh dihos sebagai laman statik bersama projek sedia ada.
+
+Percubaan membuka melalui file:// dalam Chromium cloud disekat oleh polisi pentadbir pelayar. Pembukaan fail setempat tidak disahkan dalam mesin ini; semua aliran permainan disahkan melalui HTTP.
+
+Semakan tambahan: pembatalan audio semasa kembali ke papan kes tidak menghasilkan ralat JavaScript. Pilihan maksud ujaran disunting supaya panjang pilihan lebih seimbang; indeks jawapan kekal.
