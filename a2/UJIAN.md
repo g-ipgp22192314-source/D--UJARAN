@@ -34,3 +34,7 @@ Tiada penerbitan laman, push GitHub atau pengujian peranti fizikal dilakukan. Pe
 Percubaan membuka melalui file:// dalam Chromium cloud disekat oleh polisi pentadbir pelayar. Pembukaan fail setempat tidak disahkan dalam mesin ini; semua aliran permainan disahkan melalui HTTP.
 
 Semakan tambahan: pembatalan audio semasa kembali ke papan kes tidak menghasilkan ralat JavaScript. Pilihan maksud ujaran disunting supaya panjang pilihan lebih seimbang; indeks jawapan kekal.
+
+## Kemas kini latar agensi A2
+
+Imej PNG asal pengguna 1672×941 disalin tanpa perubahan kepada assets/images/agensi-detektif.png. Ujian pada lebar 1440, 768 dan 390px mengesahkan pemuatan imej, opacity 1, filter none, tiada gradient atau pseudo-element yang menutupi latar, dan tiada limpahan mendatar. Imej dipaparkan mengikut nisbah asal. Pada tablet/telefon, tajuk diletakkan selepas gambar untuk mengelakkan pertindihan. Bantuan, Escape, Mulakan Penyiasatan, lapan fail kes, soalan pertama dan kembali ke pembukaan diuji. Tiada ralat JavaScript. Markah, data soalan, audio dan bahagian portal lain tidak diubah.

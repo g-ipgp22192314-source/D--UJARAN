@@ -27,7 +27,7 @@ MAIN AUDIO menyambung main balik, JEDA menjeda, DENGAR SEMULA bermula dari awal.
 
 ## Slot ilustrasi 3D
 
-Ilustrasi watak/situasi/bukti 3D belum dijana. Aplikasi menggunakan slot bertanda jelas dengan ikon dan keterangan sementara, bukan mendakwa ilustrasi lengkap. Latar pembukaan menggunakan imej taman asal D-UJARAN. Tambah gambar WebP pada laluan berikut, atau sunting laluan dalam data.js:
+Ilustrasi watak/situasi/bukti 3D belum dijana. Aplikasi menggunakan slot bertanda jelas dengan ikon dan keterangan sementara, bukan mendakwa ilustrasi lengkap. Latar pembukaan menggunakan imej Agensi Detektif Jiran Harmoni yang dimuat naik pengguna, disimpan tanpa perubahan sebagai assets/images/agensi-detektif.png. Imej dipaparkan penuh tanpa lapisan warna lutsinar. Tambah gambar WebP pada laluan berikut, atau sunting laluan dalam data.js:
 
 - assets/images/detektif-lelaki.webp — detektif 10 tahun, topi coklat, kaca pembesar.
 - assets/images/detektif-perempuan.webp — detektif 10 tahun, tudung merah jambu, topi, papan catatan.

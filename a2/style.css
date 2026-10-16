@@ -11,3 +11,15 @@
 @media(max-width:650px){.topbar button{font-size:16px}.progress{display:grid;grid-template-columns:1fr 1fr}.progress li{font-size:16px}.portrait-placeholder{font-size:16px}.case-grid{grid-template-columns:1fr}.case h3{min-height:0}.case-art{min-height:150px}.case .status{font-size:16px}}
 
 .upload-row small{font-size:16px}
+
+/* Pembukaan A2: imej asal penuh, tanpa tindihan warna atau ketelusan. */
+.hero.detective-home{display:block;place-items:normal;min-height:0;background:#d9f4ff;color:var(--ink);text-align:left;border-bottom:8px solid var(--gold)}
+.hero-world{width:100%;position:relative;aspect-ratio:1672/941;background:#9de0ff url('assets/images/agensi-detektif.png') center/100% 100% no-repeat;isolation:isolate}
+.hero-title{position:absolute;left:47%;top:5%;width:35%;text-align:center;color:#103969}
+.hero-title h1{font-size:clamp(30px,3.5vw,66px);line-height:1.08;margin:15px -20px 18px;color:#ffd447;-webkit-text-stroke:1px #fff5cf;text-shadow:0 3px 0 #b45d0b,0 6px 0 #123e78,0 8px 0 white,0 11px 15px #1e4160}
+.hero-title .subtitle{font-size:clamp(17px,1.35vw,24px);line-height:1.4;color:#113354;text-shadow:0 1px 0 white,1px 0 0 white,-1px 0 0 white,0 -1px 0 white;margin:0;font-weight:900}
+.mission-label{display:inline-block;padding:7px 16px;background:#1557b0;color:white;border:2px solid white;border-radius:50px;box-shadow:0 4px 0 #0d397b;font-size:16px;letter-spacing:.08em}
+.hero-console{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;padding:32px clamp(24px,6vw,100px) 38px;background:#fff8e7;border-top:6px solid white;box-shadow:0 -8px 0 #e8ad32;position:relative}
+.mission-copy h2{font-size:clamp(28px,2.6vw,40px);margin:12px 0 16px;color:#1557b0}.mission-copy p{font-size:19px;max-width:690px;line-height:1.6}.mission-copy .eyebrow{color:#7444d4;letter-spacing:.08em}.mission-launch{text-align:center}.mission-launch .actions{margin:22px 0 18px;gap:14px}.mission-launch .primary{padding:18px 24px;font-size:20px}.mission-launch .gold{font-size:18px;padding:15px 22px}.mission-reward{color:#694311;font-size:16px}.mission-launch .mini-files{gap:8px}.mission-launch .mini-files span{background:#ffd447;border:2px solid white;font-size:18px;padding:7px 11px;box-shadow:0 4px 0 #b88a1c}
+@media(min-width:1800px){.hero-title{top:7%}}
+@media(max-width:900px){.hero-title{position:static;width:100%;padding:24px 20px;background:#e5f5ff}.hero-world{aspect-ratio:auto;background-position:center top;background-size:100% auto;padding-top:56.28%}.hero-title h1{font-size:clamp(36px,6vw,52px);margin:20px 0}.hero-title .subtitle{font-size:21px}.hero-console{grid-template-columns:1fr;gap:18px;padding:28px 24px;text-align:center}.mission-copy p{margin:auto}.mission-copy .eyebrow{font-size:16px}.mission-label{font-size:16px}.mission-launch .actions{margin:22px 0}.mission-launch .primary,.mission-launch .gold{width:100%;max-width:420px}.mission-copy h2{font-size:32px}}
