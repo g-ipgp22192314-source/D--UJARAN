@@ -55,3 +55,7 @@ A2_U01_DIALOG.mp3 kini tersedia pada hos projek. Tiga rakaman pengguna digabungk
 ## Latar bilik penyiasatan untuk lapan fail kes
 
 Imej `latar belakang file.png` daripada ZIP pengguna disalin tanpa perubahan sebagai `assets/images/latar-fail-kes.png`. Ia menjadi latar pada semua cabaran lapan unit serta laporan keputusan. Gambar kecil khusus setiap kes, halaman utama bergambar, dialog, soalan, audio dan sistem markah dikekalkan. Kad teks menggunakan latar legap supaya dapat dibaca dengan jelas tanpa menggelapkan keseluruhan gambar.
+
+## Latar berbeza mengikut unit
+
+Atas permintaan pengguna, lapan latar kartun 3D baharu dijana khusus bagi setiap situasi. Medan `background` dalam data.js memadankan Unit 1–8 kepada assets/images/latar-unit-01.png hingga latar-unit-08.png. Manifest dan checksum berada dalam assets/images/unit-backgrounds.json. Latar digunakan pada semua cabaran dan laporan unit masing-masing, tanpa lapisan warna lutsinar. Latar bilik penyiasatan lama dikekalkan sebagai fallback. Halaman utama bergambar dan gambar kecil fail asal tidak diganti. Dialog, soalan, jawapan, markah dan audio tidak diubah. Ilustrasi ialah latar suasana; pilihan bukti khusus masih berasingan.

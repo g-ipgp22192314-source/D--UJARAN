@@ -54,3 +54,7 @@ Ujian Chromium melalui HTTP dengan fail A2_U01_DIALOG.mp3 sebenar mengesahkan ma
 ## Latar bilik penyiasatan
 
 Semua lapan fail kes diuji: latar latar-fail-kes.png digunakan, nombor unit sepadan, dan tiga soalan pemahaman masih tersedia. Kembali ke halaman utama memulihkan paparan gambar utama tanpa latar bilik. Laporan keputusan turut menggunakan latar bilik. Paparan 1440/768/390px diperiksa tanpa limpahan mendatar. Tiada ralat JavaScript. Imej disahkan sama bait demi bait dengan PNG dalam arkib pengguna. Logik soalan, jawapan, markah dan audio tidak diubah.
+
+## Lapan latar khusus unit
+
+Semua lapan PNG janaan diperiksa secara visual dan berjaya didekod dalam Chromium. Setiap butang kes 1–8 diuji untuk memuatkan latar-unit-01.png hingga latar-unit-08.png yang sepadan; latar kekal selepas bergerak ke cabaran seterusnya. Laporan Unit 4 turut menggunakan latar yang sepadan. Kembali ke halaman utama membuang latar unit dan memulihkan gambar utama tanpa tulisan tambahan. Lebar 1440/768/390px diuji tanpa limpahan mendatar atau ralat JavaScript. Perbandingan data sebelum/selepas mengesahkan hanya medan background ditambah; dialog, soalan, jawapan, gambar fail dan audio tidak diubah.

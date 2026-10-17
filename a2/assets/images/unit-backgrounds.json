@@ -1,0 +1,58 @@
+[
+  {
+    "unit": 1,
+    "case": "Misteri Si Comel Hilang!",
+    "background": "assets/images/latar-unit-01.png",
+    "origin": "AI-generated specifically for this unit at user request",
+    "sha256": "d9c11dc22819c3223d774517253f0abb0be0d92684e352f5433b1b0e77a16b61"
+  },
+  {
+    "unit": 2,
+    "case": "Bungkusan Misteri di Pagar!",
+    "background": "assets/images/latar-unit-02.png",
+    "origin": "AI-generated specifically for this unit at user request",
+    "sha256": "e2db2f7746496fde0893eb1c1b863682cafdd26803530d1fe77c8cf81a248eaf"
+  },
+  {
+    "unit": 3,
+    "case": "Basikal Rosak, Siapa Boleh Bantu?",
+    "background": "assets/images/latar-unit-03.png",
+    "origin": "AI-generated specifically for this unit at user request",
+    "sha256": "9c196cab427fb7afcfb13455f52729d4384f944022afd1798a1be1c42ff41d64"
+  },
+  {
+    "unit": 4,
+    "case": "Jiran Baharu, Sahabat Baharu!",
+    "background": "assets/images/latar-unit-04.png",
+    "origin": "AI-generated specifically for this unit at user request",
+    "sha256": "052b849e9841ec6defcc9a1c2462ed8934f41d8f258ee44f3b50fd46309aecad"
+  },
+  {
+    "unit": 5,
+    "case": "Rahsia Rak Buku Komuniti!",
+    "background": "assets/images/latar-unit-05.png",
+    "origin": "AI-generated specifically for this unit at user request",
+    "sha256": "6fd0b4d15601b45ba920b7972434aa4a4810385e792bb8f4473bc08a274ad2f1"
+  },
+  {
+    "unit": 6,
+    "case": "Paip Bocor, Air Mengalir!",
+    "background": "assets/images/latar-unit-06.png",
+    "origin": "AI-generated specifically for this unit at user request",
+    "sha256": "1da5233721843c11cf5b65ec9e5c63502b4dc7cb34afbb339ecc0b04ea8a2567"
+  },
+  {
+    "unit": 7,
+    "case": "Heboh Hari Sukan Kejiranan!",
+    "background": "assets/images/latar-unit-07.png",
+    "origin": "AI-generated specifically for this unit at user request",
+    "sha256": "ee42b3a31974157bb5ad68961a85816e5ce7c311b310434212968e2f5051ab4a"
+  },
+  {
+    "unit": 8,
+    "case": "Awas, Hujan Akan Turun!",
+    "background": "assets/images/latar-unit-08.png",
+    "origin": "AI-generated specifically for this unit at user request",
+    "sha256": "a56056af6068ef83bc2d123ac63da2b2e7f600bea15a6a1fd1299e3b556ecee2"
+  }
+]

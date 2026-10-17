@@ -93,7 +93,8 @@ window.A2_UNITS = [
       "y": 601,
       "width": 127,
       "height": 77
-    }
+    },
+    "background": "assets/images/latar-unit-01.png"
   },
   {
     "id": 2,
@@ -189,7 +190,8 @@ window.A2_UNITS = [
       "y": 601,
       "width": 127,
       "height": 77
-    }
+    },
+    "background": "assets/images/latar-unit-02.png"
   },
   {
     "id": 3,
@@ -285,7 +287,8 @@ window.A2_UNITS = [
       "y": 601,
       "width": 127,
       "height": 77
-    }
+    },
+    "background": "assets/images/latar-unit-03.png"
   },
   {
     "id": 4,
@@ -385,7 +388,8 @@ window.A2_UNITS = [
       "y": 601,
       "width": 127,
       "height": 77
-    }
+    },
+    "background": "assets/images/latar-unit-04.png"
   },
   {
     "id": 5,
@@ -481,7 +485,8 @@ window.A2_UNITS = [
       "y": 601,
       "width": 127,
       "height": 77
-    }
+    },
+    "background": "assets/images/latar-unit-05.png"
   },
   {
     "id": 6,
@@ -577,7 +582,8 @@ window.A2_UNITS = [
       "y": 601,
       "width": 127,
       "height": 77
-    }
+    },
+    "background": "assets/images/latar-unit-06.png"
   },
   {
     "id": 7,
@@ -673,7 +679,8 @@ window.A2_UNITS = [
       "y": 601,
       "width": 127,
       "height": 77
-    }
+    },
+    "background": "assets/images/latar-unit-07.png"
   },
   {
     "id": 8,
@@ -773,6 +780,7 @@ window.A2_UNITS = [
       "y": 601,
       "width": 127,
       "height": 77
-    }
+    },
+    "background": "assets/images/latar-unit-08.png"
   }
 ];
