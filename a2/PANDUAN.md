@@ -47,3 +47,7 @@ Fon Fredoka dan Nunito dibekalkan secara tempatan (Fontsource 5.3.0, subset Lati
 Halaman utama kini menggunakan satu imej asal pengguna `assets/images/laman-utama-a2.png` tanpa menambah tulisan yang kelihatan. Kawasan lapan fail, Mulakan Penyiasatan, Cara Bermain, Bunyi dan Animasi dipadankan dengan butang HTML telus berlabel aria untuk papan kekunci/pembaca skrin. Peti Maklumat membuka panel guru. Papan D-UJARAN di kiri atas kembali ke portal. Imej tidak disunting.
 
 Setiap fail 1–8 terus membuka unit sedia ada yang sepadan. Gambar kecil setiap fail digunakan semula sebagai situasi unit melalui pemotongan paparan CSS (medan cover dalam data.js), bukan imej baharu. Imej 24 pilihan bukti berasingan belum dibekalkan. Pada skrin kecil, ilustrasi boleh ditatal secara mendatar supaya kawasan tekan tidak menjadi terlalu kecil. Markah masih dipaparkan dalam unit/laporan dan disimpan seperti sebelumnya. Garis hijau pada fail menunjukkan kes selesai; bintang dalam gambar asal ialah hiasan statik, markah/bintang sebenar dirujuk pada laporan.
+
+## Rakaman Unit 1 telah dipasang
+
+A2_U01_DIALOG.mp3 kini tersedia pada hos projek. Tiga rakaman pengguna digabungkan mengikut Aina → Pak Rahman → Aina dengan jeda 0.6 saat. Unit 1 tidak memerlukan muat naik melalui panel guru. Jika pelayar mempunyai muat naik Unit 1 lama, buang muat naik itu dalam panel guru untuk menggunakan fail projek terkini. Unit 2–8 masih menunggu rakaman.

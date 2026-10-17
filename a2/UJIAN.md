@@ -44,3 +44,9 @@ Imej PNG asal pengguna 1672×941 disalin tanpa perubahan kepada assets/images/ag
 Sumber: laman utama A2.zip, mengandungi laman utama A2.png (1672×941). Fail disalin tanpa perubahan ke assets/images/laman-utama-a2.png. Tiada tulisan HTML kelihatan ditambah pada halaman utama (body.innerText kosong semasa tiada dialog). Kawasan klik pada gambar dipadankan dengan semua lapan unit; setiap unit diuji untuk nombor kes yang betul. Gambar kecil setiap fail digunakan semula melalui paparan CSS pada unit sepadan. Tiada imej baharu dijana.
 
 Butang Mulakan Penyiasatan memfokuskan fail pertama; fail lain bebas dipilih. Cara Bermain, Escape, Bunyi, Animasi dan Peti Maklumat/Panel Guru diuji. Pada telefon/tablet, ilustrasi boleh ditatal mendatar dalam bingkai tanpa menyebabkan limpahan halaman. Kawasan klik kekal sepadan selepas tatal. Label aria menyediakan nama butang tanpa tulisan tambahan pada imej. Bintang yang terkandung dalam imej ialah grafik; ganjaran sebenar kekal pada laporan unit.
+
+## Audio sebenar Unit 1
+
+Tiga rakaman pengguna digabungkan dalam turutan Aina, Pak Rahman, Aina dengan jeda 0.6 saat antara giliran. FFmpeg mengesahkan semua sumber dan output boleh didekod tanpa ralat. Tempoh MP3 kira-kira 24.67 saat (pelayar melaporkan kandungan audio 24.62 saat).
+
+Ujian Chromium melalui HTTP dengan fail A2_U01_DIALOG.mp3 sebenar mengesahkan main, jeda (masa kekal), sambung, ulang dari awal, pengesanan tamat dan berhenti apabila kembali ke papan kes. Tiada ralat JavaScript. Ujian ini mengesahkan fungsi media, bukan semakan manusia terhadap sebutan atau ketepatan kandungan rakaman. Ujian fail hilang dalam suite dialihkan ke Unit 2 kerana audio Unit 1 kini tersedia.
