@@ -51,3 +51,7 @@ Setiap fail 1–8 terus membuka unit sedia ada yang sepadan. Gambar kecil setiap
 ## Rakaman Unit 1 telah dipasang
 
 A2_U01_DIALOG.mp3 kini tersedia pada hos projek. Tiga rakaman pengguna digabungkan mengikut Aina → Pak Rahman → Aina dengan jeda 0.6 saat. Unit 1 tidak memerlukan muat naik melalui panel guru. Jika pelayar mempunyai muat naik Unit 1 lama, buang muat naik itu dalam panel guru untuk menggunakan fail projek terkini. Unit 2–8 masih menunggu rakaman.
+
+## Latar bilik penyiasatan untuk lapan fail kes
+
+Imej `latar belakang file.png` daripada ZIP pengguna disalin tanpa perubahan sebagai `assets/images/latar-fail-kes.png`. Ia menjadi latar pada semua cabaran lapan unit serta laporan keputusan. Gambar kecil khusus setiap kes, halaman utama bergambar, dialog, soalan, audio dan sistem markah dikekalkan. Kad teks menggunakan latar legap supaya dapat dibaca dengan jelas tanpa menggelapkan keseluruhan gambar.

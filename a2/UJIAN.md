@@ -50,3 +50,7 @@ Butang Mulakan Penyiasatan memfokuskan fail pertama; fail lain bebas dipilih. Ca
 Tiga rakaman pengguna digabungkan dalam turutan Aina, Pak Rahman, Aina dengan jeda 0.6 saat antara giliran. FFmpeg mengesahkan semua sumber dan output boleh didekod tanpa ralat. Tempoh MP3 kira-kira 24.67 saat (pelayar melaporkan kandungan audio 24.62 saat).
 
 Ujian Chromium melalui HTTP dengan fail A2_U01_DIALOG.mp3 sebenar mengesahkan main, jeda (masa kekal), sambung, ulang dari awal, pengesanan tamat dan berhenti apabila kembali ke papan kes. Tiada ralat JavaScript. Ujian ini mengesahkan fungsi media, bukan semakan manusia terhadap sebutan atau ketepatan kandungan rakaman. Ujian fail hilang dalam suite dialihkan ke Unit 2 kerana audio Unit 1 kini tersedia.
+
+## Latar bilik penyiasatan
+
+Semua lapan fail kes diuji: latar latar-fail-kes.png digunakan, nombor unit sepadan, dan tiga soalan pemahaman masih tersedia. Kembali ke halaman utama memulihkan paparan gambar utama tanpa latar bilik. Laporan keputusan turut menggunakan latar bilik. Paparan 1440/768/390px diperiksa tanpa limpahan mendatar. Tiada ralat JavaScript. Imej disahkan sama bait demi bait dengan PNG dalam arkib pengguna. Logik soalan, jawapan, markah dan audio tidak diubah.
