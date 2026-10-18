@@ -1,1 +1,580 @@
+# PROMPT INDUK: BANGUNKAN A4 – SUARA JIRAN CILIK
 
+## 1. ARAHAN UTAMA PEMBANGUNAN
+
+Bangunkan sebuah aplikasi permainan web pendidikan interaktif bernama:
+
+**A4 – SUARA JIRAN CILIK**
+
+Subtajuk:
+**PENGEMBARAAN WIRA KOMUNIKASI**
+
+Slogan:
+**"Dengar • Fikir • Bertutur • Jadi Wira!"**
+
+Aplikasi ini merupakan aktiviti keempat dalam produk inovasi digital D-UJARAN untuk murid perdana Tahun 4.
+
+Saya mahu permainan pengembaraan berinspirasikan gaya Roblox, dengan dunia kejiranan blok 3D yang comel, berwarna-warni, animasi menarik, interaksi watak, sistem rakaman suara, lapan misi, lencana dan sijil digital.
+
+**PENTING:**
+- Bangunkan aplikasi web menggunakan HTML5, CSS3 dan JavaScript.
+- Gunakan teknologi yang sesuai seperti Three.js untuk paparan 3D jika praktikal.
+- Jika 3D sebenar terlalu berat, gunakan dunia isometrik 2.5D dengan animasi yang lancar.
+- Jangan menggunakan logo, watak atau aset rasmi Roblox.
+- Aplikasi mesti boleh diterbitkan melalui GitHub dan Netlify.
+- Jangan bergantung pada Canva Code untuk rakaman suara.
+- Jangan mengubah aktiviti A1, A2, A3, A5 atau Mod B.
+- Bina A4 dalam folder berasingan bernama `a4-suara-jiran-cilik`.
+- Semua teks, arahan dan dialog hendaklah menggunakan Bahasa Melayu Malaysia yang betul.
+- **Jangan masukkan atau paparkan Standard Kandungan (SK) dan Standard Pembelajaran (SP)** dalam A4.
+- Jangan cipta butang palsu. Semua fungsi mesti boleh digunakan.
+
+## 2. IDENTITI PEMBELAJARAN
+
+Nama produk: D-UJARAN
+
+Aktiviti: A4 – Suara Jiran Cilik
+
+Mod: A – Murid Perdana
+
+Sasaran: Murid Tahun 4
+
+Tema: Kemasyarakatan
+
+Konteks: Jiran Sepakat Membawa Berkat
+
+Fokus:
+Mendengar, memahami dan memberikan respons lisan yang sesuai, jelas serta sopan dalam situasi kejiranan.
+
+Matlamat:
+Menguji keupayaan murid memindahkan pengetahuan daripada aktiviti terdahulu kepada situasi komunikasi baharu.
+
+Jangan mengulang situasi misi A2 dan A3 secara langsung.
+
+## 3. KONSEP PERMAINAN
+
+Nama dunia:
+**TAMAN HARMONI 3D**
+
+Murid menjadi WIRA KOMUNIKASI yang perlu membantu penduduk Taman Harmoni menyelesaikan lapan cabaran komunikasi.
+
+Gunakan gaya dunia blok 3D dengan:
+- Rumah teres Malaysia.
+- Taman permainan.
+- Lorong kejiranan.
+- Pokok, bunga, pagar dan lampu jalan.
+- Dewan komuniti.
+- Watak jiran pelbagai kaum.
+- Avatar murid comel.
+- Pencahayaan ceria.
+- Awan bergerak.
+- Rama-rama dan burung animasi.
+- Kesan bayang dan kedalaman visual.
+
+Warna:
+Turquoise, biru langit, ungu pastel, merah jambu, kuning dan hijau.
+
+Antara muka:
+- Landskap 16:9.
+- Responsif untuk komputer, tablet dan telefon.
+- Butang besar dengan ikon jelas.
+- Tipografi mesra kanak-kanak.
+- Navigasi mudah.
+- Muzik latar yang boleh dimatikan.
+- Kesan bunyi yang boleh dimatikan.
+- Animasi tidak mengganggu pembelajaran.
+
+## 4. HALAMAN PEMBUKAAN
+
+Paparkan animasi kamera menghampiri pintu gerbang Taman Harmoni.
+
+Avatar murid muncul dan melambai.
+
+Tajuk besar:
+**SELAMAT DATANG, WIRA KOMUNIKASI!**
+
+Teks:
+"8 misi baharu menanti kamu! Dengar ujaran jiran, fikirkan respons yang sesuai dan rakam suara kamu!"
+
+Sediakan:
+- Input NAMA MURID.
+- Input KELAS.
+- Butang MULA PENGEMBARAAN.
+- Butang CARA BERMAIN.
+- Butang KEMBALI KE D-UJARAN.
+- Kawalan muzik ON/OFF.
+- Kawalan kesan bunyi ON/OFF.
+
+Jangan meminta nombor kad pengenalan, alamat atau maklumat peribadi murid.
+
+## 5. PETA MISI 3D
+
+Bangunkan peta Taman Harmoni yang boleh diterokai dengan klik atau sentuhan.
+
+Paparkan lapan lokasi:
+1. Rumah Jiran Baharu.
+2. Rumah Hadiah Kasih.
+3. Taman Permainan Harmoni.
+4. Lorong Prihatin.
+5. Dewan Hari Keluarga.
+6. Pagar Keselamatan.
+7. Lorong Malam Tenang.
+8. Dewan Mesyuarat Harmoni.
+
+Setiap lokasi mempunyai:
+- Ikon misi.
+- Nombor misi.
+- Nama lokasi.
+- Animasi bangunan.
+- Status TERKUNCI, TERBUKA atau SELESAI.
+- Lencana apabila selesai.
+
+Misi dibuka secara berturutan.
+
+Paparkan bar kemajuan 0/8 hingga 8/8.
+
+Murid boleh kembali ke misi yang telah selesai untuk membuat latihan semula.
+
+## 6. STRUKTUR DUA PERINGKAT SETIAP MISI
+
+### PERINGKAT 1 – LATIHAN SUARA HARMONI
+
+1. Paparkan watak jiran dan ilustrasi situasi.
+2. Mainkan audio ujaran melalui butang DENGAR UJARAN.
+3. Sediakan DENGAR SEMULA.
+4. Paparkan arahan untuk memberikan respons.
+5. Sediakan butang PETUNJUK yang memaparkan kata kunci.
+6. Murid menekan MULA RAKAM.
+7. Paparkan animasi mikrofon dan pemasa rakaman.
+8. Murid menekan BERHENTI.
+9. Sediakan DENGAR RAKAMAN, RAKAM SEMULA dan MUAT TURUN.
+10. Murid meneruskan ke peringkat kedua.
+
+### PERINGKAT 2 – CABARAN WIRA KOMUNIKASI
+
+1. Watak jiran memberikan ujaran susulan.
+2. Murid mendengar ujaran baharu.
+3. Murid berfikir dan memberikan respons spontan.
+4. Jangan paparkan contoh jawapan penuh.
+5. Murid merakam suara sendiri.
+6. Murid mendengar semula dan boleh membaiki respons.
+7. Murid melengkapkan penilaian kendiri.
+8. Paparkan butang SELESAIKAN MISI.
+
+Penilaian kendiri:
+- Saya memberikan respons yang sesuai.
+- Saya menggunakan bahasa yang sopan.
+- Saya bertutur dengan jelas.
+
+Setiap peringkat memerlukan sekurang-kurangnya satu rakaman yang telah selesai sebelum boleh diteruskan.
+
+Jika murid tidak dapat memberikan kebenaran mikrofon, sediakan mesej bantuan dan pilihan guru untuk mengurus aktiviti secara lisan di luar aplikasi. Jangan memalsukan rakaman.
+
+## 7. KANDUNGAN LAPAN MISI
+
+### MISI 1 – JIRAN BAHARU PERLUKAN PANDUAN
+
+Tahap: Mudah.
+
+Lokasi: Rumah Jiran Baharu.
+
+Situasi:
+Jiran baharu tidak mengetahui arah ke taman permainan.
+
+Ujaran utama:
+"Hai, adik! Kami baru berpindah ke Taman Harmoni. Bolehkah kamu tunjukkan arah ke taman permainan?"
+
+Petunjuk:
+Terus, belok, sebelah, sama-sama.
+
+Respons contoh guru:
+"Boleh, pak cik. Pak cik boleh berjalan terus dan belok ke kanan. Taman permainan terletak di sebelah dewan komuniti."
+
+Ujaran spontan:
+"Terima kasih! Kalau kami mahu pergi ke dewan komuniti pula, ke manakah arah yang perlu kami ikut?"
+
+Pastikan kedudukan lokasi pada peta menyokong arahan arah yang digunakan.
+
+Lencana:
+**Penunjuk Arah Hebat**
+
+### MISI 2 – HADIAH UNTUK JIRAN ISTIMEWA
+
+Tahap: Mudah.
+
+Lokasi: Rumah Hadiah Kasih.
+
+Situasi:
+Mak cik mahu menghargai jiran yang banyak membantu.
+
+Ujaran utama:
+"Aina, mak cik mahu memberikan hadiah kepada Pak Kumar kerana beliau selalu membantu kami. Apakah hadiah yang sesuai?"
+
+Petunjuk:
+Hadiah, menghargai, berguna, terima kasih.
+
+Respons contoh guru:
+"Saya mencadangkan bakul buah kerana hadiah itu berguna dan menunjukkan penghargaan."
+
+Ujaran spontan:
+"Kalau mak cik tidak mempunyai wang yang banyak, bagaimanakah cara lain untuk menghargai Pak Kumar?"
+
+Lencana:
+**Hati Penyayang**
+
+### MISI 3 – SALAH FAHAM DI TAMAN HARMONI
+
+Tahap: Sederhana.
+
+Lokasi: Taman Permainan Harmoni.
+
+Situasi:
+Dua kanak-kanak salah faham tentang giliran menggunakan buaian.
+
+Ujaran utama:
+"Saya ingat kamu sudah selesai bermain buaian tadi. Mengapa kamu masih mahu menggunakannya?"
+
+Petunjuk:
+Maaf, giliran, berbincang, berkongsi.
+
+Respons contoh guru:
+"Maaf, saya belum selesai bermain. Tetapi, kita boleh bergilir-gilir supaya semua orang mendapat peluang."
+
+Ujaran spontan:
+"Bagaimanakah kita boleh memastikan semua kanak-kanak mendapat giliran yang adil?"
+
+Lencana:
+**Pendamai Bijak**
+
+### MISI 4 – SIAPA PATUT DIBANTU DAHULU?
+
+Tahap: Sederhana.
+
+Lokasi: Lorong Prihatin.
+
+Situasi:
+Seorang warga emas membawa barang berat, manakala jiran lain meminta bantuan menyiram pokok.
+
+Ujaran utama:
+"Adik, mak cik perlu membawa barang ke rumah. Pak Kumar pula meminta bantuan menyiram pokok. Bolehkah kamu membantu kami?"
+
+Petunjuk:
+Membantu, dahulu, kemudian, keperluan.
+
+Respons contoh guru:
+"Boleh, mak cik. Saya akan membantu mak cik membawa barang dahulu. Selepas itu, saya akan membantu Pak Kumar."
+
+Ujaran spontan:
+"Mak cik perlu masuk ke rumah sekarang kerana barang ini berat. Pak Kumar boleh menunggu sebentar. Siapakah yang patut kamu bantu dahulu dan mengapa?"
+
+Lencana:
+**Wira Prihatin**
+
+### MISI 5 – JOM RANCANG HARI KELUARGA!
+
+Tahap: Sederhana.
+
+Lokasi: Dewan Hari Keluarga.
+
+Situasi:
+Penduduk sedang merancang aktiviti hari keluarga.
+
+Ujaran utama:
+"Kami sedang merancang Hari Keluarga Taman Harmoni. Apakah aktiviti yang sesuai untuk kanak-kanak dan orang dewasa?"
+
+Petunjuk:
+Permainan, keluarga, bekerjasama, seronok.
+
+Respons contoh guru:
+"Saya mencadangkan permainan berkumpulan kerana kanak-kanak dan orang dewasa boleh bermain bersama-sama."
+
+Ujaran spontan:
+"Cadangan kamu menarik! Tetapi, bagaimana jika hujan pada hari tersebut? Apakah aktiviti lain yang boleh kita jalankan?"
+
+Lencana:
+**Perancang Kreatif**
+
+### MISI 6 – JIRAN TERLUPA MENUTUP PAGAR
+
+Tahap: Sederhana tinggi.
+
+Lokasi: Pagar Keselamatan.
+
+Situasi:
+Pagar rumah jiran terbuka dan haiwan peliharaan hampir keluar.
+
+Ujaran utama:
+"Adik, pak cik terlupa menutup pagar tadi. Mengapakah kamu memanggil pak cik?"
+
+Petunjuk:
+Pagar, keselamatan, haiwan, berhati-hati.
+
+Respons contoh guru:
+"Pak cik, saya nampak pagar rumah terbuka. Saya bimbang haiwan peliharaan pak cik akan keluar. Bolehkah pak cik menutup pagar itu?"
+
+Ujaran spontan:
+"Terima kasih kerana mengingatkan pak cik. Apakah langkah lain yang boleh kita lakukan untuk menjaga keselamatan rumah?"
+
+Lencana:
+**Penjaga Keselamatan**
+
+### MISI 7 – BUNYI BISING PADA WAKTU MALAM
+
+Tahap: Tinggi.
+
+Lokasi: Lorong Malam Tenang.
+
+Situasi:
+Jiran memasang muzik terlalu kuat ketika waktu malam.
+
+Ujaran utama:
+"Maaf, adik. Pak cik sedang mengadakan majlis keluarga. Adakah bunyi muzik ini mengganggu keluarga kamu?"
+
+Petunjuk:
+Maaf, perlahan, berehat, bertimbang rasa.
+
+Respons contoh guru:
+"Ya, pak cik. Maaf mengganggu. Bolehkah pak cik memperlahankan muzik kerana adik saya sedang tidur?"
+
+Ujaran spontan:
+"Bagaimanakah kita boleh memastikan semua jiran selesa apabila mengadakan majlis pada waktu malam?"
+
+Lencana:
+**Komunikasi Berhemah**
+
+### MISI 8 – MESYUARAT MINI TAMAN HARMONI
+
+Tahap: Tinggi.
+
+Lokasi: Dewan Mesyuarat Harmoni.
+
+Situasi:
+Penduduk mahu memilih projek untuk menceriakan kawasan kejiranan.
+
+Ujaran utama:
+"Kami mempunyai tiga cadangan, iaitu taman bunga, sudut bacaan dan kawasan permainan. Pada pendapat kamu, projek manakah yang patut dilaksanakan dahulu?"
+
+Petunjuk:
+Cadangan, manfaat, sebab, masyarakat.
+
+Respons contoh guru:
+"Saya mencadangkan sudut bacaan kerana kanak-kanak boleh membaca bersama-sama dan memanfaatkan masa lapang."
+
+Ujaran spontan:
+"Cadangan kamu bagus! Namun, ada jiran yang lebih suka taman bunga. Bagaimanakah kamu boleh meyakinkan mereka secara sopan?"
+
+Lencana:
+**Pemimpin Harmoni**
+
+## 8. AUDIO DIALOG
+
+Sediakan sokongan dua kaedah audio:
+
+1. Audio MP3 guru menggunakan URL HTTPS.
+2. Suara automatik Bahasa Melayu Malaysia menggunakan Web Speech API jika tersedia.
+
+Utamakan fail MP3 guru apabila tersedia.
+
+Sediakan butang DENGAR dan DENGAR SEMULA bagi setiap ujaran.
+
+Jika suara Bahasa Melayu Malaysia tidak tersedia dalam pelayar, maklumkan dengan jelas dan jangan gunakan suara bahasa lain secara senyap.
+
+Sediakan fail konfigurasi yang mudah disunting untuk semua URL audio.
+
+Muzik latar hendaklah berhenti atau menjadi senyap apabila audio dialog dimainkan atau mikrofon sedang merakam.
+
+## 9. RAKAMAN SUARA MURID
+
+Gunakan:
+- navigator.mediaDevices.getUserMedia
+- MediaRecorder API
+- Blob
+- URL.createObjectURL
+
+Fungsi wajib:
+- Meminta kebenaran mikrofon.
+- Mula rakam.
+- Berhenti.
+- Pemasa rakaman.
+- Main semula.
+- Rakam semula.
+- Muat turun fail audio.
+- Mesej ralat jika akses mikrofon gagal.
+- Pelepasan sumber mikrofon apabila rakaman berhenti.
+
+Pilih format rakaman yang benar-benar disokong oleh pelayar, contohnya WebM atau MP4 audio.
+
+Jangan menjanjikan fail MP3 jika pengekodan MP3 tidak dilaksanakan.
+
+Pastikan aplikasi dijalankan melalui HTTPS atau localhost.
+
+Jangan muat naik rakaman murid secara automatik ke mana-mana pelayan.
+
+## 10. SISTEM LENCANA
+
+Selepas murid menyelesaikan kedua-dua peringkat dan penilaian kendiri, paparkan animasi:
+
+"TAHNIAH! MISI BERJAYA!"
+
+Kesan visual:
+- Lencana berputar dan muncul dari tengah.
+- Cahaya keemasan.
+- Confetti.
+- Bintang berterbangan.
+- Bunyi kemenangan.
+- Avatar melompat gembira.
+
+Paparkan nama lencana yang diperoleh.
+
+Sediakan GALERI LENCANA dengan lapan ruang.
+
+Lencana terkunci berwarna kelabu.
+
+Lencana terbuka berwarna terang dan bercahaya.
+
+Sediakan animasi khas apabila murid mengumpulkan lencana kelapan.
+
+PENTING:
+Lencana menandakan penyertaan dan penyelesaian tugasan, bukan bukti bahawa sistem telah menilai ketepatan pertuturan secara automatik.
+
+## 11. SIJIL DIGITAL
+
+Selepas murid melengkapkan lapan misi, buka halaman:
+
+**PENTAS KEMENANGAN WIRA KOMUNIKASI**
+
+Paparkan:
+- Avatar murid.
+- Trofi emas.
+- Lapan lencana.
+- Confetti.
+- Animasi cahaya.
+- Muzik kemenangan ringkas.
+
+Paparkan sijil landskap A4 dengan kandungan:
+
+SIJIL PENCAPAIAN
+
+WIRA SUARA HARMONI
+
+Dengan bangganya dianugerahkan kepada:
+
+[NAMA MURID]
+
+Kelas: [KELAS]
+
+Atas usaha dan kejayaan melengkapkan lapan misi dalam aktiviti Suara Jiran Cilik, D-UJARAN.
+
+"Dengar • Faham • Bertutur"
+
+Dibangunkan oleh Cikgu Adibah Amani
+
+Tarikh: [TARIKH]
+
+Sediakan:
+- MUAT TURUN PDF.
+- CETAK SIJIL.
+- LIHAT LENCANA.
+- KEMBALI KE MENU MOD A.
+
+Gunakan pustaka PDF yang sesuai atau fungsi cetakan pelayar sebagai alternatif yang berfungsi.
+
+## 12. PENYIMPANAN KEMAJUAN
+
+Gunakan localStorage untuk menyimpan:
+- Nama murid.
+- Kelas.
+- Status misi.
+- Lencana diperoleh.
+- Tetapan bunyi.
+
+Jangan simpan audio besar dalam localStorage.
+
+Rakaman audio boleh digunakan sepanjang sesi dan dimuat turun oleh murid.
+
+Jika ingin menyimpan rakaman merentas sesi pada peranti yang sama, gunakan IndexedDB dengan pengendalian had storan yang sesuai.
+
+Jangan mendakwa data akan diselaraskan antara peranti tanpa backend.
+
+## 13. PANEL GURU
+
+Sediakan panel konfigurasi guru yang berasingan.
+
+Fungsi:
+- Melihat kandungan lapan misi.
+- Menyunting ujaran utama dan susulan.
+- Menyunting petunjuk.
+- Melihat contoh respons.
+- Menetapkan URL MP3.
+- Menguji audio.
+
+Simpan kandungan lalai dalam fail konfigurasi JavaScript atau JSON.
+
+Jika suntingan hanya disimpan dalam pelayar, nyatakan batasannya.
+
+Jangan mendakwa PIN ringkas di bahagian hadapan aplikasi menyediakan keselamatan pentadbir sebenar.
+
+## 14. KESAN ANIMASI WOW
+
+Masukkan:
+- Intro sinematik ringkas.
+- Pergerakan kamera.
+- Bangunan 3D atau isometrik.
+- Avatar berjalan atau bergerak ke lokasi.
+- Animasi dialog watak.
+- Gelombang suara.
+- Butang bercahaya.
+- Peralihan misi yang menarik.
+- Kesan membuka lencana.
+- Pentas kemenangan.
+- Trofi emas.
+- Confetti.
+- Sijil digital.
+
+Utamakan prestasi dan kebolehgunaan.
+
+Sediakan tetapan kurangkan animasi dan hormati prefers-reduced-motion.
+
+## 15. STRUKTUR PROJEK
+
+Sediakan projek yang kemas dan boleh dijalankan:
+
+a4-suara-jiran-cilik/
+- index.html
+- style.css
+- app.js
+- missions.js
+- assets/
+- audio/
+- README.md
+
+Boleh menggunakan fail tambahan jika perlu.
+
+Pastikan semua laluan aset berfungsi apabila aplikasi diterbitkan sebagai laman statik di Netlify.
+
+Jangan gunakan API key rahsia dalam kod frontend.
+
+## 16. UJIAN AKHIR
+
+Pastikan:
+1. Semua lapan misi boleh dimainkan.
+2. Peta misi berfungsi.
+3. Dua peringkat wujud dalam setiap misi.
+4. Mikrofon boleh merakam pada pelayar yang menyokongnya.
+5. Rakaman boleh dimainkan semula dan dimuat turun.
+6. Lencana diberikan selepas misi dilengkapkan.
+7. Kemajuan murid dikemas kini.
+8. Sijil dibuka selepas lapan misi.
+9. Nama dan kelas tertera dengan betul.
+10. Sijil boleh dicetak atau disimpan sebagai PDF.
+11. Aplikasi boleh digunakan pada komputer dan tablet.
+12. Tiada SK atau SP dipaparkan.
+13. A1, A2, A3, A5 dan Mod B tidak diubah.
+
+**HASIL YANG SAYA MAHU:**
+
+Bukan sekadar mockup atau contoh visual.
+
+Saya mahu kod sumber aplikasi permainan A4 yang lengkap, boleh dijalankan, boleh diuji dan boleh diterbitkan di Netlify.
+
+Jika terdapat fungsi yang belum boleh dilaksanakan, nyatakan secara jelas dan jangan menggantikannya dengan butang hiasan.
