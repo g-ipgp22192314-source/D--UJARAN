@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#185a89" />
+    <title>A4 — Suara Jiran Cilik | D-UJARAN</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="missions.js"></script>
+    <script defer src="recorder.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="https://g-ipgp22192314-source.github.io/D--UJARAN/"
+        >D-UJARAN <small>A4 · SUARA JIRAN CILIK</small></a
+      >
+      <nav aria-label="Kawalan permainan">
+        <button id="nav-map">▦ Peta</button
+        ><button id="nav-badges">✦ Lencana</button
+        ><button id="music" aria-pressed="false">♫ Muzik OFF</button
+        ><button id="sfx" aria-pressed="false">♪ Kesan bunyi OFF</button
+        ><button id="motion" aria-pressed="false">Kurangkan animasi</button
+        ><button id="teacher">⚙ Guru</button>
+      </nav>
+    </header>
+    <main id="app" tabindex="-1"></main>
+    <footer>
+      D-UJARAN · Bahasa Melayu Tahun 4 · Jiran Sepakat Membawa Berkat
+    </footer>
+    <dialog id="help">
+      <h2>Cara menjadi Wira Komunikasi</h2>
+      <ol>
+        <li>Isi nama dan kelas. Pilih lokasi yang terbuka pada peta.</li>
+        <li>Dengar atau baca ujaran jiran. Fikirkan respons yang sopan.</li>
+        <li>Benarkan mikrofon, mula rakam, kemudian tekan Berhenti.</li>
+        <li>Dengar rakaman sendiri. Baiki atau muat turun jika perlu.</li>
+        <li>
+          Selesaikan dua peringkat serta penilaian kendiri untuk membuka misi
+          seterusnya.
+        </li>
+      </ol>
+      <p>
+        Rakaman kekal pada peranti sepanjang sesi dan tidak dihantar ke pelayan.
+        Muat turun sebelum menutup atau memuat semula halaman.
+      </p>
+      <button class="primary close-dialog">Saya faham</button>
+    </dialog>
+    <dialog id="teacher-panel">
+      <h2>Bengkel guru</h2>
+      <p>
+        Suntingan dan pengesahan guru disimpan pada pelayar ini sahaja. Panel
+        ini bukan kawasan pentadbir yang dilindungi kata laluan.
+      </p>
+      <label>Pilih misi<select id="edit-mission"></select></label>
+      <form id="edit-form">
+        <label
+          >Ujaran utama<textarea
+            id="edit-main"
+            required
+            maxlength="1500"
+          ></textarea></label
+        ><label
+          >Ujaran susulan<textarea
+            id="edit-follow"
+            required
+            maxlength="1500"
+          ></textarea></label
+        ><label
+          >Petunjuk (pisahkan dengan koma)<input
+            id="edit-hints"
+            required
+            maxlength="250" /></label
+        ><label
+          >Contoh respons guru<textarea
+            id="edit-example"
+            required
+            maxlength="1500"
+          ></textarea></label
+        ><label
+          >URL MP3 utama (HTTPS, pilihan)<input
+            id="edit-audio0"
+            type="url"
+            placeholder="https://..." /></label
+        ><button type="button" id="test-audio0">▶ Uji ujaran utama</button
+        ><label
+          >URL MP3 susulan (HTTPS, pilihan)<input
+            id="edit-audio1"
+            type="url"
+            placeholder="https://..." /></label
+        ><button type="button" id="test-audio1">▶ Uji ujaran susulan</button
+        ><button class="primary" type="submit">Simpan suntingan</button>
+      </form>
+      <p id="teacher-status" role="status"></p>
+      <button id="restore" class="secondary">
+        Pulihkan kandungan lalai misi ini
+      </button>
+      <hr />
+      <section id="oral-panel">
+        <h3>Aktiviti lisan bersama guru</h3>
+        <p>
+          Jika mikrofon tidak boleh digunakan, guru boleh mengesahkan latihan
+          lisan yang benar-benar telah dijalankan. Ini direkodkan sebagai
+          <strong>lisan bersama guru</strong>, bukan rakaman digital dan bukan
+          penilaian automatik.
+        </p>
+        <div id="oral-controls"></div>
+      </section>
+      <hr />
+      <button id="reset" class="danger">
+        Padam profil dan kemajuan peranti ini</button
+      ><button class="primary close-dialog">Tutup panel</button>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <audio id="utterance-audio" preload="none"></audio>
+  </body>
+</html>
