@@ -75,3 +75,7 @@ A2_U04_DIALOG.mp3 kini tersedia: empat giliran Sofea → Mei Xin → Sofea → M
 ## Rakaman Unit 5 telah dipasang
 
 A2_U05_DIALOG.mp3 kini tersedia: Hakim → Puan Devi → Hakim, dengan jeda 0.6 saat. Unit 1–5 kini mempunyai fail dialog; Unit 6–8 masih menunggu rakaman. Buang muat naik Unit 5 lama dalam panel guru jika mahu menggunakan audio projek terkini.
+
+## Rakaman Unit 6 telah dipasang
+
+A2_U06_DIALOG.mp3 kini tersedia: Sara → Encik Lim → Sara, dengan jeda 0.6 saat. Unit 1–6 kini mempunyai fail dialog; Unit 7–8 masih menunggu rakaman. Buang muat naik Unit 6 lama dalam panel guru jika mahu menggunakan audio projek terkini.

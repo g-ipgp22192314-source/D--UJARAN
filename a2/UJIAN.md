@@ -74,3 +74,7 @@ Empat rakaman pengguna digabungkan mengikut urutan Sofea → Mei Xin → Sofea �
 ## Audio sebenar Unit 5
 
 Tiga rakaman pengguna digabungkan Hakim → Puan Devi → Hakim, dengan jeda 0.6 saat. MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat; tempoh sekitar 20.88 saat. Chromium mengesahkan laluan A2_U05_DIALOG.mp3, main, jeda, sambung, ulang dari awal, tamat dan berhenti ketika kembali ke papan kes. Tiada ralat JavaScript. Pengesahan ini meliputi fungsi media, bukan semakan manusia terhadap kandungan/sebutan rakaman. Ujian audio hilang dialihkan ke Unit 6.
+
+## Audio sebenar Unit 6
+
+Tiga rakaman pengguna digabungkan Sara → Encik Lim → Sara, dengan jeda 0.6 saat. MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat; tempoh sekitar 22.90 saat. Chromium mengesahkan laluan A2_U06_DIALOG.mp3, main, jeda, sambung, ulang dari awal, tamat dan berhenti ketika kembali ke papan kes. Tiada ralat JavaScript. Pengesahan ini meliputi fungsi media, bukan semakan manusia terhadap kandungan/sebutan rakaman. Ujian audio hilang dialihkan ke Unit 7.
