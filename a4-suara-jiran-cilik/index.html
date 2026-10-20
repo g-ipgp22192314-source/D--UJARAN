@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ms"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A4 – Suara Jiran Cilik</title>
+  <link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/tailwind.css">
+  <link rel="stylesheet" href="style.css">
+  
+  
+  
+  
+  
+ </head>
+ <body data-template-id="__page-root" class="w-full" style="background: rgb(23, 59, 80);">
+  <div class="app-shell"><img data-template-id="a4-background-image" class="canva-image a4-background" loading="eager" fetchpriority="high" src="assets/a4.png" alt="Ilustrasi berwarna-warni Taman Harmoni dengan rumah, taman permainan, bunga dan dua murid di hadapan">
+   <div class="page-frame">
+    <main>
+     <p id="message" class="notice mb-5" role="status" aria-live="polite" hidden=""></p>
+     <section id="opening" class="view opening-layout" aria-label="Pembukaan Aktiviti A4">
+      <header class="hero-area">
+       <div class="world-copy">
+        <p data-template-id="brand" class="canva-text brand-pill" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">AKTIVITI A4</p>
+        <h1 data-template-id="app-title" class="canva-text display hero-title" style="color: rgb(255, 242, 47); font-weight: 800; font-style: normal; font-size: 52px;">SUARA JIRAN CILIK</h1>
+        <p data-template-id="subtitle" class="canva-text hero-subtitle" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Pengembaraan di Taman Harmoni</p>
+       </div>
+      </header>
+      <div data-template-id="welcome-panel" class="canva-panel game-card" style="background: rgb(255, 253, 241);">
+       <p data-template-id="opening-kicker" class="canva-tag kicker" style="background: rgb(12, 155, 172); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">AKTIVITI 4</p>
+       <h2 data-template-id="welcome-title" class="canva-text display welcome" style="color: rgb(101, 62, 170); font-weight: 800; font-style: normal; font-size: 30px;">PENGEMBARAAN DI TAMAN HARMONI</h2>
+       <p data-template-id="welcome-description" class="canva-text description" style="color: rgb(23, 59, 80); font-weight: 600; font-style: normal; font-size: 16px;">8 misi menanti kamu! Dengar ujaran jiran, fikirkan respons terbaik dan serlahkan suaramu!</p>
+       <p data-template-id="slogan" class="canva-text slogan" style="background: rgb(255, 243, 165); color: rgb(87, 50, 141); font-weight: 800; font-style: normal; font-size: 16px;">SUARA JIRAN CILIK</p>
+       <form id="student-form" novalidate=""><label data-template-id="name-label" class="canva-text field-label" for="student-name" style="color: rgb(73, 52, 135); font-weight: 800; font-style: normal; font-size: 16px;">NAMA MURID</label> <input data-template-id="name-input" id="student-name" class="canva-input field" type="text" maxlength="80" autocomplete="name" required="" placeholder="Tulis nama kamu di sini..." style="background: rgb(255, 255, 255); color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;"> <label data-template-id="class-label" class="canva-text field-label" for="student-class" style="color: rgb(73, 52, 135); font-weight: 800; font-style: normal; font-size: 16px;">KELAS</label> <input data-template-id="class-input" id="student-class" class="canva-input field" type="text" maxlength="40" required="" placeholder="Tulis kelas kamu di sini..." style="background: rgb(255, 255, 255); color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;"> <button id="start-button" class="action start" type="submit"><i data-lucide="play" aria-hidden="true"></i><span data-template-id="start-label" class="canva-text" style="color: rgb(86, 54, 20); font-weight: 800; font-style: normal; font-size: 16px;">MULA PENGEMBARAAN</span></button>
+       </form>
+       <p id="form-message" class="notice inline-notice" role="alert" hidden=""></p>
+       <div class="secondary-actions"><button data-template-id="how-button" id="how-button" class="canva-button action purple" type="button" aria-haspopup="dialog" style="background: rgb(128, 103, 200); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">CARA BERMAIN</button> <button id="return-opening" class="action turquoise" type="button"><i data-lucide="house" aria-hidden="true"></i><span data-template-id="return-opening-label" class="canva-text" style="color: rgb(7, 62, 83); font-weight: 800; font-style: normal; font-size: 16px;">KEMBALI KE MENU MOD A</span></button>
+       </div>
+      </div>
+     </section>
+     <section id="map-view" class="view" hidden="" aria-labelledby="map-title">
+      <div class="section-card">
+       <div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+        <div>
+         <h2 data-template-id="map-title" id="map-title" class="canva-text display font-extrabold" style="color: rgb(0, 0, 0); font-weight: 800; font-style: normal; font-size: 45px;">PETA TAMAN HARMONI</h2>
+         <p data-template-id="map-intro" class="canva-text mt-2" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 24px;">Pilih lokasi yang bercahaya. Selesaikan satu misi untuk membuka misi seterusnya!</p>
+        </div><button data-template-id="gallery-map-button" id="gallery-map-button" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">GALERI LENCANA</button>
+       </div>
+       <div class="flex justify-between font-extrabold mb-2">
+        <span data-template-id="progress-label" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 24px; letter-spacing: 0.415rem;">KEMAJUAN PENGEMBARAAN</span><span id="progress-count" aria-live="polite">0/8 MISI</span>
+       </div>
+       <div id="progress-bar" role="progressbar" aria-label="Kemajuan misi" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" class="w-full h-5 rounded-full bg-slate-200 overflow-hidden mb-7">
+        <div id="progress-fill" class="h-full rounded-full bg-teal-500 transition-all duration-500" style="width:0%"></div>
+       </div>
+       <div id="locations" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+       <div class="flex flex-wrap gap-3 mt-8">
+        <button data-template-id="restart-button" id="restart-button" class="canva-button action gold" type="button" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">MULA SEMULA</button><button data-template-id="return-map" class="canva-button action turquoise return-mod-a" type="button" style="background: rgb(18, 172, 182); color: rgb(7, 62, 83); font-weight: 800; font-style: normal; font-size: 16px;">KEMBALI KE MENU MOD A</button>
+       </div>
+       <div id="restart-confirm" class="notice mt-5" hidden="">
+        <p data-template-id="restart-question" class="canva-text mb-3" style="color: rgb(105, 77, 20); font-weight: 700; font-style: normal; font-size: 16px;">Padam nama, kelas, kemajuan dan lencana pada pelayar ini? Tindakan ini tidak boleh dibatalkan.</p>
+        <div class="flex flex-wrap gap-2">
+         <button data-template-id="restart-yes" id="restart-yes" class="canva-button action gold" type="button" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">YA, MULA SEMULA</button><button data-template-id="restart-no" id="restart-no" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">BATAL</button>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section id="mission-view" class="view" hidden="" aria-labelledby="mission-name">
+      <div class="flex flex-wrap gap-3 mb-5"><button data-template-id="mission-back" id="mission-back" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">← KEMBALI KE PETA</button> <button id="teacher-open" class="action teacher-trigger" type="button" aria-haspopup="dialog"><i data-lucide="settings" aria-hidden="true"></i><span data-template-id="teacher-open-label" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">PANEL GURU A4 ⚙️</span></button>
+      </div>
+      <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-5">
+       <aside class="section-card text-center">
+        <div id="mission-icon" class="text-6xl mb-3" aria-hidden="true"></div>
+        <p id="mission-level" class="font-extrabold"></p>
+        <h2 id="mission-name" class="display my-4"></h2>
+        <p id="mission-place" class="font-bold"></p>
+        <p id="mission-situation" class="mt-4"></p>
+       </aside>
+       <div class="section-card">
+        <p id="stage-counter" class="font-extrabold text-teal-800"></p>
+        <h2 id="stage-title" class="display my-3"></h2>
+        <p data-template-id="speech-instruction" class="canva-text mb-4" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Dengar ujaran jiran. Fikirkan respons yang sesuai, jelas dan sopan.</p>
+        <blockquote id="mission-dialog" class="dialog-quote mb-4"></blockquote>
+        <div id="speech-control" class="flex flex-wrap items-center gap-2 mb-4"><button id="listen-button" class="action turquoise" type="button"><span data-template-id="listen-button-label" class="canva-text" style="color: rgb(7, 62, 83); font-weight: 800; font-style: normal; font-size: 16px;">DENGAR UJARAN</span><span data-template-id="listen-stop-label" class="canva-text" hidden="" style="color: rgb(7, 62, 83); font-weight: 800; font-style: normal; font-size: 16px;">BERHENTI</span></button> <button id="relisten-button" class="action white" type="button"><span data-template-id="relisten-button-label" class="canva-text" style="color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">DENGAR SEMULA</span><span data-template-id="relisten-stop-label" class="canva-text" hidden="" style="color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">BERHENTI</span></button>
+         <div class="wave" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+         </div>
+        </div>
+        <p id="speech-status" class="font-bold mb-3" role="status" aria-live="polite"></p>
+        <div id="stage-one-extra">
+         <p data-template-id="practice-instruction" class="canva-text font-bold mb-3" style="color: rgb(23, 59, 80); font-weight: 700; font-style: normal; font-size: 16px;">Apakah respons yang sesuai? Fikir dan sebut jawapan kamu dengan jelas.</p><button data-template-id="hint-button" id="hint-button" class="canva-button action white" type="button" aria-expanded="false" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">PETUNJUK</button>
+         <p id="hint-content" class="notice mt-3" hidden=""></p>
+        </div>
+        <div id="stage-two-extra" hidden="">
+         <p data-template-id="challenge-instruction" class="canva-text font-bold mb-4" style="color: rgb(23, 59, 80); font-weight: 700; font-style: normal; font-size: 16px;">Berikan respons spontan dengan alasan atau cadangan yang munasabah. Tiada satu jawapan sahaja yang betul.</p>
+         <fieldset class="space-y-3">
+          <legend data-template-id="self-check-title" class="canva-text font-extrabold mb-2" style="color: rgb(23, 59, 80); font-weight: 800; font-style: normal; font-size: 16px;">SEMAKAN KENDIRI</legend> <label class="flex gap-3 items-start"><input class="self-check mt-1 w-5 h-5" type="checkbox"><span data-template-id="check-suitable" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Saya memberikan respons yang sesuai.</span></label> <label class="flex gap-3 items-start"><input class="self-check mt-1 w-5 h-5" type="checkbox"><span data-template-id="check-polite" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Saya menggunakan bahasa yang sopan.</span></label> <label class="flex gap-3 items-start"><input class="self-check mt-1 w-5 h-5" type="checkbox"><span data-template-id="check-clear" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Saya bertutur dengan jelas.</span></label>
+         </fieldset>
+        </div>
+        <section id="recording-studio" class="studio" aria-labelledby="studio-title">
+         <h3 data-template-id="studio-title" id="studio-title" class="canva-text font-extrabold text-[#553c9e]" style="color: rgb(85, 60, 158); font-weight: 800; font-style: normal; font-size: 19px;">🎙️ STUDIO SUARA WIRA KOMUNIKASI</h3>
+         <p data-template-id="studio-instruction" class="canva-text mt-2" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Tekan mikrofon, sebut respons kamu dengan jelas dan dengar semula rakaman!</p>
+         <div class="flex items-center gap-5 my-4">
+          <div class="studio-mic" aria-hidden="true">
+           🎙️
+          </div>
+          <div>
+           <div id="record-timer" class="font-extrabold text-2xl tabular-nums" aria-live="off">
+            00:00
+           </div>
+           <div class="wave" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+           </div>
+          </div>
+         </div>
+         <p id="record-status" class="font-bold mb-3" role="status" aria-live="polite"></p>
+         <p data-template-id="record-unavailable" id="record-unavailable" class="canva-text notice mb-3" hidden="" style="color: rgb(105, 77, 20); font-weight: 400; font-style: normal; font-size: 16px;">Rakaman mikrofon tidak tersedia dalam paparan ini. Sila buka aktiviti melalui laman HTTPS yang menyokong mikrofon.</p>
+         <div id="record-controls" class="flex flex-wrap gap-2"><button data-template-id="record-start" id="record-start" class="canva-button action turquoise" type="button" style="background: rgb(18, 172, 182); color: rgb(7, 62, 83); font-weight: 800; font-style: normal; font-size: 16px;">MULA RAKAM 🎙️</button> <button data-template-id="record-stop" id="record-stop" class="canva-button action purple" type="button" hidden="" style="background: rgb(128, 103, 200); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">BERHENTI RAKAM ⏹️</button> <button data-template-id="record-play" id="record-play" class="canva-button action white" type="button" disabled="" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">DENGAR RAKAMAN ▶️</button> <button data-template-id="record-again" id="record-again" class="canva-button action white" type="button" disabled="" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">RAKAM SEMULA 🔄</button> <button data-template-id="record-download" id="record-download" class="canva-button action gold" type="button" disabled="" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">MUAT TURUN RAKAMAN ⬇️</button>
+         </div>
+         <audio id="record-preview" controls="" preload="metadata" hidden=""></audio>
+         <p data-template-id="record-privacy" class="canva-text mt-4" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Privasi: Rakaman tidak dimuat naik secara automatik dan hanya dimuat turun apabila kamu menekan butang muat turun. Rakaman dalam halaman ini hilang apabila halaman ditutup.</p>
+        </section>
+        <div class="notice mt-5">
+         <p data-template-id="oral-notice" class="canva-text" style="color: rgb(105, 77, 20); font-weight: 400; font-style: normal; font-size: 16px;">Latihan lisan: sebut respons kamu dan rakam suara. Rakaman membuktikan latihan dibuat; aplikasi tidak menilai ketepatan pertuturan menggunakan AI.</p><label class="flex gap-3 items-start mt-3"><input id="spoken-check" class="mt-1 w-5 h-5" type="checkbox"><span data-template-id="spoken-label" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Saya sudah memberikan respons secara lisan untuk peringkat ini.</span></label>
+        </div><button data-template-id="next-stage-button" id="next-stage" class="canva-button action gold mt-6 w-full" type="button" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">TERUSKAN CABARAN</button> <button data-template-id="complete-button" id="complete-mission" class="canva-button action gold mt-6 w-full" type="button" hidden="" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">SELESAIKAN MISI</button>
+       </div>
+      </div>
+     </section>
+     <section id="win-view" class="view" hidden="">
+      <div class="section-card max-w-3xl mx-auto text-center">
+       <div class="text-6xl mb-3" aria-hidden="true">
+        🌟
+       </div>
+       <h2 data-template-id="win-title" class="canva-text display" style="color: rgb(23, 59, 80); font-weight: 800; font-style: normal; font-size: 24px;">TAHNIAH! MISI BERJAYA!</h2>
+       <p data-template-id="win-description" class="canva-text mt-3" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Kamu telah berlatih mendengar, berfikir dan bertutur dengan sopan!</p>
+       <div id="won-badge" class="notice my-6"></div><button data-template-id="win-continue" id="win-continue" class="canva-button action gold" type="button" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">TERUSKAN PENGEMBARAAN</button>
+      </div>
+     </section>
+     <section id="gallery-view" class="view" hidden="">
+      <div class="section-card">
+       <h2 data-template-id="gallery-title" class="canva-text display" style="color: rgb(23, 59, 80); font-weight: 800; font-style: normal; font-size: 24px;">GALERI LENCANA</h2>
+       <p data-template-id="gallery-description" class="canva-text mt-2 mb-6" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Setiap lencana meraikan usaha kamu menyelesaikan dua peringkat misi.</p>
+       <div id="badges" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div><button data-template-id="gallery-back" id="gallery-back" class="canva-button action white mt-6" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">KEMBALI</button>
+      </div>
+     </section>
+     <section id="final-view" class="view" hidden="">
+      <div class="section-card max-w-3xl mx-auto text-center">
+       <div class="text-6xl mb-4" aria-hidden="true">
+        🏆
+       </div>
+       <h2 data-template-id="final-title" class="canva-text display" style="color: rgb(23, 59, 80); font-weight: 800; font-style: normal; font-size: 24px;">TAHNIAH, WIRA SUARA HARMONI!</h2>
+       <p data-template-id="final-description" class="canva-text my-5" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Lapan misi telah selesai. Inilah sijil pencapaian kamu!</p><button data-template-id="show-certificate" id="show-certificate" class="canva-button action gold" type="button" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">LIHAT SIJIL</button>
+      </div>
+     </section>
+     <section id="certificate-view" class="view" hidden="">
+      <div id="certificate" class="section-card text-center">
+       <div class="text-6xl" aria-hidden="true">
+        🏆
+       </div>
+       <h2 data-template-id="cert-heading" class="canva-text display" style="color: rgb(23, 59, 80); font-weight: 800; font-style: normal; font-size: 24px;">SIJIL PENCAPAIAN</h2>
+       <h3 data-template-id="cert-subheading" class="canva-text display mt-2" style="color: rgb(23, 59, 80); font-weight: 700; font-style: normal; font-size: 19px;">WIRA SUARA HARMONI</h3>
+       <p data-template-id="cert-awarded" class="canva-text mt-8" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Dengan bangganya sijil ini dianugerahkan kepada:</p>
+       <p id="cert-name" class="display font-bold text-teal-700 my-4"></p>
+       <p id="cert-class" class="font-bold"></p>
+       <p data-template-id="cert-reason" class="canva-text max-w-3xl mx-auto my-8" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Atas kejayaan melengkapkan 8 Misi Suara Jiran Cilik dalam aplikasi D-UJARAN serta menunjukkan usaha dalam aktiviti mendengar dan memberikan respons lisan.</p>
+       <p data-template-id="cert-motto" class="canva-text font-extrabold" style="color: rgb(23, 59, 80); font-weight: 800; font-style: normal; font-size: 16px;">Dengar • Faham • Bertutur</p>
+       <p data-template-id="cert-credit" class="canva-text mt-3" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Dibangunkan oleh Cikgu Adibah Amani</p>
+       <p id="cert-date" class="mt-3"></p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-3 mt-7">
+       <button data-template-id="print-button" id="print-button" class="canva-button action gold" type="button" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">CETAK SIJIL</button><button data-template-id="gallery-cert-button" id="gallery-cert-button" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">LIHAT SEMUA LENCANA</button><button data-template-id="return-cert" class="canva-button action turquoise return-mod-a" type="button" style="background: rgb(18, 172, 182); color: rgb(7, 62, 83); font-weight: 800; font-style: normal; font-size: 16px;">KEMBALI KE MENU MOD A</button>
+      </div>
+     </section>
+    </main>
+    <footer class="mt-8 text-center">
+     <p data-template-id="footer-text" class="canva-text inline-block rounded-xl px-4 py-2 bg-[#fffdf2ed]" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Bahasa Melayu Tahun 4 · Mendengar dan Bertutur</p>
+    </footer>
+   </div>
+  </div>
+  <div id="how-overlay" class="overlay" hidden="">
+   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="how-title" tabindex="-1">
+    <h2 data-template-id="how-title" id="how-title" class="canva-text display" style="color: rgb(101, 62, 170); font-weight: 800; font-style: normal; font-size: 24px;">CARA BERMAIN</h2>
+    <ol class="mt-5 mb-6">
+     <li data-template-id="how-step-one" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 700; font-style: normal; font-size: 16px;">1. Dengar ujaran</li>
+     <li data-template-id="how-step-two" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 700; font-style: normal; font-size: 16px;">2. Fikirkan respons</li>
+     <li data-template-id="how-step-three" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 700; font-style: normal; font-size: 16px;">3. Rakam suara</li>
+     <li data-template-id="how-step-four" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 700; font-style: normal; font-size: 16px;">4. Selesaikan misi</li>
+     <li data-template-id="how-step-five" class="canva-text" style="color: rgb(23, 59, 80); font-weight: 700; font-style: normal; font-size: 16px;">5. Kumpulkan lencana</li>
+    </ol>
+    <p data-template-id="mic-notice" class="canva-text notice mb-5" style="color: rgb(105, 77, 20); font-weight: 400; font-style: normal; font-size: 16px;">Rakaman mikrofon bergantung pada kebenaran pelayar dan sokongan HTTPS. Jika tidak tersedia, tiada rakaman palsu dibuat.</p><button data-template-id="how-close" id="how-close" class="canva-button action purple" type="button" style="background: rgb(128, 103, 200); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">TUTUP</button>
+   </div>
+  </div>
+  <div id="teacher-overlay" class="overlay" hidden="">
+   <div class="modal teacher-modal" role="dialog" aria-modal="true" aria-labelledby="teacher-title" tabindex="-1">
+    <div class="flex flex-wrap justify-between gap-3 items-start">
+     <div>
+      <h2 data-template-id="teacher-title" id="teacher-title" class="canva-text display text-[#653eaa]" style="color: rgb(101, 62, 170); font-weight: 800; font-style: normal; font-size: 24px;">PUSAT KAWALAN AUDIO – CIKGU A4</h2>
+      <p data-template-id="teacher-description" class="canva-text mt-2" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Urus audio ujaran jiran untuk setiap misi pembelajaran.</p>
+     </div><button data-template-id="teacher-close" id="teacher-close" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">TUTUP PANEL</button>
+    </div><label data-template-id="teacher-mission-label" class="canva-text field-label" for="teacher-mission" style="color: rgb(73, 52, 135); font-weight: 800; font-style: normal; font-size: 16px;">PILIH MISI</label> <select id="teacher-mission" class="field mb-2" size="8" aria-describedby="teacher-active-mission" aria-label="Pilih satu daripada lapan misi"></select>
+    <p id="teacher-active-mission" class="notice mb-4" role="status" aria-live="polite"></p>
+    <section class="studio" aria-labelledby="utterance-title">
+     <div class="flex flex-wrap items-start justify-between gap-3">
+      <div>
+       <h3 data-template-id="utterance-title" id="utterance-title" class="canva-text font-extrabold text-[#553c9e]" style="color: rgb(85, 60, 158); font-weight: 800; font-style: normal; font-size: 19px;">TEKS UJARAN MISI</h3>
+       <p data-template-id="utterance-instruction" class="canva-text mt-2" style="color: rgb(23, 59, 80); font-weight: 400; font-style: normal; font-size: 16px;">Pilih misi untuk membaca teks sebenar sebelum menyediakan rakaman Audio 1 dan Audio 2.</p>
+      </div><button data-template-id="copy-utterance" id="copy-utterance" class="canva-button action turquoise" type="button" style="background: rgb(18, 172, 182); color: rgb(7, 62, 83); font-weight: 800; font-style: normal; font-size: 16px;">SALIN TEKS UJARAN</button>
+     </div>
+     <div id="utterance-tabs" class="flex flex-wrap gap-2 mt-4" role="tablist" aria-label="Pilih misi untuk teks ujaran"></div>
+     <div class="grid md:grid-cols-2 gap-4 mt-4">
+      <article class="slot-card">
+       <h4 data-template-id="utterance-stage-one" class="canva-text font-extrabold" style="color: rgb(23, 59, 80); font-weight: 800; font-style: normal; font-size: 16px;">Peringkat 1 – Latihan Suara Harmoni</h4><textarea id="utterance-stage-one-text" class="field mt-2 min-h-[150px] resize-y" readonly="" aria-label="Teks ujaran Peringkat 1"></textarea>
+      </article>
+      <article class="slot-card">
+       <h4 data-template-id="utterance-stage-two" class="canva-text font-extrabold" style="color: rgb(23, 59, 80); font-weight: 800; font-style: normal; font-size: 16px;">Peringkat 2 – Cabaran Wira Komunikasi</h4><textarea id="utterance-stage-two-text" class="field mt-2 min-h-[150px] resize-y" readonly="" aria-label="Teks ujaran Peringkat 2"></textarea>
+      </article>
+     </div>
+     <p id="utterance-status" class="mt-3 font-bold" role="status" aria-live="polite"></p>
+    </section>
+    <div class="grid md:grid-cols-2 gap-4">
+     <section class="slot-card" aria-labelledby="slot-1-title">
+      <h3 data-template-id="slot-1-title" id="slot-1-title" class="canva-text font-extrabold text-[#553c9e]" style="color: rgb(85, 60, 158); font-weight: 800; font-style: normal; font-size: 19px;">AUDIO 1 – LATIHAN SUARA HARMONI</h3><label data-template-id="slot-1-file-label" class="canva-text field-label" for="slot-1-file" style="color: rgb(73, 52, 135); font-weight: 800; font-style: normal; font-size: 16px;">FAIL AUDIO MP3, WAV ATAU M4A</label> <input id="slot-1-file" class="field" type="file" accept=".mp3,.wav,.m4a,audio/mpeg,audio/wav,audio/mp4">
+      <p id="slot-1-name" class="mt-2 break-all" aria-live="polite"></p>
+      <audio id="slot-1-preview" controls="" preload="metadata" hidden=""></audio>
+      <div class="flex flex-wrap gap-2 mt-3">
+       <button data-template-id="slot-1-replace" id="slot-1-replace" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">GANTI AUDIO</button><button data-template-id="slot-1-delete" id="slot-1-delete" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">PADAM AUDIO</button>
+      </div><label data-template-id="slot-1-url-label" class="canva-text field-label" for="slot-1-url" style="color: rgb(73, 52, 135); font-weight: 800; font-style: normal; font-size: 16px;">URL AUDIO HTTPS</label> <input id="slot-1-url" class="field" type="url" inputmode="url" placeholder="https://">
+      <div class="flex flex-wrap gap-2 mt-3">
+       <button data-template-id="slot-1-save" id="slot-1-save" class="canva-button action turquoise" type="button" style="background: rgb(18, 172, 182); color: rgb(7, 62, 83); font-weight: 800; font-style: normal; font-size: 16px;">SIMPAN PAUTAN</button><button data-template-id="slot-1-test" id="slot-1-test" class="canva-button action purple" type="button" style="background: rgb(128, 103, 200); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">UJI AUDIO</button>
+      </div>
+      <p id="slot-1-status" class="mt-3 font-bold" role="status" aria-live="polite"></p>
+     </section>
+     <section class="slot-card" aria-labelledby="slot-2-title">
+      <h3 data-template-id="slot-2-title" id="slot-2-title" class="canva-text font-extrabold text-[#553c9e]" style="color: rgb(85, 60, 158); font-weight: 800; font-style: normal; font-size: 19px;">AUDIO 2 – CABARAN WIRA KOMUNIKASI</h3><label data-template-id="slot-2-file-label" class="canva-text field-label" for="slot-2-file" style="color: rgb(73, 52, 135); font-weight: 800; font-style: normal; font-size: 16px;">FAIL AUDIO MP3, WAV ATAU M4A</label> <input id="slot-2-file" class="field" type="file" accept=".mp3,.wav,.m4a,audio/mpeg,audio/wav,audio/mp4">
+      <p id="slot-2-name" class="mt-2 break-all" aria-live="polite"></p>
+      <audio id="slot-2-preview" controls="" preload="metadata" hidden=""></audio>
+      <div class="flex flex-wrap gap-2 mt-3">
+       <button data-template-id="slot-2-replace" id="slot-2-replace" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">GANTI AUDIO</button><button data-template-id="slot-2-delete" id="slot-2-delete" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">PADAM AUDIO</button>
+      </div><label data-template-id="slot-2-url-label" class="canva-text field-label" for="slot-2-url" style="color: rgb(73, 52, 135); font-weight: 800; font-style: normal; font-size: 16px;">URL AUDIO HTTPS</label> <input id="slot-2-url" class="field" type="url" inputmode="url" placeholder="https://">
+      <div class="flex flex-wrap gap-2 mt-3">
+       <button data-template-id="slot-2-save" id="slot-2-save" class="canva-button action turquoise" type="button" style="background: rgb(18, 172, 182); color: rgb(7, 62, 83); font-weight: 800; font-style: normal; font-size: 16px;">SIMPAN PAUTAN</button><button data-template-id="slot-2-test" id="slot-2-test" class="canva-button action purple" type="button" style="background: rgb(128, 103, 200); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">UJI AUDIO</button>
+      </div>
+      <p id="slot-2-status" class="mt-3 font-bold" role="status" aria-live="polite"></p>
+     </section>
+    </div>
+    <p data-template-id="teacher-privacy" class="canva-text notice mt-5" style="color: rgb(105, 77, 20); font-weight: 400; font-style: normal; font-size: 16px;">Privasi: Audio tempatan dalam satu pelayar tidak tersedia secara automatik kepada murid pada peranti lain. Untuk akses semua murid, gunakan URL HTTPS atau konfigurasi berpusat. Panel ini tidak mempunyai pengesahan akses.</p><button data-template-id="teacher-reset" id="teacher-reset" class="canva-button action gold mt-4" type="button" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">RESET AUDIO LALAI</button>
+   </div>
+  </div>
+  <div id="confirm-overlay" class="overlay" hidden="">
+   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title" tabindex="-1">
+    <h2 data-template-id="confirm-title" id="confirm-title" class="canva-text display" style="color: rgb(101, 62, 170); font-weight: 800; font-style: normal; font-size: 24px;">SAHKAN TINDAKAN</h2>
+    <p id="confirm-message" class="my-5"></p>
+    <div class="flex flex-wrap gap-3">
+     <button data-template-id="confirm-yes" id="confirm-yes" class="canva-button action gold" type="button" style="background: rgb(255, 209, 102); color: rgb(80, 59, 19); font-weight: 800; font-style: normal; font-size: 16px;">YA, TERUSKAN</button><button data-template-id="confirm-no" id="confirm-no" class="canva-button action white" type="button" style="background: rgb(255, 255, 255); color: rgb(23, 65, 86); font-weight: 800; font-style: normal; font-size: 16px;">BATAL</button>
+    </div>
+   </div>
+  </div>
+  <div id="confetti" class="confetti" aria-hidden="true"></div>
+  
+ 
+<script src="assets/lucide.min.js"></script><script src="app.js"></script></body></html>
