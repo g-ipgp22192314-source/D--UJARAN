@@ -59,3 +59,7 @@ Imej `latar belakang file.png` daripada ZIP pengguna disalin tanpa perubahan seb
 ## Latar berbeza mengikut unit
 
 Atas permintaan pengguna, lapan latar kartun 3D baharu dijana khusus bagi setiap situasi. Medan `background` dalam data.js memadankan Unit 1–8 kepada assets/images/latar-unit-01.png hingga latar-unit-08.png. Manifest dan checksum berada dalam assets/images/unit-backgrounds.json. Latar digunakan pada semua cabaran dan laporan unit masing-masing, tanpa lapisan warna lutsinar. Latar bilik penyiasatan lama dikekalkan sebagai fallback. Halaman utama bergambar dan gambar kecil fail asal tidak diganti. Dialog, soalan, jawapan, markah dan audio tidak diubah. Ilustrasi ialah latar suasana; pilihan bukti khusus masih berasingan.
+
+## Rakaman Unit 2 telah dipasang
+
+A2_U02_DIALOG.mp3 kini tersedia pada hos projek. Tiga fail pengguna digabungkan mengikut Amir → Encik Farid → Amir, dengan jeda 0.6 saat. Jika muat naik Unit 2 lama tersimpan dalam pelayar, buangnya melalui panel guru untuk menggunakan fail projek. Unit 1 dan 2 kini mempunyai fail dialog; Unit 3–8 masih menunggu rakaman.

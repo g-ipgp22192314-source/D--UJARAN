@@ -58,3 +58,7 @@ Semua lapan fail kes diuji: latar latar-fail-kes.png digunakan, nombor unit sepa
 ## Lapan latar khusus unit
 
 Semua lapan PNG janaan diperiksa secara visual dan berjaya didekod dalam Chromium. Setiap butang kes 1–8 diuji untuk memuatkan latar-unit-01.png hingga latar-unit-08.png yang sepadan; latar kekal selepas bergerak ke cabaran seterusnya. Laporan Unit 4 turut menggunakan latar yang sepadan. Kembali ke halaman utama membuang latar unit dan memulihkan gambar utama tanpa tulisan tambahan. Lebar 1440/768/390px diuji tanpa limpahan mendatar atau ralat JavaScript. Perbandingan data sebelum/selepas mengesahkan hanya medan background ditambah; dialog, soalan, jawapan, gambar fail dan audio tidak diubah.
+
+## Audio sebenar Unit 2
+
+Rakaman pengguna digabungkan Amir → Encik Farid → Amir dengan jeda 0.6 saat. Output MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat; tempoh fail sekitar 26.26 saat (kandungan main balik sekitar 26.21 saat). Chromium mengesahkan laluan A2_U02_DIALOG.mp3, main, jeda (masa kekal), sambung, ulang dari awal, pengesanan tamat dan berhenti apabila keluar dari kes. Tiada ralat JavaScript. Ujian ini tidak menggantikan semakan manusia terhadap kandungan dan sebutan rakaman. Ujian audio hilang dialihkan ke Unit 3 kerana Unit 2 kini tersedia.
