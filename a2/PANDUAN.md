@@ -63,3 +63,7 @@ Atas permintaan pengguna, lapan latar kartun 3D baharu dijana khusus bagi setiap
 ## Rakaman Unit 2 telah dipasang
 
 A2_U02_DIALOG.mp3 kini tersedia pada hos projek. Tiga fail pengguna digabungkan mengikut Amir → Encik Farid → Amir, dengan jeda 0.6 saat. Jika muat naik Unit 2 lama tersimpan dalam pelayar, buangnya melalui panel guru untuk menggunakan fail projek. Unit 1 dan 2 kini mempunyai fail dialog; Unit 3–8 masih menunggu rakaman.
+
+## Rakaman Unit 3 telah dipasang
+
+A2_U03_DIALOG.mp3 kini tersedia: Danish → Abang Firdaus → Danish, dengan jeda 0.6 saat. Unit 1–3 kini mempunyai fail dialog; Unit 4–8 masih menunggu rakaman. Buang muat naik Unit 3 lama dalam panel guru jika mahu menggunakan fail projek terkini.

@@ -62,3 +62,7 @@ Semua lapan PNG janaan diperiksa secara visual dan berjaya didekod dalam Chromiu
 ## Audio sebenar Unit 2
 
 Rakaman pengguna digabungkan Amir → Encik Farid → Amir dengan jeda 0.6 saat. Output MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat; tempoh fail sekitar 26.26 saat (kandungan main balik sekitar 26.21 saat). Chromium mengesahkan laluan A2_U02_DIALOG.mp3, main, jeda (masa kekal), sambung, ulang dari awal, pengesanan tamat dan berhenti apabila keluar dari kes. Tiada ralat JavaScript. Ujian ini tidak menggantikan semakan manusia terhadap kandungan dan sebutan rakaman. Ujian audio hilang dialihkan ke Unit 3 kerana Unit 2 kini tersedia.
+
+## Audio sebenar Unit 3
+
+Tiga rakaman pengguna digabungkan Danish → Abang Firdaus → Danish dengan jeda 0.6 saat. Output MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat; tempoh sekitar 24.84 saat. Chromium mengesahkan laluan A2_U03_DIALOG.mp3, main, jeda, sambung, dengar semula dari awal, pengesanan tamat dan berhenti ketika kembali ke papan kes. Tiada ralat JavaScript. Ini pengesahan fungsi media, bukan semakan manusia terhadap sebutan/kandungan rakaman. Ujian audio hilang dialihkan ke Unit 4.
