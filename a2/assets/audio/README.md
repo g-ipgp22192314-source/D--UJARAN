@@ -14,9 +14,9 @@ Format output: MP3, mono, 24 kHz, 96 kbps; tempoh kira-kira 24.67 saat.
 
 SHA-256: 7edb25c7ea15af259e7fcf618da5251555b0bd1b7451396ff0d623ada4fa8736
 
-## Unit 5–8
+## Unit 6–8
 
-Masih menunggu rakaman pengguna. Nama sasaran: A2_U05_DIALOG.mp3 hingga A2_U08_DIALOG.mp3. Rujuk ../../PANDUAN.md untuk muat naik pelayar berbanding penerbitan fail projek.
+Masih menunggu rakaman pengguna. Nama sasaran: A2_U06_DIALOG.mp3 hingga A2_U08_DIALOG.mp3. Rujuk ../../PANDUAN.md untuk muat naik pelayar berbanding penerbitan fail projek.
 
 ## Unit 2 — tersedia
 
@@ -54,3 +54,15 @@ SHA-256: 0928cfd8d1e13626f755f42dd445464bb93c3ab84b9164c562902d13243f84f2
 Nama fail pengguna menyebut Sofiya; nama watak dalam data asal kekal Sofea. Audio pengguna tidak diubah kandungannya. Jeda 0.6 saat antara giliran, MP3 48 kHz mono 128 kbps, tempoh kira-kira 29.78 saat. Tiada perubahan kelajuan/pitch atau muzik tambahan.
 
 SHA-256: 5a3587a4cddd51928608725b069930098160d619300812b2c3eae1b7098c56e8
+
+## Unit 5 — tersedia
+
+`A2_U05_DIALOG.mp3` menggabungkan rakaman pengguna mengikut turutan:
+
+1. Puan Devi bolehkah s.mp3 — Hakim.
+2. Boleh Hakim Catat na.mp3 — Puan Devi.
+3. Baikk puan Saya akan.mp3 — Hakim.
+
+Jeda 0.6 saat antara giliran. Output MP3 48 kHz mono 128 kbps, tempoh kira-kira 20.88 saat. Tiada perubahan kelajuan/pitch atau muzik tambahan.
+
+SHA-256: 7787622cfb74d4d69def4c4a1b9490e19a2ebc2b05e6f130562edcdb3cbab036

@@ -71,3 +71,7 @@ A2_U03_DIALOG.mp3 kini tersedia: Danish → Abang Firdaus → Danish, dengan jed
 ## Rakaman Unit 4 telah dipasang
 
 A2_U04_DIALOG.mp3 kini tersedia: empat giliran Sofea → Mei Xin → Sofea → Mei Xin, dengan jeda 0.6 saat. Unit 1–4 kini mempunyai fail dialog; Unit 5–8 masih menunggu rakaman. Nama fail pengguna menyebut Sofiya; teks asal Sofea dikekalkan. Buang muat naik Unit 4 lama dalam panel guru jika mahu menggunakan audio projek terkini.
+
+## Rakaman Unit 5 telah dipasang
+
+A2_U05_DIALOG.mp3 kini tersedia: Hakim → Puan Devi → Hakim, dengan jeda 0.6 saat. Unit 1–5 kini mempunyai fail dialog; Unit 6–8 masih menunggu rakaman. Buang muat naik Unit 5 lama dalam panel guru jika mahu menggunakan audio projek terkini.
