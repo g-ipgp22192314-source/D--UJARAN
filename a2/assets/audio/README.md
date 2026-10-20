@@ -14,9 +14,9 @@ Format output: MP3, mono, 24 kHz, 96 kbps; tempoh kira-kira 24.67 saat.
 
 SHA-256: 7edb25c7ea15af259e7fcf618da5251555b0bd1b7451396ff0d623ada4fa8736
 
-## Unit 8
+## Status semasa
 
-Masih menunggu rakaman pengguna. Nama sasaran: A2_U08_DIALOG.mp3. Rujuk ../../PANDUAN.md untuk muat naik pelayar berbanding penerbitan fail projek.
+Semua lapan fail A2_U01_DIALOG.mp3 hingga A2_U08_DIALOG.mp3 kini tersedia pada hos projek. Panel guru boleh digunakan untuk menggantikan rakaman pada pelayar setempat.
 
 ## Unit 2 — tersedia
 
@@ -90,3 +90,16 @@ SHA-256: 68dfbe8a4b224cb7f52dddcc388f02a6ab1905476d46b2125155e3478642032c
 Jeda 0.6 saat antara giliran. Output MP3 48 kHz mono 128 kbps, tempoh kira-kira 21.36 saat. Tiada perubahan kelajuan/pitch atau muzik tambahan.
 
 SHA-256: e7326f2db44c6615e880ad15f3e17d870d32fa2a0a0732fdc98522ed0e58f5d2
+
+## Unit 8 — tersedia
+
+`A2_U08_DIALOG.mp3` menggabungkan empat rakaman pengguna mengikut turutan:
+
+1. Puan Ramlah awan sud.mp3 — Faris.
+2. Terima kasih Faris S.mp3 — Puan Ramlah.
+3. Lebih baik puan angk.mp3 — Faris.
+4. Baiklah saya akan me.mp3 — Puan Ramlah.
+
+Jeda 0.6 saat antara giliran. Output MP3 48 kHz mono 128 kbps, tempoh kira-kira 21.77 saat. Tiada perubahan kelajuan/pitch atau muzik tambahan.
+
+SHA-256: 1c42e8a8b5553b8c1ee6dc156d4da949a603b83c5ea396fe31fbc9571101f28b

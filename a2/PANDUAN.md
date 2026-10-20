@@ -21,7 +21,7 @@ Laluan bagi fail pada hos:
 - assets/audio/A2_U07_DIALOG.mp3
 - assets/audio/A2_U08_DIALOG.mp3
 
-Letakkan fail dalam folder itu atau tekan Panel guru dan pilih fail mengikut unit. MP3 dan WAV disokong. Muat naik disimpan dalam IndexedDB pelayar semasa sahaja; ia tidak memasukkan fail ke repositori atau menyediakan audio untuk peranti murid lain. Untuk perkongsian, letakkan fail pada laluan hos di atas. Gunakan suara Bahasa Melayu Malaysia standard yang berlainan mengikut watak. Rakaman belum dibekalkan bersama aplikasi.
+Letakkan fail dalam folder itu atau tekan Panel guru dan pilih fail mengikut unit. MP3 dan WAV disokong. Muat naik disimpan dalam IndexedDB pelayar semasa sahaja; ia tidak memasukkan fail ke repositori atau menyediakan audio untuk peranti murid lain. Untuk perkongsian, letakkan fail pada laluan hos di atas. Gunakan suara Bahasa Melayu Malaysia standard yang berlainan mengikut watak. Semua lapan rakaman dialog kini dibekalkan bersama aplikasi.
 
 MAIN AUDIO menyambung main balik, JEDA menjeda, DENGAR SEMULA bermula dari awal. Muat naik guru mengatasi laluan lalai. Jika MP3 tiada atau gagal, aplikasi hanya menawarkan bacaan automatik apabila dua suara berbeza berbahasa tepat ms-MY tersedia. Tiada fallback bahasa lain. Kualiti sebutan suara pelayar masih perlu disemak guru. Jika tiada suara yang sesuai, mesej jelas meminta rakaman; teks boleh dibuka untuk ulang kaji. Butang bunyi atas mematikan dialog serta kesan bunyi. Kesan Web Audio ringkas dimainkan dengan kelantangan rendah.
 
@@ -83,3 +83,7 @@ A2_U06_DIALOG.mp3 kini tersedia: Sara → Encik Lim → Sara, dengan jeda 0.6 sa
 ## Rakaman Unit 7 telah dipasang
 
 A2_U07_DIALOG.mp3 kini tersedia: Ravi → Kak Nisha → Ravi, dengan jeda 0.6 saat. Unit 1–7 kini mempunyai fail dialog; Unit 8 masih menunggu rakaman. Buang muat naik Unit 7 lama dalam panel guru jika mahu menggunakan audio projek terkini.
+
+## Semua lapan audio dialog lengkap
+
+A2_U08_DIALOG.mp3 kini tersedia: Faris → Puan Ramlah → Faris → Puan Ramlah, dengan jeda 0.6 saat. Semua audio Unit 1–8 telah dipasang pada hos projek. Catatan kemas kini terdahulu tentang rakaman yang masih menunggu ialah sejarah sebelum penyempurnaan ini. Buang muat naik lama dalam panel guru jika mahu menggunakan audio projek terkini.

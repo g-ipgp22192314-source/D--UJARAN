@@ -82,3 +82,9 @@ Tiga rakaman pengguna digabungkan Sara → Encik Lim → Sara, dengan jeda 0.6 s
 ## Audio sebenar Unit 7
 
 Tiga rakaman pengguna digabungkan Ravi → Kak Nisha → Ravi, dengan jeda 0.6 saat. MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat; tempoh sekitar 21.36 saat. Chromium mengesahkan laluan A2_U07_DIALOG.mp3, main, jeda, sambung, ulang dari awal, tamat dan berhenti ketika kembali ke papan kes. Tiada ralat JavaScript. Pengesahan ini meliputi fungsi media, bukan semakan manusia terhadap kandungan/sebutan rakaman. Ujian audio hilang dialihkan ke Unit 8.
+
+## Audio sebenar Unit 8 dan penyempurnaan lapan unit
+
+Empat rakaman pengguna digabungkan Faris → Puan Ramlah → Faris → Puan Ramlah, dengan jeda 0.6 saat. Output MP3 48 kHz mono 128 kbps, tempoh sekitar 21.77 saat. Chromium mengesahkan laluan A2_U08_DIALOG.mp3, main, jeda, sambung, ulang dari awal, tamat dan berhenti ketika kembali ke papan kes. Tiada ralat JavaScript. Semua lapan fail dialog diuji semula melalui FFmpeg dan berjaya didekod tanpa ralat. Ini pengesahan fungsi media, bukan semakan sebutan atau kandungan oleh manusia.
+
+Oleh sebab tiada lagi audio lalai yang hilang, ujian kegagalan audio kini mensimulasikan HTTP 404 pada Unit 8, kemudian memulihkan laluan selepas semakan mesej bantuan. Laluan kegagalan ini turut diuji secara berasingan dan lulus.
