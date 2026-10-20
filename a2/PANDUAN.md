@@ -79,3 +79,7 @@ A2_U05_DIALOG.mp3 kini tersedia: Hakim → Puan Devi → Hakim, dengan jeda 0.6 
 ## Rakaman Unit 6 telah dipasang
 
 A2_U06_DIALOG.mp3 kini tersedia: Sara → Encik Lim → Sara, dengan jeda 0.6 saat. Unit 1–6 kini mempunyai fail dialog; Unit 7–8 masih menunggu rakaman. Buang muat naik Unit 6 lama dalam panel guru jika mahu menggunakan audio projek terkini.
+
+## Rakaman Unit 7 telah dipasang
+
+A2_U07_DIALOG.mp3 kini tersedia: Ravi → Kak Nisha → Ravi, dengan jeda 0.6 saat. Unit 1–7 kini mempunyai fail dialog; Unit 8 masih menunggu rakaman. Buang muat naik Unit 7 lama dalam panel guru jika mahu menggunakan audio projek terkini.

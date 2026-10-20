@@ -78,3 +78,7 @@ Tiga rakaman pengguna digabungkan Hakim → Puan Devi → Hakim, dengan jeda 0.6
 ## Audio sebenar Unit 6
 
 Tiga rakaman pengguna digabungkan Sara → Encik Lim → Sara, dengan jeda 0.6 saat. MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat; tempoh sekitar 22.90 saat. Chromium mengesahkan laluan A2_U06_DIALOG.mp3, main, jeda, sambung, ulang dari awal, tamat dan berhenti ketika kembali ke papan kes. Tiada ralat JavaScript. Pengesahan ini meliputi fungsi media, bukan semakan manusia terhadap kandungan/sebutan rakaman. Ujian audio hilang dialihkan ke Unit 7.
+
+## Audio sebenar Unit 7
+
+Tiga rakaman pengguna digabungkan Ravi → Kak Nisha → Ravi, dengan jeda 0.6 saat. MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat; tempoh sekitar 21.36 saat. Chromium mengesahkan laluan A2_U07_DIALOG.mp3, main, jeda, sambung, ulang dari awal, tamat dan berhenti ketika kembali ke papan kes. Tiada ralat JavaScript. Pengesahan ini meliputi fungsi media, bukan semakan manusia terhadap kandungan/sebutan rakaman. Ujian audio hilang dialihkan ke Unit 8.
