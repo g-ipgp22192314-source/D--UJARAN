@@ -66,3 +66,7 @@ Rakaman pengguna digabungkan Amir → Encik Farid → Amir dengan jeda 0.6 saat.
 ## Audio sebenar Unit 3
 
 Tiga rakaman pengguna digabungkan Danish → Abang Firdaus → Danish dengan jeda 0.6 saat. Output MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat; tempoh sekitar 24.84 saat. Chromium mengesahkan laluan A2_U03_DIALOG.mp3, main, jeda, sambung, dengar semula dari awal, pengesanan tamat dan berhenti ketika kembali ke papan kes. Tiada ralat JavaScript. Ini pengesahan fungsi media, bukan semakan manusia terhadap sebutan/kandungan rakaman. Ujian audio hilang dialihkan ke Unit 4.
+
+## Audio sebenar Unit 4
+
+Empat rakaman pengguna digabungkan mengikut urutan Sofea → Mei Xin → Sofea → Mei Xin, dengan jeda 0.6 saat. MP3 48 kHz mono 128 kbps berjaya didekod tanpa ralat, tempoh sekitar 29.78 saat. Chromium mengesahkan laluan A2_U04_DIALOG.mp3, main, jeda, sambung, ulang dari awal, tamat dan berhenti apabila kembali ke papan kes. Tiada ralat JavaScript. Pengesahan ini meliputi fungsi media, bukan semakan sebutan atau isi audio oleh manusia. Ujian audio hilang dialihkan ke Unit 5.

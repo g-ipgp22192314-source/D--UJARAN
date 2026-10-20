@@ -14,9 +14,9 @@ Format output: MP3, mono, 24 kHz, 96 kbps; tempoh kira-kira 24.67 saat.
 
 SHA-256: 7edb25c7ea15af259e7fcf618da5251555b0bd1b7451396ff0d623ada4fa8736
 
-## Unit 4–8
+## Unit 5–8
 
-Masih menunggu rakaman pengguna. Nama sasaran: A2_U04_DIALOG.mp3 hingga A2_U08_DIALOG.mp3. Rujuk ../../PANDUAN.md untuk muat naik pelayar berbanding penerbitan fail projek.
+Masih menunggu rakaman pengguna. Nama sasaran: A2_U05_DIALOG.mp3 hingga A2_U08_DIALOG.mp3. Rujuk ../../PANDUAN.md untuk muat naik pelayar berbanding penerbitan fail projek.
 
 ## Unit 2 — tersedia
 
@@ -41,3 +41,16 @@ SHA-256: 0e027336eb4faac3b38e628ae3eae37bc75ffe5506e12d9f7ccebb4bf16d6caa
 Jeda 0.6 saat antara giliran. Output MP3 48 kHz mono 128 kbps, kira-kira 24.84 saat. Tiada muzik, suara tambahan atau perubahan kelajuan/pitch.
 
 SHA-256: 0928cfd8d1e13626f755f42dd445464bb93c3ab84b9164c562902d13243f84f2
+
+## Unit 4 — tersedia
+
+`A2_U04_DIALOG.mp3` menggabungkan empat rakaman pengguna mengikut turutan:
+
+1. Hai saya Sofiya Kamu.mp3 — giliran pertama Sofea.
+2. Ya saya Mei Xin Kami.mp3 — giliran pertama Mei Xin.
+3. Selamat datang Di se.mp3 — giliran kedua Sofea.
+4. Terima kasih Sofiya .mp3 — giliran kedua Mei Xin.
+
+Nama fail pengguna menyebut Sofiya; nama watak dalam data asal kekal Sofea. Audio pengguna tidak diubah kandungannya. Jeda 0.6 saat antara giliran, MP3 48 kHz mono 128 kbps, tempoh kira-kira 29.78 saat. Tiada perubahan kelajuan/pitch atau muzik tambahan.
+
+SHA-256: 5a3587a4cddd51928608725b069930098160d619300812b2c3eae1b7098c56e8
