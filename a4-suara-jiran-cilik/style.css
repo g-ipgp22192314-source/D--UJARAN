@@ -58,7 +58,7 @@
     @media(max-width:600px){.hero-area{min-height:190px;padding:3px}.world-copy{padding:17px}.game-card{padding:20px}.secondary-actions .action{flex:1 1 180px}.teacher-modal{padding:16px}}
     @media print{.a4-background{position:fixed!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}.view:not(#certificate-view),footer,#certificate-view>.flex,.confetti,.overlay{display:none!important}#certificate-view{display:block!important}.section-card{box-shadow:none}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-  
+
 .a4-background{opacity:1} .page-frame{min-height:100vh} .section-card,.game-card{min-width:0;overflow-wrap:anywhere} button{max-width:100%} .progress-heading{overflow-wrap:anywhere}
 @media(max-width:600px){[data-template-id="progress-label"]{font-size:16px!important;letter-spacing:.03em!important}#locations,#badges{grid-template-columns:1fr} .opening-layout{padding-top:38vh} }
 @page{size:A4 landscape;margin:12mm}

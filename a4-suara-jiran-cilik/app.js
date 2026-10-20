@@ -425,7 +425,7 @@
   }
   $("record-start").addEventListener("click",startRecording);
   $("record-stop").addEventListener("click",finishRecording);
-  $("record-play").addEventListener("click",async()=>{stopAudio();try{await $("record-preview").play();}catch{$("record-status").textContent="Rakaman tidak dapat dimainkan dalam pelayar ini.";}}); 
+  $("record-play").addEventListener("click",async()=>{stopAudio();try{await $("record-preview").play();}catch{$("record-status").textContent="Rakaman tidak dapat dimainkan dalam pelayar ini.";}});
   $("record-again").addEventListener("click",()=>askConfirmation("Gantikan rakaman sedia ada untuk misi dan peringkat ini?",()=>beginRecording(key(current,stage))));
   $("record-download").addEventListener("click",()=>{
     const item=recordings.get(key(current,stage));if(!item)return;
