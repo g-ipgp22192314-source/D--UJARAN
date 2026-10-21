@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ms"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B2 – Jelajah Audio Visual</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--purple:#7444D4;--lavender:#C5AEFF;--pink:#FFE0F0;--sky:#DFF5FF;--mint:#65DBB5;--yellow:#FFD447;--cream:#FFF8E7;--ink:#292147}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Nunito,sans-serif;color:var(--ink);margin:0;width:100%;min-width:0}
+    h1,h2,h3{font-family:Fredoka,sans-serif;line-height:1.16}button,input,select{font:inherit}
+    button{min-height:56px;cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}
+    :focus-visible{outline:4px solid #1d1766!important;outline-offset:3px}
+    .shell{width:100%;min-height:calc(100 * min(var(--vh, 1vh), 1vh));background:transparent}
+    .screen{width:min(1160px,100%);margin:auto;padding:22px clamp(16px,4vw,48px) 65px}
+    .panel{background:#fff;border:3px solid #e7dcff;border-radius:28px;box-shadow:0 10px 0 #e6dafa;padding:clamp(18px,3vw,32px)}
+    .btn{border:3px solid #160b4a;border-radius:18px;background:#24145f;color:white;font-weight:800;padding:10px 21px;transition:transform .15s,box-shadow .15s;background-clip:padding-box;box-shadow:0 5px 0 #160b4a}
+    .btn:hover:not(:disabled),.btn:focus-visible:not(:disabled){background:#160b4a;border-color:#080321;transform:translateY(-2px);box-shadow:0 6px 0 #080321}.btn:active:not(:disabled){transform:translateY(3px);box-shadow:none}
+    .secondary{background:#fff;color:#442686}.sunny{background:#ffd447;color:#292147;border-color:#806100;box-shadow:0 5px 0 #806100}
+    .small{min-height:56px;padding:8px 16px}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .badge{display:inline-block;background:#eee5ff;border-radius:999px;padding:7px 14px;font-weight:800}
+    .scene{width:100%;aspect-ratio:4/3;border:3px dashed #7444d4;border-radius:25px;background:linear-gradient(160deg,#dff5ff 0 48%,#bcefcf 48% 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:22px;overflow:hidden;background-size:cover;background-position:center}
+    .scene .scene-label{background:rgba(255,255,255,.94);border-radius:15px;padding:12px;max-width:100%;overflow-wrap:anywhere;font-weight:800;font-size:clamp(18px,2.2vw,26px)}
+    .scene .asset-label{background:#fff;padding:5px 10px;border-radius:8px;font-size:14px;margin-top:12px}
+    .choice{width:100%;border:4px solid #b8a1ec;border-radius:23px;background:#fff;padding:12px;text-align:left;min-height:90px;color:var(--ink);font-weight:800;font-size:clamp(20px,2.4vw,25px)}
+    .choice[aria-pressed=true]{border-color:#442686;background:#f1eaff;box-shadow:inset 0 0 0 2px #442686}
+    .choice .scene{aspect-ratio:4/3;margin-bottom:10px}
+    .cardgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .unitcard{background:white;border:3px solid #e4d7ff;border-radius:24px;padding:16px;display:flex;flex-direction:column;gap:10px}
+    .unitcard .scene{aspect-ratio:4/3}.unitcard h3{font-size:26px;margin:0}.unitcard .btn{margin-top:auto}
+    .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:25px;align-items:start}
+    .choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+    .choices.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .review{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+    .review button{border:3px solid #7444d4;background:white;border-radius:20px;text-align:left;padding:10px}
+    .review .scene{aspect-ratio:4/3}
+    .feedback{border-radius:18px;padding:14px 18px;font-weight:800;min-height:56px}
+    .good{background:#c9f7e6;border:2px solid #187657}.bad{background:#ffe0f0;border:2px solid #a13a68}.notice{background:#fff2be;border:2px solid #8b6900}
+    .sentence{font-size:clamp(26px,3vw,32px);font-weight:800;line-height:1.35}
+    .question{font-size:clamp(24px,3vw,28px);font-weight:800}
+    .field{width:100%;min-height:56px;border:2px solid #7444d4;border-radius:13px;padding:9px 13px;background:white}
+    label{font-weight:800;display:block;margin:12px 0 6px;font-size:18px}
+    .tabs{display:flex;flex-wrap:wrap;gap:10px}.tabs button[aria-current=step]{background:#442686;color:white}
+    .muted{color:#51496a}.hero-title{font-size:clamp(40px,5vw,54px);letter-spacing:-.035em;margin:10px 0}
+    .unit-title{font-size:clamp(28px,3.2vw,34px)}.hide{display:none!important}
+    .report{overflow:auto}.report table{width:100%;border-collapse:collapse;text-align:left;min-width:700px}.report th,.report td{padding:12px;border-bottom:2px solid #e7dcff;vertical-align:top}
+    @media(max-width:900px){.cardgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}}
+    @media(max-width:620px){.cardgrid,.choices,.choices.three,.review{grid-template-columns:1fr}.screen{padding:16px 14px 45px}.panel{border-radius:20px}.hero-title{font-size:40px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+    .less-motion *, .less-motion *:before,.less-motion *:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    .home-hero{width:100vw;margin-left:calc((100% - 100vw)/2);min-height:calc(100 * min(var(--vh, 1vh), 1vh));border-radius:0;padding:clamp(22px,4vw,48px);display:flex;flex-direction:column;justify-content:flex-end;background-color:transparent;background-size:cover;background-position:center;background-repeat:no-repeat}
+    .home-header{align-items:flex-start}.home-header .badge,.home-settings label{background:rgba(255,255,255,.96);border:3px solid #442686;color:#292147;box-shadow:0 4px 0 rgba(68,38,134,.45)}
+    .home-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:760px;width:100%;margin:clamp(18px,3vw,32px) auto 0}.home-settings{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:28px}.home-settings label{padding:9px 14px;border-radius:999px}
+    .internal-screen{background-color:rgba(255,248,231,.88);background-blend-mode:soft-light;background-size:cover;background-position:center;background-attachment:scroll;border-radius:28px;padding:clamp(18px,3vw,32px);}
+    @media(max-width:620px){.home-hero{width:100vw;margin-left:calc((100% - 100vw)/2);min-height:calc(100 * min(var(--vh, 1vh), 1vh));border-radius:0;padding:16px 14px 28px}.home-header{gap:12px}.home-header .badge{font-size:14px}.home-actions{width:100%;flex-direction:column}.home-actions .btn{width:100%}.home-settings{align-items:stretch;flex-direction:column;gap:10px}.home-settings label{justify-content:center}.internal-screen{border-radius:20px;padding:16px 14px 28px;background-attachment:scroll}}
+      /* Preserve the entire supplied cover, including text within the original image. */
+    .unitcard .unit-cover{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;object-position:center;border-radius:16px;background:#fff}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  
+  
+  
+ </head>
+ <body data-template-id="__page-root">
+  <div id="app" class="shell w-full">
+   <main class="screen">
+    <header class="row justify-between mb-5">
+     <span data-template-id="brand" class="canva-tag badge" style="color: rgb(68, 38, 134); font-weight: 800; font-style: normal; font-size: 18px;">D-UJARAN • MOD B • TAHUN 4</span> <span id="stars" class="badge" aria-live="polite">⭐ 0 / 8 Bintang Jelajah</span>
+    </header>
+    <section id="home" data-template-id="home-screen" class="home-hero canva-section" style="background: transparent;">
+     <div class="home-actions">
+      <button id="start" data-template-id="start-button" class="canva-button btn" style="background: rgb(36, 20, 95); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">▶ MULA JELAJAH</button> <button id="resume" data-template-id="resume-button" class="canva-button btn sunny hide" style="background: rgb(255, 212, 71); color: rgb(41, 33, 71); font-weight: 800; font-style: normal; font-size: 18px;">↪ SAMBUNG</button> <button id="how-open" data-template-id="how-button" class="canva-button btn secondary" style="background: rgb(36, 20, 95); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">ⓘ CARA BERMAIN</button> <button id="teacher-open" data-template-id="teacher-button" class="canva-button btn secondary" style="background: rgb(36, 20, 95); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">⚙ PANEL GURU</button>
+     </div>
+     <div class="home-settings">
+      <label class="row !m-0"><input id="sound-setting" type="checkbox" checked="" class="w-6 h-6"> <span data-template-id="sound-label" class="canva-text" style="color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">Kesan bunyi hidup</span></label> <label class="row !m-0"><input id="motion-setting" type="checkbox" class="w-6 h-6"> <span data-template-id="motion-label" class="canva-text" style="color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">Kurangkan animasi</span></label>
+     </div>
+    </section>
+    <section id="how" data-template-id="how-screen" class="panel hide internal-screen canva-section">
+     <h2 data-template-id="how-title" class="canva-text unit-title" style="color: rgb(68, 38, 134); font-weight: 700; font-style: normal; font-size: 27px;">Cara bermain</h2>
+     <p data-template-id="how-a" class="canva-text question" style="color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">A · Dengar. Lihat gambar. Tekan seterusnya.</p>
+     <p data-template-id="how-b" class="canva-text question" style="color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">B · Dengar. Pilih gambar. Tekan SEMAK.</p>
+     <p data-template-id="how-c" class="canva-text question" style="color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">C · Tekan gambar untuk mendengar semula.</p>
+     <p data-template-id="how-note" class="canva-text" style="color: rgb(81, 73, 106); font-weight: 400; font-style: normal; font-size: 18px;">Kamu boleh memilih mana-mana unit. Tiada had masa.</p><button data-template-id="how-back" data-back="home" class="canva-button btn secondary mt-5" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">← KEMBALI</button>
+    </section>
+    <section id="board" data-template-id="board-screen" class="hide internal-screen canva-section">
+     <div class="row justify-between mb-5">
+      <div>
+       <h2 data-template-id="board-title" class="canva-text unit-title" style="color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 52px;">Pilih satu unit</h2>
+       <p data-template-id="board-note" class="canva-text" style="color: rgb(81, 73, 106); font-weight: 700; font-style: normal; font-size: 26px;">Semua unit boleh dipilih pada bila-bila masa.</p>
+      </div>
+      <div class="row">
+       <button id="summary-open" data-template-id="summary-button" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">⭐ RINGKASAN</button> <button data-template-id="board-home" data-back="home" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">⌂ HALAMAN UTAMA</button>
+      </div>
+     </div>
+     <p class="badge mb-5">B2_PETA_UNIT · Aset peta bergambar belum lengkap</p>
+     <div id="unit-grid" class="cardgrid"></div>
+    </section>
+    <section id="lesson" data-template-id="lesson-screen" class="panel hide internal-screen canva-section">
+     <div class="row justify-between"><button id="leave-unit" data-template-id="leave-unit" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">← PILIH UNIT</button><span id="unit-progress" class="badge"></span>
+     </div>
+     <h2 id="lesson-title" class="unit-title mt-5"></h2>
+     <div class="tabs my-5" role="navigation" aria-label="Bahagian unit">
+      <button id="tab-a" data-part="a" data-template-id="tab-a" class="canva-button btn secondary" aria-current="step" style="color: rgb(0, 0, 0); font-weight: 800; font-style: normal; font-size: 18px;">A · DENGAR DAN LIHAT</button> <button id="tab-b" data-part="b" data-template-id="tab-b" class="canva-button btn secondary" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">B · CARI GAMBAR</button> <button id="tab-c" data-part="c" data-template-id="tab-c" class="canva-button btn secondary" style="color: rgb(68, 38, 134); font-weight: 800; font-style: normal; font-size: 18px;">C · LIHAT SEMULA</button>
+     </div>
+     <div id="part-a">
+      <p data-template-id="a-instruction" class="canva-text question" style="color: rgb(41, 33, 71); font-weight: 700; font-style: normal; font-size: 27px;">Dengar. Lihat gambar.</p>
+      <div class="two">
+       <div id="learning-scene" class="scene" role="img"></div>
+       <div>
+        <p id="card-counter" class="badge"></p>
+        <p id="learning-sentence" class="sentence mt-5"></p>
+        <div class="row mt-5">
+         <button id="play-a" data-template-id="play-a" class="canva-button btn" style="background: rgb(116, 68, 212); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 18px;">▶ MAIN</button> <button id="pause-a" data-template-id="pause-a" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">Ⅱ JEDA</button> <button id="replay-a" data-template-id="replay-a" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">↺ DENGAR SEMULA</button>
+        </div>
+        <p id="audio-message-a" class="muted mt-4" aria-live="polite"></p><button id="sentence-toggle" class="btn secondary mt-4"></button>
+        <div class="row mt-6">
+         <button id="previous-card" data-template-id="previous-card" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">← SEBELUM</button> <button id="next-card" data-template-id="next-card" class="canva-button btn sunny" style="background: rgb(255, 212, 71); color: rgb(41, 33, 71);">SETERUSNYA →</button>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="part-b" class="hide">
+      <p data-template-id="b-instruction" class="canva-text question" style="color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 23px;">Dengar. Pilih gambar.</p>
+      <p id="question-counter" class="badge"></p>
+      <h3 id="question-text" class="question mt-4"></h3>
+      <div class="row my-4">
+       <button id="play-q" data-template-id="play-q" class="canva-button btn" style="background: rgb(116, 68, 212); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 18px;">▶ MAIN AUDIO</button> <button id="pause-q" data-template-id="pause-q" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">Ⅱ JEDA</button> <button id="replay-q" data-template-id="replay-q" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">↺ DENGAR SEMULA</button>
+      </div>
+      <p id="audio-message-q" class="muted" aria-live="polite"></p>
+      <div id="answer-choices" class="choices mt-5"></div>
+      <div class="row mt-5">
+       <button id="check-answer" data-template-id="check-answer" class="canva-button btn sunny" style="background: rgb(255, 212, 71); color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">✓ SEMAK</button> <button id="hint-button" data-template-id="hint-button" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">💡 LIHAT PETUNJUK</button> <button id="view-learning" data-template-id="view-learning" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">↩ LIHAT GAMBAR PEMBELAJARAN</button>
+      </div>
+      <p id="hint-output" class="feedback notice mt-4 hide" aria-live="polite"></p>
+      <p id="answer-feedback" class="feedback mt-4 hide" aria-live="polite"></p>
+      <div class="row mt-5">
+       <button id="previous-q" data-template-id="previous-q" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">← SOALAN SEBELUM</button> <button id="next-q" data-template-id="next-q" class="canva-button btn" style="background: rgb(116, 68, 212); color: rgb(255, 255, 255);">SOALAN SETERUSNYA →</button>
+      </div>
+     </div>
+     <div id="part-c" class="hide">
+      <p data-template-id="c-instruction" class="canva-text question" style="color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">Lihat gambar. Sebut satu ayat jika kamu bersedia.</p>
+      <p data-template-id="c-note" class="canva-text" style="color: rgb(81, 73, 106); font-weight: 400; font-style: normal; font-size: 18px;">Tekan gambar untuk mendengar ayat. Bercakap tidak wajib.</p>
+      <div id="review-grid" class="review mt-6"></div>
+      <p id="audio-message-c" class="muted mt-4" aria-live="polite"></p>
+      <div class="row mt-7">
+       <button id="finish-unit" data-template-id="finish-unit" class="canva-button btn sunny" style="background: rgb(255, 212, 71); color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">⭐ SELESAIKAN UNIT</button> <button id="repeat-unit" data-template-id="repeat-unit" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">↺ ULANG UNIT</button> <button id="other-unit" data-template-id="other-unit" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">▦ PILIH UNIT LAIN</button>
+      </div>
+      <p id="finish-message" class="feedback good mt-5 hide" aria-live="polite"></p>
+     </div>
+    </section>
+    <section id="summary" data-template-id="summary-screen" class="panel hide internal-screen canva-section">
+     <h2 data-template-id="summary-title" class="canva-text unit-title" style="color: rgb(68, 38, 134); font-weight: 700; font-style: normal; font-size: 27px;">Ringkasan Jelajah</h2>
+     <p id="summary-stars" class="sentence"></p>
+     <p data-template-id="summary-explain" class="canva-text" style="color: rgb(81, 73, 106); font-weight: 400; font-style: normal; font-size: 18px;">Bintang menandakan unit selesai, bukan penguasaan.</p>
+     <div id="summary-list" class="mt-5 grid sm:grid-cols-2 gap-3"></div><button data-template-id="summary-back" data-back="board" class="canva-button btn mt-6" style="background: rgb(116, 68, 212); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 18px;">← PILIH UNIT</button>
+    </section>
+    <section id="teacher" data-template-id="teacher-screen" class="panel hide internal-screen canva-section">
+     <div class="row justify-between">
+      <h2 data-template-id="teacher-title" class="canva-text unit-title" style="color: rgb(68, 38, 134); font-weight: 700; font-style: normal; font-size: 27px;">Panel Guru</h2><button data-template-id="teacher-back" data-back="home" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">← KEMBALI</button>
+     </div>
+     <p data-template-id="teacher-note" class="canva-text notice feedback mt-4" style="color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">Fail yang dimuat naik ke pelayar ini tidak tersedia secara automatik pada peranti lain. Untuk semua murid, gunakan aset yang dibundel dalam laman atau URL HTTPS.</p>
+     <p id="storage-message" class="feedback bad hide" role="status">Kemajuan tidak dapat disimpan pada peranti ini. Sesi semasa masih boleh digunakan.</p>
+     <div class="two mt-5">
+      <div>
+       <h3 data-template-id="teacher-settings" class="canva-text question" style="color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 21px;">Tetapan pembelajaran</h3><label for="teacher-unit">Pilih unit</label><select id="teacher-unit" class="field"></select> <label for="teacher-kind">Pilih aset</label><select id="teacher-kind" class="field"><option value="card">Kad pembelajaran</option><option value="question">Item soalan</option></select> <label for="teacher-index">Pilih kad atau item</label><select id="teacher-index" class="field"></select>
+       <p id="asset-id" class="badge mt-4"></p>
+       <p id="asset-text" class="question mt-4"></p><label for="teacher-audio-file">Muat naik audio MP3, WAV atau M4A</label><input id="teacher-audio-file" class="field" type="file" accept=".mp3,.wav,.m4a,audio/mpeg,audio/wav,audio/mp4"> <label for="teacher-audio-url">URL audio HTTPS</label><input id="teacher-audio-url" class="field" type="url" placeholder="https://contoh.com/audio.mp3">
+       <div class="row mt-3">
+        <button id="save-audio-url" data-template-id="save-audio-url" class="canva-button btn small" style="background: rgb(116, 68, 212); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 18px;">SIMPAN URL AUDIO</button> <button id="test-audio" data-template-id="test-audio" class="canva-button btn secondary small" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">▶ UJI AUDIO</button> <button id="stop-test" data-template-id="stop-test" class="canva-button btn secondary small" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">■ HENTI</button>
+       </div><label for="teacher-image-file">Ganti gambar pada peranti ini</label><input id="teacher-image-file" class="field" type="file" accept="image/png,image/jpeg,image/webp">
+       <p id="teacher-asset-status" class="muted mt-3" aria-live="polite"></p>
+      </div>
+      <div>
+       <h3 data-template-id="teacher-options" class="canva-text question" style="color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 21px;">Pilihan paparan</h3><label for="choice-count">Bilangan pilihan gambar</label><select id="choice-count" class="field"><option value="2">Dua pilihan</option><option value="3">Tiga pilihan</option></select> <label for="default-sentence">Ayat semasa membuka kad</label><select id="default-sentence" class="field"><option value="show">Papar ayat</option><option value="hide">Sembunyikan ayat</option></select>
+       <h3 data-template-id="teacher-assets-title" class="canva-text question mt-7" style="color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 21px;">Aset belum lengkap</h3>
+       <p id="asset-totals" class="feedback notice"></p>
+       <p class="muted">B2_LATAR_UTAMA dan B2_PETA_UNIT: pemegang tempat. Gambar soalan pengganggu: pemegang tempat berlabel.</p>
+       <h3 data-template-id="teacher-checks-title" class="canva-text question mt-7" style="color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 21px;">Pemeriksaan dalaman</h3>
+       <div id="checks" class="feedback notice"></div>
+      </div>
+     </div>
+     <h3 data-template-id="report-title" class="canva-text question mt-8" style="color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 21px;">Laporan setiap unit</h3>
+     <p data-template-id="report-note" class="canva-text" style="color: rgb(81, 73, 106); font-weight: 400; font-style: normal; font-size: 18px;">Audio dimainkan hingga tamat hanya direkod selepas fail selesai dimainkan. Laporan ini tidak menilai pertuturan.</p>
+     <div id="report" class="report"></div><button id="reset-open" data-template-id="reset-open" class="canva-button btn secondary mt-6" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">↺ MULA SEMULA KEMAJUAN</button>
+     <div id="reset-confirm" class="feedback bad mt-4 hide">
+      <p data-template-id="reset-warning" class="canva-text" style="color: rgb(41, 33, 71); font-weight: 400; font-style: normal; font-size: 18px;">Padam semua kemajuan dan laporan pada peranti ini?</p>
+      <div class="row">
+       <button id="reset-yes" data-template-id="reset-yes" class="canva-button btn" style="background: rgb(116, 68, 212); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 18px;">YA, PADAM KEMAJUAN</button> <button id="reset-no" data-template-id="reset-no" class="canva-button btn secondary" style="background: rgb(255, 255, 255); color: rgb(68, 38, 134); font-weight: 400; font-style: normal; font-size: 18px;">BATAL</button>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script>
+(() => {
+  // Kandungan, ID aset dan jawapan disimpan berasingan daripada kemajuan.
+  const raw = [
+    {title:"Si Comel Hilang",icon:"🐈",people:"Aina, Pak Rahman",cards:[
+      ["Aina mencari Si Comel.","Aina mencari kucing putih bertompok oren di taman."],
+      ["Bulu Si Comel berwarna putih bertompok oren.","Si Comel berbulu putih dengan tompok oren."],
+      ["Si Comel memakai kolar biru.","Si Comel dengan kolar biru yang jelas."],
+      ["Pak Rahman melihat Si Comel berhampiran bangku taman.","Pak Rahman melihat Si Comel di sisi bangku taman."],
+      ["Bangku taman itu berada di bawah pokok besar.","Bangku taman di bawah pokok besar; Si Comel berhampiran bangku."]],questions:[
+      ["Pilih Aina.","Aina","Pak Rahman","Mei Xin","Aina sedang mencari Si Comel.",0],
+      ["Pilih Si Comel.","Kucing putih bertompok oren berkolar biru","Kucing hitam berkolar merah","Kucing kelabu berkolar hijau","Lihat warna bulu dan kolar biru.",2],
+      ["Di manakah Si Comel?","Berhampiran bangku taman","Di atas meja","Di dalam kereta","Lihat bangku di bawah pokok besar.",3]]},
+    {title:"Bungkusan di Pagar",icon:"📦",people:"Amir, Encik Farid",cards:[
+      ["Amir melihat bungkusan di pagar rumahnya.","Amir melihat bungkusan di pagar rumah."],
+      ["Nama Encik Farid tertera pada label bungkusan.","Bungkusan dengan label: Encik Farid."],
+      ["Nombor rumah Encik Farid ialah 24.","Rumah Encik Farid dengan nombor rumah 24."],
+      ["Bungkusan itu milik Encik Farid.","Encik Farid berdiri di sisi bungkusan miliknya."],
+      ["Penghantar tersalah menghantar bungkusan itu.","Penghantar di pagar rumah Amir dengan bungkusan berlabel Encik Farid."]],questions:[
+      ["Siapakah pemilik bungkusan?","Encik Farid","Amir","Danish","Baca nama pada label bungkusan.",1],
+      ["Di manakah Amir melihat bungkusan?","Di pagar rumah","Di taman permainan","Di padang komuniti","Lihat pagar rumah Amir.",0],
+      ["Apakah nombor rumah Encik Farid?","24","42","14","Lihat nombor pada rumah Encik Farid.",2]]},
+    {title:"Basikal Danish Pancit",icon:"🚲",people:"Danish, Abang Firdaus",cards:[
+      ["Danish melihat tayar basikalnya.","Danish memandang tayar basikal."],
+      ["Tayar basikal Danish pancit.","Tayar basikal Danish kempis dan pancit."],
+      ["Abang Firdaus menasihati Danish.","Abang Firdaus menasihati Danish supaya tidak menunggang basikal pancit."],
+      ["Danish menuntun basikal ke tempat selamat.","Danish berjalan sambil menuntun basikal."],
+      ["Danish menjaga keselamatan dirinya.","Danish berdiri di tempat selamat bersama basikalnya."]],questions:[
+      ["Pilih Danish.","Danish","Abang Firdaus","Amir","Danish ialah pemilik basikal.",0],
+      ["Bagaimanakah keadaan tayar?","Tayar pancit","Tayar berisi angin dengan baik","Tayar baharu dalam kotak","Lihat tayar yang kempis.",1],
+      ["Apakah tindakan Danish?","Menuntun basikal","Menunggang basikal yang pancit","Meninggalkan basikal di jalan","Danish berjalan di sisi basikal.",3]]},
+    {title:"Jiran Baharu",icon:"🏠",people:"Sofea, Mei Xin",cards:[
+      ["Mei Xin ialah jiran baharu.","Mei Xin berdiri di hadapan rumah baharunya."],
+      ["Sofea memperkenalkan dirinya kepada Mei Xin.","Sofea berkenalan dengan Mei Xin."],
+      ["Sofea menunjukkan taman permainan kepada Mei Xin.","Sofea menunjuk ke arah taman permainan bersama Mei Xin."],
+      ["Sofea menunjukkan perpustakaan mini kepada Mei Xin.","Sofea menunjuk ke arah perpustakaan mini bersama Mei Xin."],
+      ["Mei Xin mengucapkan terima kasih kepada Sofea.","Mei Xin berterima kasih kepada Sofea."]],questions:[
+      ["Siapakah jiran baharu?","Mei Xin","Sofea","Aina","Mei Xin baru berpindah.",0],
+      ["Apakah tindakan Sofea?","Menunjukkan kawasan kejiranan","Membaiki basikal","Mencuci kereta","Sofea menunjukkan dua tempat kepada Mei Xin.",2],
+      ["Di manakah tempat membaca?","Perpustakaan mini","Taman permainan","Padang bola","Cari tempat yang mempunyai buku.",3]]},
+    {title:"Rak Buku Komuniti",icon:"📚",people:"Hakim, Puan Devi",cards:[
+      ["Hakim mahu meminjam buku.","Hakim memilih buku pada rak komuniti."],
+      ["Puan Devi menerangkan peraturan peminjaman.","Puan Devi menunjukkan peraturan peminjaman kepada Hakim."],
+      ["Hakim mencatat namanya dalam buku rekod.","Hakim menulis nama dalam buku rekod. Label: NAMA."],
+      ["Hakim mencatat tajuk buku dalam buku rekod.","Hakim menulis tajuk buku dalam buku rekod. Label: TAJUK BUKU."],
+      ["Hakim mematuhi peraturan peminjaman buku.","Hakim membawa buku selepas melengkapkan buku rekod."]],questions:[
+      ["Siapakah yang mahu meminjam buku?","Hakim","Puan Devi","Encik Lim","Hakim memilih buku untuk dipinjam.",0],
+      ["Apakah tindakan Hakim?","Mencatat dalam buku rekod","Mengoyakkan halaman buku","Membuang buku","Lihat buku rekod dan pensel.",2],
+      ["Apakah maklumat yang perlu dicatat?","Nama dan tajuk buku","Warna kasut dan makanan kegemaran","Nombor basikal dan warna pagar","Cari label NAMA dan TAJUK BUKU.",3]]},
+    {title:"Paip Bocor",icon:"💧",people:"Murid, Encik Lim",cards:[
+      ["Paip itu bocor.","Air keluar daripada paip yang bocor."],
+      ["Paip itu berada berhampiran pagar dewan komuniti.","Paip bocor di sisi pagar dewan komuniti."],
+      ["Air mengalir di laluan.","Air daripada paip mengalir di laluan."],
+      ["Laluan itu licin.","Laluan yang basah dan licin; tanda berhati-hati."],
+      ["Encik Lim menasihati murid supaya berhati-hati.","Encik Lim mengingatkan Murid supaya menggunakan laluan kering."]],questions:[
+      ["Pilih paip bocor.","Paip mengeluarkan air","Paip baik tanpa kebocoran","Paip baharu dalam kotak","Cari air yang keluar daripada paip.",0],
+      ["Di manakah paip bocor?","Berhampiran pagar dewan komuniti","Di dalam bilik tidur","Di dalam perpustakaan mini","Lihat pagar dewan komuniti.",1],
+      ["Apakah tindakan selamat?","Berjalan berhati-hati di laluan kering","Berlari di laluan licin","Melompat ke dalam air","Laluan kering lebih selamat.",4]]},
+    {title:"Hari Sukan Kejiranan",icon:"🏃",people:"Murid, Kak Nisha",cards:[
+      ["Murid melihat poster Hari Sukan Kejiranan.","Murid melihat poster: HARI SUKAN KEJIRANAN."],
+      ["Kak Nisha menerangkan acara itu.","Kak Nisha menunjukkan poster acara kepada Murid."],
+      ["Hari Sukan Kejiranan diadakan pada hari Sabtu.","Poster acara dengan kalendar bertulis SABTU."],
+      ["Acara itu bermula pada pukul lapan pagi.","Poster bertulis 8:00 PAGI dengan matahari."],
+      ["Acara itu berlangsung di padang komuniti.","Acara sukan di padang komuniti."]],questions:[
+      ["Pada hari apakah acara itu?","Sabtu","Isnin","Rabu","Lihat kalendar pada poster.",2],
+      ["Bilakah acara bermula?","Pukul lapan pagi ☀️","Pukul lapan malam 🌙","Pukul dua petang ☀️","Cari 8:00 PAGI dan matahari.",3],
+      ["Di manakah acara itu?","Padang komuniti","Perpustakaan mini","Bilik tidur","Cari kawasan padang.",4]]},
+    {title:"Hujan Akan Turun",icon:"🌧️",people:"Faris, Puan Ramlah",cards:[
+      ["Awan di langit kelihatan gelap.","Awan gelap di atas rumah kejiranan."],
+      ["Angin bertiup kencang.","Angin kuat menggerakkan daun dan pakaian."],
+      ["Pakaian Puan Ramlah masih dijemur.","Pakaian Puan Ramlah tergantung pada ampaian."],
+      ["Faris mengingatkan Puan Ramlah tentang pakaian itu.","Faris menunjuk ke arah pakaian dan awan gelap kepada Puan Ramlah."],
+      ["Puan Ramlah mengangkat pakaian sebelum hujan.","Puan Ramlah mengambil pakaian daripada ampaian sebelum hujan."]],questions:[
+      ["Apakah tanda hujan akan turun?","Awan gelap","Langit cerah tanpa awan","Pelangi di langit cerah","Lihat warna awan.",0],
+      ["Apakah yang masih dijemur?","Pakaian","Buku","Basikal","Lihat benda pada ampaian.",2],
+      ["Apakah tindakan Puan Ramlah?","Mengangkat pakaian","Menambah pakaian pada ampaian ketika hujan hampir turun","Membawa buku ke taman","Puan Ramlah mengambil pakaian sebelum hujan.",4]]}
+  ];
+  const units=raw.map((u,i)=>({id:`B2_U${String(i+1).padStart(2,"0")}`,title:u.title,icon:u.icon,people:u.people,
+    cards:u.cards.map((c,j)=>({id:`B2_U${String(i+1).padStart(2,"0")}_A${String(j+1).padStart(2,"0")}`,image:`B2_U${String(i+1).padStart(2,"0")}_G${String(j+1).padStart(2,"0")}`,audio:`B2_U${String(i+1).padStart(2,"0")}_A${String(j+1).padStart(2,"0")}.mp3`,sentence:c[0],visual:c[1]})),
+    questions:u.questions.map((q,j)=>({id:`B2_U${String(i+1).padStart(2,"0")}_Q${String(j+1).padStart(2,"0")}`,audio:`B2_U${String(i+1).padStart(2,"0")}_Q${String(j+1).padStart(2,"0")}.mp3`,text:q[0],correct:q[1],wrong:[q[2],q[3]],hint:q[4],card:q[5]}))}));
+  const $=id=>document.getElementById(id);
+  const KEY="b2-jelajah-audio-visual-v1";
+  const fresh=()=>({settings:{sound:true,motion:false,choiceCount:2,showSentence:true},progress:{},audioUrls:{},lastUnit:null});
+  let state=fresh(),storageOK=true;
+  try{const saved=JSON.parse(localStorage.getItem(KEY)||"null");if(saved){state={...fresh(),...saved,settings:{...fresh().settings,...saved.settings},progress:saved.progress||{},audioUrls:saved.audioUrls||{}}}}catch(e){storageOK=false}
+  const fileAudio=new Map(),fileImages=new Map();
+  const unitCardImages={1:"assets/unit-covers/UNIT-01.png",2:"assets/unit-covers/UNIT-02.png",3:"assets/unit-covers/UNIT-03.png",4:"assets/unit-covers/UNIT-04.png",5:"assets/unit-covers/UNIT-05.png",6:"assets/unit-covers/UNIT-06.png",7:"assets/unit-covers/UNIT-07.png",8:"assets/unit-covers/UNIT-08.png"};
+  let current=0,card=0,question=0,part="a",selected=null,playingKey=null,sequence=0;
+  const audio=new Audio();
+  audio.preload="none";
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){storageOK=false;$("storage-message").classList.remove("hide")}}
+  function prog(i){return state.progress[units[i].id] ||= {opened:[],ended:[],answers:{},completed:false,lastCard:0}}
+  function view(name){stopAudio();document.querySelectorAll("main > section").forEach(s=>s.classList.toggle("hide",s.id!==name));window.scrollTo({top:0,behavior:"instant"});updateStars();if(name==="board")renderBoard();if(name==="summary")renderSummary();if(name==="teacher")renderTeacher()}
+  function updateStars(){let n=units.filter((_,i)=>!!state.progress[units[i].id]?.completed).length;$("stars").textContent=`⭐ ${n} / 8 Bintang Jelajah`;$("resume").classList.toggle("hide",state.lastUnit===null)}
+  function stopAudio(){sequence++;audio.pause();audio.removeAttribute("src");audio.load();playingKey=null}
+  function audioSource(key){return fileAudio.get(key)||state.audioUrls[key]||""}
+  function playAudio(key,target,restart=false){
+    const src=audioSource(key);if(!src){$(target).textContent="Audio belum tersedia. Guru boleh menambah audio.";return}
+    $(target).textContent="";if(playingKey!==key||restart){stopAudio();playingKey=key;audio.src=src;audio.currentTime=0}
+    const token=sequence;
+    audio.play().catch(()=>{if(token===sequence)$(target).textContent="Audio tidak dapat dimainkan. Semak fail atau URL audio."});
+  }
+  audio.addEventListener("ended",()=>{if(playingKey&&$("lesson").classList.contains("hide")===false){const p=prog(current);if(!p.ended.includes(playingKey)){p.ended.push(playingKey);save()}}playingKey=null});
+  function scene(el,label,id,attachedImage=""){el.replaceChildren();el.setAttribute("aria-label",label+"; "+id+"; aset gambar belum lengkap");el.className="scene";let image=fileImages.get(id)||attachedImage;el.style.backgroundImage=image?`url("${image}")`:"";el.style.backgroundSize="cover";el.style.backgroundPosition="center";let a=document.createElement("span");a.className="scene-label";a.textContent=label;let b=document.createElement("span");b.className="asset-label";b.textContent=id+(image?" · Gambar tersedia":" · Aset gambar belum lengkap");el.append(a,b)}
+  function makeScene(label,id,attachedImage=""){let e=document.createElement("div");scene(e,label,id,attachedImage);return e}
+  function renderBoard(){
+    const grid=$("unit-grid");grid.replaceChildren();
+    units.forEach((u,i)=>{let p=prog(i),article=document.createElement("article");article.className="unitcard";
+      let n=document.createElement("span");n.className="badge";n.textContent=`UNIT ${i+1}`;
+      // Cover images are independent of teaching-card uploads.
+      let picture=document.createElement("img");
+      picture.className="unit-cover";picture.src=unitCardImages[i+1];
+      picture.alt=`Muka hadapan Unit ${i+1}: ${u.title}`;
+      picture.loading="lazy";picture.decoding="async";
+      picture.addEventListener("error",()=>{picture.alt=`Gambar Unit ${i+1} tidak dapat dimuatkan`;});
+      let h=document.createElement("h3");h.textContent=u.title;
+      let status=document.createElement("p");status.className="badge";status.textContent=p.completed?"⭐ Selesai":p.opened.length||Object.keys(p.answers).length?"Sedang belajar":"Belum mula";
+      let b=document.createElement("button");b.className="btn";b.textContent="▶ MULA";b.addEventListener("click",()=>openUnit(i));
+      article.append(n,picture,h,status,b);grid.append(article)});
+  }
+  function openUnit(i){current=i;state.lastUnit=i;card=prog(i).lastCard||0;question=0;selected=null;part="a";save();view("lesson");renderLesson()}
+  function renderLesson(){
+    const u=units[current];$("lesson-title").textContent=`Unit ${current+1} · ${u.title}`;
+    $("unit-progress").textContent=prog(current).completed?"⭐ Unit selesai":"Sedang belajar";
+    ["a","b","c"].forEach(x=>{$("part-"+x).classList.toggle("hide",part!==x);$("tab-"+x).setAttribute("aria-current",part===x?"step":"false")});
+    if(part==="a")renderCard();if(part==="b")renderQuestion();if(part==="c")renderReview()
+  }
+  function changePart(next){stopAudio();part=next;selected=null;renderLesson()}
+  function renderCard(){
+    const c=units[current].cards[card],p=prog(current);
+    if(!p.opened.includes(c.id)){p.opened.push(c.id)}p.lastCard=card;save();
+    scene($("learning-scene"),c.visual,c.image);
+    $("card-counter").textContent=`Gambar ${card+1} daripada 5`;
+    $("learning-sentence").textContent=c.sentence;
+    $("learning-sentence").classList.toggle("hide",!state.settings.showSentence);
+    $("sentence-toggle").textContent=state.settings.showSentence?"SEMBUNYIKAN AYAT":"PAPAR AYAT";
+    $("audio-message-a").textContent=audioSource(c.audio)?"":"Audio belum tersedia. Guru boleh menambah audio.";
+    $("previous-card").disabled=card===0;
+    $("next-card").textContent=card===4?"TERUS KE CARI GAMBAR →":"SETERUSNYA →";
+  }
+  // Mengimbangi kedudukan jawapan: indeks betul berpusing mengikut unit dan soalan.
+  function choicesFor(q){let all=[{label:q.correct,correct:true},{label:q.wrong[0],correct:false},{label:q.wrong[1],correct:false}];
+    let count=Number(state.settings.choiceCount),position=(current+question)%count;
+    let wrong=all.slice(1),list=[];for(let i=0;i<count;i++)list.push(i===position?all[0]:wrong.shift());return list}
+  function renderQuestion(){
+    const q=units[current].questions[question],record=prog(current).answers[q.id];
+    $("question-counter").textContent=`Soalan ${question+1} daripada 3`;
+    $("question-text").textContent=q.text;
+    $("audio-message-q").textContent=audioSource(q.audio)?"":"Audio belum tersedia. Guru boleh menambah audio.";
+    $("answer-feedback").classList.add("hide");$("hint-output").classList.add("hide");selected=null;
+    const box=$("answer-choices");box.replaceChildren();box.classList.toggle("three",Number(state.settings.choiceCount)===3);
+    choicesFor(q).forEach((option,index)=>{
+      const b=document.createElement("button");b.type="button";b.className="choice";b.setAttribute("aria-pressed","false");
+      let visual=makeScene(option.label,option.correct?units[current].cards[q.card].image:`${q.id}_PENGGANGGU_${index+1}`);
+      let text=document.createElement("span");text.textContent=option.label;
+      b.append(visual,text);b.addEventListener("click",()=>{selected=option;box.querySelectorAll(".choice").forEach(v=>v.setAttribute("aria-pressed",String(v===b)))});
+      box.append(b)
+    });
+    $("next-q").textContent=question===2?"TERUS KE LIHAT SEMULA →":"SOALAN SETERUSNYA →";
+    if(record?.status){$("answer-feedback").textContent=`✓ Betul! Bagus! Status: ${statusName(record.status)}.`;$("answer-feedback").className="feedback good mt-4"}
+  }
+  function statusName(s){return s==="first"?"betul percubaan pertama":s==="retry"?"betul selepas cuba semula":"selesai dengan bantuan"}
+  function check(){
+    if(!selected){$("answer-feedback").textContent="Pilih gambar dahulu.";$("answer-feedback").className="feedback notice mt-4";return}
+    const q=units[current].questions[question],answers=prog(current).answers;
+    let r=answers[q.id]||{attempts:0,first:null,hint:false,status:null};
+    if(r.status){$("answer-feedback").textContent="✓ Betul! Bagus! Tekan soalan seterusnya.";$("answer-feedback").className="feedback good mt-4";return}
+    r.attempts++;if(r.first===null)r.first=selected.label;
+    if(selected.correct){r.status=r.hint?"helped":r.attempts===1?"first":"retry";$("answer-feedback").textContent=`✓ Betul! Bagus! ${statusName(r.status)}.`;$("answer-feedback").className="feedback good mt-4"}
+    else{$("answer-feedback").textContent="✕ Cuba lagi. Lihat gambar dengan teliti.";$("answer-feedback").className="feedback bad mt-4";
+      if(r.attempts>=2){$("hint-output").textContent=`Petunjuk: ${q.hint}`;$("hint-output").classList.remove("hide")}}
+    answers[q.id]=r;save()
+  }
+  function renderReview(){
+    const box=$("review-grid");box.replaceChildren();
+    [0,2,4].forEach((index,j)=>{const c=units[current].cards[index],b=document.createElement("button");b.type="button";
+      let visual=makeScene(c.visual,c.image),label=document.createElement("span");label.className="font-extrabold block mt-2";label.textContent=`Gambar ${j+1}: ${c.sentence}`;
+      b.append(visual,label);b.addEventListener("click",()=>playAudio(c.audio,"audio-message-c",true));box.append(b)});
+    $("finish-message").classList.toggle("hide",!prog(current).completed);
+    if(prog(current).completed)$("finish-message").textContent="⭐ Unit selesai! Satu Bintang Jelajah diperoleh."
+  }
+  function renderSummary(){
+    let n=units.filter((_,i)=>prog(i).completed).length;
+    $("summary-stars").textContent=`⭐ ${n} daripada 8 Bintang Jelajah`;
+    const box=$("summary-list");box.replaceChildren();
+    units.forEach((u,i)=>{let d=document.createElement("p");d.className="badge";d.textContent=`${i+1}. ${u.title} — ${prog(i).completed?"⭐ Selesai":"Belum selesai"}`;box.append(d)})
+  }
+  function assetSelection(){let u=units[Number($("teacher-unit").value)||0],kind=$("teacher-kind").value,i=Number($("teacher-index").value)||0;return{u,kind,i,item:kind==="card"?u.cards[i]:u.questions[i]}}
+  function refreshIndex(){let e=$("teacher-index");e.replaceChildren();let count=$("teacher-kind").value==="card"?5:3;for(let i=0;i<count;i++){let o=document.createElement("option");o.value=i;o.textContent=$("teacher-kind").value==="card"?`Kad ${i+1}`:`Soalan ${i+1}`;e.append(o)}refreshAsset()}
+  function refreshAsset(){let {kind,item}=assetSelection();$("asset-id").textContent=`${item.audio} · ${kind==="card"?item.image:"Pilihan gambar berlabel"}`;
+    $("asset-text").textContent=kind==="card"?item.sentence:item.text;
+    $("teacher-audio-url").value=state.audioUrls[item.audio]||"";
+    $("teacher-asset-status").textContent=`Audio: ${audioSource(item.audio)?"tersedia pada peranti ini":"belum tersedia"}. Gambar utama: ${kind==="card"&&fileImages.has(item.image)?"dimuat naik pada peranti ini":"belum lengkap"}.`}
+  function renderTeacher(){
+    $("storage-message").classList.toggle("hide",storageOK);
+    $("choice-count").value=String(state.settings.choiceCount);$("default-sentence").value=state.settings.showSentence?"show":"hide";
+    refreshAsset();let missingAudio=units.reduce((n,u)=>n+[...u.cards,...u.questions].filter(x=>!audioSource(x.audio)).length,0);
+    let missingImages=units.reduce((n,u)=>n+u.cards.filter(c=>!fileImages.has(c.image)).length,0);
+    $("asset-totals").textContent=`${missingAudio} daripada 64 slot audio belum tersedia. ${missingImages} daripada 40 gambar kad belum lengkap. 2 aset latar/peta dan gambar pengganggu masih pemegang tempat.`;
+    $("checks").textContent=`✓ ${units.length} unit · ${units.reduce((n,u)=>n+u.cards.length,0)} kad · ${units.reduce((n,u)=>n+u.questions.length,0)} item. ✓ Satu ayat pada satu masa; satu audio aktif; audio dihenti apabila bertukar. ✓ Jawapan seimbang, pilihan tanpa pendua, petunjuk dan cuba semula. ✓ Pemulihan kemajuan dan laporan bantuan. ✓ Susun atur telefon potret. ✓ Tiada mikrofon wajib. ✓ Aset belum tersedia dilabel dengan jelas.`;
+    const table=document.createElement("table"),head=document.createElement("thead"),tr=document.createElement("tr");
+    ["Unit","Kad dibuka","Audio tamat","Jawapan pertama / cubaan / bantuan","Status","Aset belum tersedia"].forEach(t=>{let th=document.createElement("th");th.textContent=t;tr.append(th)});head.append(tr);table.append(head);
+    const tbody=document.createElement("tbody");
+    units.forEach((u,i)=>{const p=prog(i),row=document.createElement("tr"),parts=[
+      `${i+1}. ${u.title}`,`${p.opened.length}/5`,
+      `${p.ended.filter(x=>u.cards.some(c=>c.audio===x)).length}/5 kad; ${p.ended.filter(x=>u.questions.some(q=>q.audio===x)).length}/3 soalan`,
+      u.questions.map((q,j)=>{let a=p.answers[q.id];return `${j+1}: ${a?`${a.first}; ${a.attempts} cubaan; petunjuk ${a.hint?"ya":"tidak"}; ${a.status?statusName(a.status):"belum betul"}`:"belum dijawab"}`}).join(" | "),
+      p.completed?"Selesai":"Belum selesai",
+      `${[...u.cards,...u.questions].filter(x=>!audioSource(x.audio)).length} audio; ${u.cards.filter(x=>!fileImages.has(x.image)).length} gambar kad`
+    ];parts.forEach(t=>{let td=document.createElement("td");td.textContent=t;row.append(td)});tbody.append(row)});table.append(tbody);$("report").replaceChildren(table)
+  }
+  $("start").onclick=()=>view("board");$("resume").onclick=()=>openUnit(state.lastUnit);
+  $("how-open").onclick=()=>view("how");$("teacher-open").onclick=()=>view("teacher");$("summary-open").onclick=()=>view("summary");
+  document.querySelectorAll("[data-back]").forEach(b=>b.onclick=()=>view(b.dataset.back));
+  $("leave-unit").onclick=()=>view("board");$("other-unit").onclick=()=>view("board");
+  document.querySelectorAll("[data-part]").forEach(b=>b.onclick=()=>changePart(b.dataset.part));
+  $("previous-card").onclick=()=>{if(card>0){stopAudio();card--;renderCard()}};
+  $("next-card").onclick=()=>{stopAudio();if(card<4){card++;renderCard()}else changePart("b")};
+  $("sentence-toggle").onclick=()=>{state.settings.showSentence=!state.settings.showSentence;save();renderCard()};
+  $("play-a").onclick=()=>playAudio(units[current].cards[card].audio,"audio-message-a");
+  $("pause-a").onclick=()=>audio.pause();
+  $("replay-a").onclick=()=>playAudio(units[current].cards[card].audio,"audio-message-a",true);
+  $("play-q").onclick=()=>playAudio(units[current].questions[question].audio,"audio-message-q");
+  $("pause-q").onclick=()=>audio.pause();
+  $("replay-q").onclick=()=>playAudio(units[current].questions[question].audio,"audio-message-q",true);
+  $("check-answer").onclick=check;
+  $("hint-button").onclick=()=>{let q=units[current].questions[question],a=prog(current).answers[q.id]||{attempts:0,first:null,hint:false,status:null};a.hint=true;prog(current).answers[q.id]=a;save();$("hint-output").textContent=`Petunjuk: ${q.hint}`;$("hint-output").classList.remove("hide")};
+  $("view-learning").onclick=()=>{card=units[current].questions[question].card;changePart("a")};
+  $("previous-q").onclick=()=>{if(question>0){stopAudio();question--;renderQuestion()}};
+  $("next-q").onclick=()=>{stopAudio();if(question<2){question++;renderQuestion()}else changePart("c")};
+  $("finish-unit").onclick=()=>{prog(current).completed=true;save();updateStars();renderReview()};
+  $("repeat-unit").onclick=()=>{stopAudio();card=0;question=0;changePart("a")};
+  $("sound-setting").onchange=e=>{state.settings.sound=e.target.checked;save()};
+  $("motion-setting").onchange=e=>{state.settings.motion=e.target.checked;document.body.classList.toggle("less-motion",e.target.checked);save()};
+  $("teacher-unit").onchange=refreshAsset;$("teacher-kind").onchange=refreshIndex;$("teacher-index").onchange=refreshAsset;
+  $("choice-count").onchange=e=>{state.settings.choiceCount=Number(e.target.value);save();renderTeacher()};
+  $("default-sentence").onchange=e=>{state.settings.showSentence=e.target.value==="show";save()};
+  $("teacher-audio-file").onchange=e=>{let f=e.target.files[0];if(!f)return;if(!(/\.(mp3|wav|m4a)$/i.test(f.name))){$("teacher-asset-status").textContent="Pilih fail MP3, WAV atau M4A.";return}
+    let key=assetSelection().item.audio;if(fileAudio.has(key))URL.revokeObjectURL(fileAudio.get(key));fileAudio.set(key,URL.createObjectURL(f));renderTeacher()};
+  $("save-audio-url").onclick=()=>{let url=$("teacher-audio-url").value.trim(),key=assetSelection().item.audio;
+    if(url&&!/^https:\/\/[^ ]+/i.test(url)){$("teacher-asset-status").textContent="Gunakan URL HTTPS yang sah.";return}
+    if(url)state.audioUrls[key]=url;else delete state.audioUrls[key];save();renderTeacher()};
+  $("test-audio").onclick=()=>playAudio(assetSelection().item.audio,"teacher-asset-status",true);
+  $("stop-test").onclick=stopAudio;
+  $("teacher-image-file").onchange=e=>{let f=e.target.files[0],a=assetSelection();if(!f)return;
+    if(a.kind!=="card"){$("teacher-asset-status").textContent="Pilih kad pembelajaran untuk mengganti gambar utama.";return}
+    if(!["image/png","image/jpeg","image/webp"].includes(f.type)){$("teacher-asset-status").textContent="Pilih gambar PNG, JPEG atau WebP.";return}
+    if(fileImages.has(a.item.image))URL.revokeObjectURL(fileImages.get(a.item.image));
+    fileImages.set(a.item.image,URL.createObjectURL(f));renderTeacher()};
+  $("reset-open").onclick=()=>$("reset-confirm").classList.remove("hide");
+  $("reset-no").onclick=()=>$("reset-confirm").classList.add("hide");
+  $("reset-yes").onclick=()=>{stopAudio();state.progress={};state.lastUnit=null;save();$("reset-confirm").classList.add("hide");renderTeacher();updateStars()};
+  $("teacher-unit").replaceChildren(...units.map((u,i)=>{let o=document.createElement("option");o.value=i;o.textContent=`${i+1}. ${u.title}`;return o}));
+  $("sound-setting").checked=state.settings.sound;$("motion-setting").checked=state.settings.motion;
+  document.body.classList.toggle("less-motion",state.settings.motion);
+  refreshIndex();updateStars();
+})();
+</script>
+ 
+</body></html>

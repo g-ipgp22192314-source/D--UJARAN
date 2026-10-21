@@ -1,0 +1,11 @@
+B2 – Jelajah Audio Visual
+
+Perubahan: Lapan muka hadapan unit digantikan dengan gambar asal guru mengikut nombor Unit 1–8. Gambar dipaparkan penuh tanpa crop, label aset atau lapisan teks baharu. Muka hadapan berasingan daripada gambar kad latihan.
+
+Kandungan unit, soalan, audio, kemajuan dan fungsi lain dikekalkan daripada kod yang dihantar. SDK editor Canva dibuang supaya laman dapat dibuka sebagai web biasa. Fon Google, Tailwind dan ikon Lucide menggunakan sambungan Internet seperti kod asal.
+
+Netlify: Ekstrak ZIP, kemudian muat naik folder yang mengandungi index.html dan assets ke Netlify Drop.
+
+Gambar dalam ZIP ini ialah muka hadapan sahaja, bukan 40 gambar pembelajaran atau audio. Aset latihan yang belum dimasukkan kekal seperti kod asal. Latar halaman utama tidak diberikan dalam muat naik ini dan tidak direka semula.
+
+Jika meneruskan penyuntingan dalam Canva Code, gunakan index.html sebagai rujukan dan muat naik lapan gambar ke Canva; laluan assets/... ialah untuk versi laman statik, bukan ID aset Canva.
