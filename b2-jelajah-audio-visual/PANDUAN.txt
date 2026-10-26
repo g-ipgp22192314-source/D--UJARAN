@@ -1,11 +1,23 @@
-B2 – Jelajah Audio Visual
+B2 – PANEL SUNTINGAN
 
-Perubahan: Lapan muka hadapan unit digantikan dengan gambar asal guru mengikut nombor Unit 1–8. Gambar dipaparkan penuh tanpa crop, label aset atau lapisan teks baharu. Muka hadapan berasingan daripada gambar kad latihan.
+MULA
+Buka index.html melalui Chrome atau Edge. Gambar kulit unit telah disertakan. Tekan PANEL GURU. Tiada pemasangan diperlukan. Semua fon, CSS dan ikon dibundel dalam fail.
 
-Kandungan unit, soalan, audio, kemajuan dan fungsi lain dikekalkan daripada kod yang dihantar. SDK editor Canva dibuang supaya laman dapat dibuka sebagai web biasa. Fon Google, Tailwind dan ikon Lucide menggunakan sambungan Internet seperti kod asal.
+SUNTING
+1. Pilih unit, bahagian A atau B, dan nombor kad/soalan.
+2. Ubah tajuk, ayat, soalan, jawapan dan petunjuk.
+3. Muat naik gambar atau audio, atau gunakan URL HTTPS. Gambar jawapan salah disunting berasingan daripada gambar kad rujukan.
+4. Tekan SIMPAN PADA PELAYAR. Simpan menggunakan IndexedDB, bukan Canva atau pelayan. Pengubahsuaian teks latihan menetapkan semula kemajuan unit itu pada pelayar guru supaya keputusan lama tidak bercampur.
+5. Tekan PRATONTON SEBAGAI MURID. Kembali melalui bar KEMBALI MENYUNTING.
 
-Netlify: Ekstrak ZIP, kemudian muat naik folder yang mengandungi index.html dan assets ke Netlify Drop.
+TERBIT UNTUK SEMUA MURID
+1. Tekan MUAT TURUN LAMAN TERKINI. Fail bernama index.html akan dimuat turun. Jika pelayar menamakan index (1).html, namakan semula kepada index.html.
+2. Letakkan fail itu dalam satu folder kosong.
+3. Buka laman Netlify sedia ada, bahagian Deploys, dan muat naik folder itu ke kawasan kemas kini manual. Untuk laman baharu, gunakan https://app.netlify.com/drop.
+4. Gambar/audio yang dimuat naik disertakan dalam HTML tersebut. Pautan HTTPS luar masih bergantung pada pelayan asal.
 
-Gambar dalam ZIP ini ialah muka hadapan sahaja, bukan 40 gambar pembelajaran atau audio. Aset latihan yang belum dimasukkan kekal seperti kod asal. Latar halaman utama tidak diberikan dalam muat naik ini dan tidak direka semula.
+SANDARAN
+MUAT TURUN SALINAN SUNTINGAN menghasilkan JSON yang boleh dibuka melalui BUKA SALINAN SUNTINGAN pada peranti lain. JSON merangkumi kandungan dan media, bukan jawapan/kemajuan murid. Simpan sebelum membersihkan data pelayar atau menukar peranti. Draf disimpan mengikut versi laman; versi terbitan baharu tidak dibayangi draf lama.
 
-Jika meneruskan penyuntingan dalam Canva Code, gunakan index.html sebagai rujukan dan muat naik lapan gambar ke Canva; laluan assets/... ialah untuk versi laman statik, bukan ID aset Canva.
+HAD DAN PRIVASI
+Panel bukan sistem akaun guru. Pelawat boleh menyunting salinan setempat sendiri; mereka tidak dapat mengubah laman awam tanpa akses penerbitan Netlify. Tiada muat naik automatik ke pelayan. Simpan pelayar tidak berkongsi perubahan dengan murid lain. Had fail: gambar 10 MB; audio 20 MB. Fail audio: MP3/WAV/M4A/MP4/Ogg/WebM/AAC. Gambar PNG/JPG/WebP/GIF sahaja. SVG/HTML ditolak. Gunakan ayat tunggal dan rakaman ms-MY sebenar. Audio dan 40 gambar latihan yang belum diberikan tidak dijana secara palsu. Latar boleh dimuat naik melalui Teks halaman dan latar belakang.
